@@ -27,11 +27,17 @@ This workshop is designed for anyone interested in learning more about programmi
 > 2. Each participant needs to have access to a computer with Unix/Linux or the Windows Ubuntu app. If you are attending the workshop in person, then a computer will be available for you. 
 >
 > 3. Since this is an introductory workshop, we will walkthrough installing the necessary software. 
-> 4. Please complete the [pre-workshop survey][preSurvey].
+> 4. Please complete the [pre-workshop survey][preSurvey] before getting started with the workshop.
+{: .prereq}
+
+> ## Exit Ticket
+> 
+> Please complete the [post-workshop survey][preSurvey] after completion of the workshop, and before you leave.
 {: .prereq}
 
 <!-- {% include syllabus.html %} -->
 
 [preSurvey]: https://forms.gle/djkoZpj4GeeQA7yQ6
+[postSurvey]: https://forms.gle/Gg4PMerdxVXULtEAA
 
 {% include links.md %}
