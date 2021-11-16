@@ -26,7 +26,7 @@ Some of the practical skills required of programmers include the ability to crea
 ## Programming vs Coding 
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
-![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg)
+![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="250" }
 *Image source: https://techbiason.com/coding-vs-programming/*
 
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
@@ -53,7 +53,7 @@ So although programming and coding have different meanings, they are related. Th
 ## Pseudocode, Code, and Algorithms... Oh My!
 Although the differences seem small, there are important distinctions that we can make between the concepts of [pseudocode, code, and algorithms][algorithmPseudocode].
 
-![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg)
+![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg){: width="250" }
 *Image source: https://pediaa.com/difference-between-algorithm-and-pseudocode/*
 
 Everyone has some experienece with algorithms in their day-to-day life. For example, if you have ever cooked or done some task that requires you to follow instructions with a sequence of steps. 
@@ -135,7 +135,7 @@ The three primary types of [control statements][controlStructures] are:
 - Iterative statements control the number of times a block of code is executed
 - Conditional statements control which block of code is executed, and which are not
 
-![Control Statements](../fig/lnpls008.gif)
+![Control Statements](../fig/lnpls008.gif){: width="250" }
 *Image source: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm*
 
 The most common iterative statements are defined using either FOR or WHILE loops.
@@ -157,11 +157,13 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ## Solution
 >>
 >> The FOR loop outputs the current value of x at each iteration:
->> - 1
->> - 2
->> - 3
->> - 4
->> - 5
+>>> ## Output
+>>> 1
+>>> 2
+>>> 3
+>>> 4
+>>> 5
+>> {: .output}
 > {: .solution}
 {: .discussion}
 
@@ -185,15 +187,17 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ## Solution
 >>
 >> The WHILE loop outputs the current value of x at each iteration:
->> - 1
->> - 2
->> - 3
+>>> ## Output
+>>> 1
+>>> 2
+>>> 3
+>> {: .output}
 > {: .solution}
 {: .discussion}
 
 The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format. The most simple form of conditional statement is the IF... THEN form.
 
-![Conditional Statements](../fig/vocab.png)
+![Conditional Statements](../fig/vocab.png){: width="250" }
 *Image source: https://code.org/curriculum/course2/12/Teacher*
 
 > ## Discussion
@@ -214,8 +218,9 @@ The most common [conditional statements][conditionalStatements] are defined usin
 >> ## Solution
 >>
 >> The IF... THEN statement outputs the value of x if it is less than 6:
->>
->> 3
+>>> ## Output
+>>> 3
+>> {: .output}
 > {: .solution}
 {: .discussion}
 
@@ -242,8 +247,9 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
->>
->> x is larger than or equal to 6
+>>> ## Output
+>>> x is larger than or equal to 6
+>> {: .output}
 > {: .solution}
 {: .discussion}
 
@@ -274,9 +280,10 @@ The final version of the conditional statement further combines the IF... THEN..
 >
 >> ## Solution
 >>
->> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
->>
->> x is larger than 6
+>> The IF... THEN... ELSE statement outputs a message depending on if the value of x is equal to, greater than, or less than 6:
+>>> ## Output
+>>> x is larger than 6
+>> {: .output}
 > {: .solution}
 {: .discussion}
 
