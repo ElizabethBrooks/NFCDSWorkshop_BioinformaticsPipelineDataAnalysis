@@ -145,7 +145,8 @@ The most common iterative statements are defined using either FOR or WHILE loops
 > What does the following FOR loop output?
 >
 > Pseudocode:
-> 1. For each x in the sequence 1, 2, 3, 4, 5 print the value of x
+> 1. For each x in the sequence 1, 2, 3, 4, 5 
+> - print the value of x
 >
 > ~~~
 > for (x in 1:5) {
@@ -182,8 +183,9 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >
 > Pseudocode:
 > 1. Set x equal to 1
-> 2. While x is less than 3 print the value of x
-> 3. Incrememnt the value of x by 1
+> 2. While x is less than 3 
+> - print the value of x
+> - increment the value of x by 1
 >
 > ~~~
 > x <- 1
