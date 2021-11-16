@@ -9,6 +9,6 @@ layout: reference
 - Algorithms are the set of step-by-step instructions that explain how to solve a given problem.
 - Pseudocode is the set of instructions for an algorithm written in a plain language.
 - Boolean algebra uses mathematical expressions that are evaluated to one of two values: true or false.
-- Conditional Statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then).
+- Conditional statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then).
 
 {% include links.md %}

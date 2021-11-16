@@ -17,16 +17,16 @@ keypoints:
 - "Algorithms are the set of step-by-step instructions that explain how to solve a given problem."
 - "Pseudocode is the set of instructions for an algorithm written in a plain language."
 - "Boolean algebra uses mathematical expressions that are evaluated to one of two values: true or false."
-- "Conditional Statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then)."
+- "Conditional statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then)."
 ---
 
 ## Introduction
-Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. 
+Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. Some of the practical skills required of programmers include the ability to create algorithms, model problems, process data, and manage projects. Many of these same skills are also necessary for the analysis of complex or large biological data sets.
 
 ## Programming vs Coding 
 While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
-![This is an image](/fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg)
+![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg)
 
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
 

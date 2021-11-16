@@ -22,9 +22,7 @@ keypoints:
 ---
 
 ## How to Be a Good Programmer
-Some of the practical skills required of programmers include the ability to create algorithms, model problems, process data, and manage projects. Many of these same skills are also necessary for the analysis of complex or large biological data sets.
-
-The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and answer research questions. It is therefore very important that we consider techniques for improving the reproducibility and reliability of code. 
+The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and create publishable results. It is therefore very important that we consider techniques for improving the reproducibility and reliability of code. 
 
 In this section we will learn about some of the common best practices in programming, which are easy to implememnt into your personal programming process.
 
