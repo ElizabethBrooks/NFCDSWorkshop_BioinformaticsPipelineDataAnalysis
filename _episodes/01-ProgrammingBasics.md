@@ -133,7 +133,7 @@ We can combine boolean expressions with basic control statements to set how prog
 The three primary types of [control statements][controlStructures] are: 
 - Sequential statmenetes are executed in the default ordering
 - Iterative statements control the number of times a block of code is executed
-- Conditional statements control which block of code is executed, and which are not
+- Conditional (or selection) statements control which blocks of code are executed, and which are not
 
 ![Control Statements](../fig/lnpls008.gif){: width="500" }
 *Image source: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm*
@@ -157,12 +157,13 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ## Solution
 >>
 >> The FOR loop outputs the current value of x at each iteration:
->>> ## Output
->>> 1
->>> 2
->>> 3
->>> 4
->>> 5
+>>~~~
+>> 1
+>> 2
+>> 3
+>> 4
+>> 5
+>>~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -187,10 +188,11 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ## Solution
 >>
 >> The WHILE loop outputs the current value of x at each iteration:
->>> ## Output
->>> 1
->>> 2
->>> 3
+>>~~~
+>> 1
+>> 2
+>> 3
+>>~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -218,8 +220,9 @@ The most common [conditional statements][conditionalStatements] are defined usin
 >> ## Solution
 >>
 >> The IF... THEN statement outputs the value of x if it is less than 6:
->>> ## Output
->>> 3
+>>~~~
+>> 3
+>>~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -247,8 +250,9 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
->>> ## Output
->>> x is larger than or equal to 6
+>>~~~
+>> x is larger than or equal to 6
+>>~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -281,8 +285,9 @@ The final version of the conditional statement further combines the IF... THEN..
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs a message depending on if the value of x is equal to, greater than, or less than 6:
->>> ## Output
->>> x is larger than 6
+>>~~~
+>> x is larger than 6
+>>~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
