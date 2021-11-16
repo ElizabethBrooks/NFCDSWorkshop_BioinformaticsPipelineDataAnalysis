@@ -91,7 +91,7 @@ Now, let's put these steps into practice. Keep in mind that the number of steps 
 >> 1. The weather outside is cold
 >> 2. You have access to a pair of pants and a shirt
 >>
->> Our simple algorithm might then be:
+>> *Our simple algorithm might then be:*
 >> 1. Walk to where your clothes are kept
 >> 2. Take off pajamas
 >> 3. Take out the the pants and shirt
@@ -103,7 +103,7 @@ Now, let's put these steps into practice. Keep in mind that the number of steps 
 >> 1. Assume you have a way to check the current weather
 >> 2. Assume you have a closet with all types of clothing
 >>
->> Our more complex algorithm might then be:
+>> *Our more complex algorithm might then be:*
 >> 1. Check the weather
 >> 2. Walk to wear you clothes are kept
 >> 3. If the temperature is less than 75 degrees fahrenheit, then

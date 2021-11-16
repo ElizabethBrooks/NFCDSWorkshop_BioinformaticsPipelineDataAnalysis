@@ -24,7 +24,11 @@ keypoints:
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. 
 
 ## Programming vs Coding 
-While sometimes used interchangeably, programming and coding have different definitions. Based on your personal experiences, let's discuss our current understanding of these important concepts.
+While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
+
+![This is an image](/fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg)
+
+Based on your personal experiences, let's discuss our current understanding of these important concepts.
 
 > ## Discussion
 >
@@ -265,6 +269,8 @@ The final version of the conditional statement further combines the IF... THEN..
 >> x is larger than 6
 > {: .solution}
 {: .discussion}
+
+[codingProgramming]: https://techbiason.com/coding-vs-programming/
 
 {% include links.md %}
 
