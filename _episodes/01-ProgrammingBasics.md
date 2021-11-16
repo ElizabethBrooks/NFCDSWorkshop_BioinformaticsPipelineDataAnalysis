@@ -10,6 +10,7 @@ questions:
 objectives:
 - "Become familiar with the key concepts of programming, coding, algorithms, and pseudocode."
 - "Be able to design algorithms to accomplish basic everyday tasks."
+- "Become familiar with logical expressions commonly used in programming."
 keypoints:
 - "Programming is the process of creating instructions or set of related activities to achieve a task or goal."
 - "Coding is the process of transforming the set of instructions for a process into a written language that a computer can interpret."
@@ -49,6 +50,8 @@ So although programming and coding have different meanings, they are related. Th
 ## Pseudocode, Code, and Algorithms... Oh My!
 Although the differences seem small, there are important distinctions that we can make between the concepts of pseudocode, code, and algorithms.
 
+Everyone has some experienece with algorithms in their day-to-day life. For example, if you have ever cooked or done some task that requires you to follow instructions with a sequence of steps. 
+
 > ## Discussion
 >
 > What are algorithms?
@@ -59,9 +62,7 @@ Although the differences seem small, there are important distinctions that we ca
 > {: .solution}
 {: .discussion}
 
-Algorithms need to be represented by some form of language in order to be understood and shared with others. Everyone has some experienece with algorithms in their day-to-day life. For example, if you have ever cooked or done some task that requires you to follow instructions with a sequence of steps. 
-
-The process of writing pseudocode can be tremendously helpful for figuring out how to start developing code to solve a problem, or implement an algorithm.
+Algorithms need to be represented by some form of language in order to be understood and shared with others. The process of writing pseudocode can be tremendously helpful for figuring out how to start developing code to solve a problem, or implement an algorithm.
 
 > ## Discussion
 >
@@ -73,7 +74,7 @@ The process of writing pseudocode can be tremendously helpful for figuring out h
 > {: .solution}
 {: .discussion}
 
-As a first step before you begin writing any code, it is a good idea to write out the steps in a plain language. Let's look at an example of pseudocode for a simple algorithm to make tea:
+As a first step before you begin developing an algorithm or writing any code, it is a good idea to write out the steps in a plain language. Let's look at an example of pseudocode for a simple algorithm to make tea:
 
 1. Remove a teabag from the package
 2. Put the teabag in a cup
@@ -84,7 +85,7 @@ As a first step before you begin writing any code, it is a good idea to write ou
 
 > ## Challenge
 >
-> Write your own pseudocode for an algorithm for making buttered toast.
+> Write your own pseudocode for an algorithm to make buttered toast.
 >> ## Solution
 >>
 >> 1. Take a slice of bread from the package
@@ -147,13 +148,11 @@ Iterative statements are defined using either FOR or WHILE loops.
 >> ## Solution
 >>
 >> The FOR loop outputs the current value of x after each iteration:
->> ~~~
 >> 1
 >> 2
 >> 3
 >> 4
 >> 5
->> ~~~
 > {: .solution}
 {: .discussion}
 
@@ -161,13 +160,12 @@ Iterative statements are defined using either FOR or WHILE loops.
 >
 > What does the following WHILE loop output?
 >
-> ~~~
-> x <- 1
-> while (x < 3) {
->   print(x)
->   x <- i + 1
-> }
-> ~~~
+>> x <- 1
+>> while (x < 3) {
+>>   print(x)
+>>   x <- i + 1
+>> }
+> {: .language-r}
 >
 > Pseudocode:
 > 1. Set x equal to 1
@@ -178,11 +176,9 @@ Iterative statements are defined using either FOR or WHILE loops.
 >> ## Solution
 >>
 >> The WHILE loop outputs the current value of x after each iteration:
->> ~~~
 >> 1
 >> 2
 >> 3
->> ~~~
 > {: .solution}
 {: .discussion}
 
@@ -192,12 +188,11 @@ Conditional statements are defined using combinations of the IF... THEN... ELSE 
 >
 > What does the following IF... THEN conditional statement output?
 >
-> ~~~
-> x <- 3
-> if (x < 6) {
->   print(x)
-> }
-> ~~~
+>> x <- 3
+>> if (x < 6) {
+>>   print(x)
+>> }
+> {: .language-r}
 >
 > Pseudocode:
 > 1. Set x equal to 3
@@ -207,9 +202,7 @@ Conditional statements are defined using combinations of the IF... THEN... ELSE 
 >> ## Solution
 >>
 >> The IF... THEN statement outputs the value of x if it is less than 6:
->> ~~~
 >> 3
->> ~~~
 > {: .solution}
 {: .discussion}
 
@@ -219,14 +212,13 @@ The next type of conditional statement adds a level of complexity with the IF...
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
-> ~~~
-> x <- 7
-> if (x < 6) {
->   print(x)
-> } else {
-> 	print("x is larger than or equal to 6")
-> }
-> ~~~
+>> x <- 7
+>> if (x < 6) {
+>>   print(x)
+>> } else {
+>> 	print("x is larger than or equal to 6")
+>> }
+> {: .language-r}
 >
 > Pseudocode:
 > 1. Set x equal to 7
@@ -237,9 +229,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
->> ~~~
 >> x is larger than or equal to 6
->> ~~~
 > {: .solution}
 {: .discussion}
 
@@ -249,16 +239,15 @@ The final version of the conditional statement further combines the IF... THEN..
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
-> ~~~
-> x <- 7
-> if (x = 6) {
->   print("x is equal to 6")
-> } else if (x > 6) {
-> 	print("x is larger than 6")
-> } else if (x < 6) {
-> 	print("x is less than 6")
-> }
-> ~~~
+>> x <- 7
+>> if (x = 6) {
+>>   print("x is equal to 6")
+>> } else if (x > 6) {
+>> 	print("x is larger than 6")
+>> } else if (x < 6) {
+>> 	print("x is less than 6")
+>> }
+> {: .language-r}
 >
 > Pseudocode:
 > 1. Set x equal to 7
@@ -272,9 +261,7 @@ The final version of the conditional statement further combines the IF... THEN..
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
->> ~~~
 >> x is larger than 6
->> ~~~
 > {: .solution}
 {: .discussion}
 

@@ -16,4 +16,6 @@ This workshop is designed for anyone interested in learning more about programmi
 > Participants should be comfortable with using a computer and basic statistical methods. 
 {: .prereq}
 
+<!-- {% include syllabus.html %} -->
+
 {% include links.md %}
