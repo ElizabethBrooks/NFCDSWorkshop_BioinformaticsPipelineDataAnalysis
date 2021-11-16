@@ -6,7 +6,7 @@ questions:
 - "What are the benefits of writing programs?"
 - "What are the most helpful programming techniques?"
 - "How can I get started with writing a program?"
-- "How can I tackle programming mistakes?"
+- "What is the best way to tackle coding errors?"
 objectives:
 - "Be able to write pseudocode to describe the steps of a program in a plain language."
 - "Become familiar with methods for writing modular and understandable programs."
