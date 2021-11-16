@@ -26,7 +26,7 @@ Some of the practical skills required of programmers include the ability to crea
 ## Programming vs Coding 
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
-![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="750" }
+![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="500" }
 *[Image source][codingProgramming]*
 
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
@@ -53,7 +53,7 @@ So although programming and coding have different meanings, they are related. Th
 ## Pseudocode, Code, and Algorithms... Oh My!
 Although the differences seem small, there are important distinctions that we can make between the concepts of [pseudocode, code, and algorithms][algorithmPseudocode].
 
-![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg){: width="750" }
+![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg){: width="500" }
 *[Image source][algorithmPseudocode]*
 
 Everyone has some experienece with algorithms in their day-to-day life. For example, if you have ever cooked or done some task that requires you to follow instructions with a sequence of steps. 
@@ -135,17 +135,17 @@ The three primary types of [control statements][controlStructures] are:
 - Iterative statements control the number of times a block of code is executed
 - Conditional (or selection) statements control which blocks of code are executed, and which are not
 
-![Control Statements](../fig/lnpls008.gif){: width="750" }
+![Control Statements](../fig/lnpls008.gif){: width="500" }
 *[Image source][controlStructures]*
 
 The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops.
 
-![Control Statements](../fig/java-loops.png){: width="750" }
+![Control Statements](../fig/java-loops.png){: width="500" }
 *[Image source][loopStatements]*
 
 Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
 
-![Control Statements](../fig/for_flowdiagram.png){: width="750" }
+![Control Statements](../fig/for_flowdiagram.png){: width="500" }
 *[Image source][loopsInR]*
 
 > ## Challenge
@@ -189,7 +189,7 @@ Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow 
 
 WHILE loops are another type of iterative statement that can be used as a control structure in your code.
 
-![Control Statements](../fig/while_flowdiagram.png){: width="750" }
+![Control Statements](../fig/while_flowdiagram.png){: width="500" }
 *[Image source][loopsInR]*
 
 > ## Challenge
@@ -236,12 +236,12 @@ WHILE loops are another type of iterative statement that can be used as a contro
 
 The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format.
 
-![Conditional Statements](../fig/vocab.png){: width="750" }
+![Conditional Statements](../fig/vocab.png){: width="500" }
 *[Image source][conditionalStatements]*
 
 The most simple form of conditional statement is the IF... THEN form.
 
-![Control Statements](../fig/scala_decision_making.jpeg){: width="750" }
+![Control Statements](../fig/scala_decision_making.jpeg){: width="500" }
 *[Image source][ifThenInPython]*
 
 > ## Challenge
@@ -283,7 +283,7 @@ The most simple form of conditional statement is the IF... THEN form.
 
 The next type of conditional statement adds a level of complexity with the IF... THEN... ELSE format.
 
-![Control Statements](../fig/if-else-statement-in-R-11.webp){: width="750" }
+![Control Statements](../fig/if-else-statement-in-R-11.webp){: width="500" }
 *[Image source][ifElseInR]*
 
 > ## Challenge
@@ -330,7 +330,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 
 The final version of the conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
 
-![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="750" }
+![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="500" }
 *[Image source][ifElseInR]*
 
 > ## Challenge
@@ -384,7 +384,7 @@ The final version of the conditional statement that we will consider further com
 
 An even more advanced concept, nested IF... THEN... ELSE statements can increase the flexability of your code by allowing you to specify more complex conditions.
 
-![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="750" }
+![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="500" }
 *[Image source][nestedIfElseInR]*
 
 > ## Additional Challenge

@@ -27,7 +27,7 @@ In this section we will learn about some of the common best practices in program
 ## How to Be a Good Programmer
 The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and create publishable results. It is therefore very important that we consider [techniques for improving][goodProgrammer] the reproducibility and reliability of code. 
 
-![Good Programmer Characteristics](../fig/codingmindset-sm.png){: width="750" }
+![Good Programmer Characteristics](../fig/codingmindset-sm.png){: width="500" }
 *[Image source][goodProgrammer]*
 
 > ## Checklist
@@ -46,7 +46,7 @@ The development of custom software programs has become increasingly necessary in
 ## Ways to Approach Programming Tasks
 Throughout any programming undertaking we should be thinking about our problem solving thought process. This means that you will need to think critically about how you approach [solving coding problems][codingProblems] with programming. Often you will find that there are many routes to the same solution, and which route you take may depend on your intended user or available tools.
 
-![Good Programmer Characteristics](../fig/How-to-Approach-a-Coding-Problem.png){: width="750" }
+![Good Programmer Characteristics](../fig/How-to-Approach-a-Coding-Problem.png){: width="500" }
 *[Image source][codingProblems]*
 
 > ## Checklist
