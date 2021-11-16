@@ -19,10 +19,14 @@ This workshop is designed for anyone interested in learning more about programmi
 
 > ## Prerequisites
 >
-> Participants should be comfortable with using a computer and basic statistical methods. Furthermore, participants should have:
+> 1. Participants should be comfortable with using a computer and basic statistical methods. Furthermore, participants should have:
 > - used a computer before
 > - limited to no experience with BASH
 > - limited to no experience with R
+>
+> 2. Each participant needs to have access to a computer with Unix/Linux or the Windows Ubuntu app. If you are attending the workshop in person, then a computer will be available for you. 
+>
+> 3. Since this is an introductory workshop, we will walkthrough installing the necessary software. 
 {: .prereq}
 
 <!-- {% include syllabus.html %} -->
