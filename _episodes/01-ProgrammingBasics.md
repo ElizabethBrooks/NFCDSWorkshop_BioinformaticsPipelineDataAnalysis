@@ -26,7 +26,7 @@ Some of the practical skills required of programmers include the ability to crea
 ## Programming vs Coding 
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
-![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="500" }
+![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="750" }
 *[Image source][codingProgramming]*
 
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
@@ -53,7 +53,7 @@ So although programming and coding have different meanings, they are related. Th
 ## Pseudocode, Code, and Algorithms... Oh My!
 Although the differences seem small, there are important distinctions that we can make between the concepts of [pseudocode, code, and algorithms][algorithmPseudocode].
 
-![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg){: width="500" }
+![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg){: width="750" }
 *[Image source][algorithmPseudocode]*
 
 Everyone has some experienece with algorithms in their day-to-day life. For example, if you have ever cooked or done some task that requires you to follow instructions with a sequence of steps. 
@@ -119,7 +119,7 @@ Note that an expression is a combination of logical operands and operators. In B
 >
 > Hint: Use comparison operators (<, >, =, >=, <=, !=) to add complexity to your expressions!
 >
->> ## Solution
+>> ## Solutions
 >>
 >> 1. It is raining and it is Spring
 >> 2. I have green eyes and I am not 4 feet tall
@@ -135,33 +135,41 @@ The three primary types of [control statements][controlStructures] are:
 - Iterative statements control the number of times a block of code is executed
 - Conditional (or selection) statements control which blocks of code are executed, and which are not
 
-![Control Statements](../fig/lnpls008.gif){: width="500" }
+![Control Statements](../fig/lnpls008.gif){: width="750" }
 *[Image source][controlStructures]*
 
-The most common iterative statements are defined using either FOR or WHILE loops.
+The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops.
 
-> ## Discussion
+![Control Statements](../fig/java-loops.png){: width="750" }
+*[Image source][loopStatements]*
+
+> ## Challenge
 >
 > What does the following FOR loop output?
 >
-> Pseudocode:
+> **Pseudocode:**
 > 1. For each x in the sequence 1, 2, 3, 4, 5 
 > - print the value of x
 >
-> ~~~
-> for (x in 1:5) {
->   print(x)
-> }
-> ~~~
-> {: .language-r}
+> ![Control Statements](../fig/for_flowdiagram.png){: width="750" }
+> *[Image source][loopsInR]*
 >
-> ~~~
-> for x in {1..5}
-> do
->   echo $x
-> done
-> ~~~
-> {: .language-bash}
+>> ## Code Examples
+>> ~~~
+>> for (x in 1:5) {
+>>   print(x)
+>> }
+>> ~~~
+>> {: .language-r}
+>>
+>> ~~~
+>> for x in {1..5}
+>> do
+>>   echo $x
+>> done
+>> ~~~
+>> {: .language-bash}
+> {: .callout}
 >
 >> ## Solution
 >>
@@ -175,35 +183,40 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ~~~
 >> {: .output}
 > {: .solution}
-{: .discussion}
+{: .challenge}
 
-> ## Discussion
+> ## Challenge
 >
 > What does the following WHILE loop output?
 >
-> Pseudocode:
+> **Pseudocode:**
 > 1. Set x equal to 1
 > 2. While x is less than 3 
 > - print the value of x
 > - increment the value of x by 1
 >
-> ~~~
-> x <- 1
-> while (x < 3) {
->   print(x)
->   x <- i + 1
-> }
-> ~~~
-> {: .language-r}
+> ![Control Statements](../fig/while_flowdiagram.png){: width="750" }
+> *[Image source][loopsInR]*
 >
-> ~~~
-> x=1
-> while [ $x -lt 3 ]
-> do
->   echo $x
-> done
-> ~~~
-> {: .language-bash}
+>> ## Code Examples
+>> ~~~
+>> x <- 1
+>> while (x < 3) {
+>>   print(x)
+>>   x <- i + 1
+>> }
+>> ~~~
+>> {: .language-r}
+>>
+>> ~~~
+>> x=1
+>> while [ $x -lt 3 ]
+>> do
+>>   echo $x
+>> done
+>> ~~~
+>> {: .language-bash}
+> {: .callout}
 >
 >> ## Solution
 >>
@@ -215,39 +228,44 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ~~~
 >> {: .output}
 > {: .solution}
-{: .discussion}
+{: .challenge}
 
 The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format.
 
-![Conditional Statements](../fig/vocab.png){: width="500" }
+![Conditional Statements](../fig/vocab.png){: width="750" }
 *[Image source][conditionalStatements]*
 
 The most simple form of conditional statement is the IF... THEN form.
 
-> ## Discussion
+> ## Challenge
 >
 > What does the following IF... THEN conditional statement output?
 >
-> Pseudocode:
+> **Pseudocode:**
 > 1. Set x equal to 3
 > 2. If x is greater than 6, then print the value of x
 >
-> ~~~
-> x <- 7
-> if (x > 6) {
->   print(x)
-> }
-> ~~~
-> {: .language-r}
+> ![Control Statements](../fig/scala_decision_making.jpeg){: width="750" }
+> *[Image source][ifThenInPython]*
 >
-> ~~~
-> x=7
-> if [ $x -gt 6 ]
-> then
->   echo $x
-> fi
-> ~~~
-> {: .language-bash}
+>> ## Code Examples
+>> ~~~
+>> x <- 7
+>> if (x > 6) {
+>>   print(x)
+>> }
+>> ~~~
+>> {: .language-r}
+>>
+>> ~~~
+>> x=7
+>> if [ $x -gt 6 ]
+>> then
+>>   echo $x
+>> fi
+>> ~~~
+>> {: .language-bash}
+> {: .callout}
 >
 >> ## Solution
 >>
@@ -257,39 +275,44 @@ The most simple form of conditional statement is the IF... THEN form.
 >> ~~~
 >> {: .output}
 > {: .solution}
-{: .discussion}
+{: .challenge}
 
 The next type of conditional statement adds a level of complexity with the IF... THEN... ELSE format.
 
-> ## Discussion
+> ## Challenge
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
-> Pseudocode:
+> **Pseudocode:**
 > 1. Set x equal to 7
 > 2. If x is less than 6, then print the value of x
 > 3. Else print "x is greater than or equal to 6"
 >
-> ~~~
-> x <- 7
-> if (x < 6) {
->   print(x)
-> } else {
-> 	print("x is greater than or equal to 6")
-> }
-> ~~~
-> {: .language-r}
+> ![Control Statements](../fig/if-else-statement-in-R-11.webp){: width="750" }
+> *[Image source][ifElseInR]*
 >
-> ~~~
-> x=7
-> if [ $x -lt 6 ]
-> then
->   echo $x
-> else
->   echo "x is greater than or equal to 6"
-> fi
-> ~~~
-> {: .language-bash}
+>> ## Code Examples
+>> ~~~
+>> x <- 7
+>> if (x < 6) {
+>>   print(x)
+>> } else {
+>> 	print("x is greater than or equal to 6")
+>> }
+>> ~~~
+>> {: .language-r}
+>>
+>> ~~~
+>> x=7
+>> if [ $x -lt 6 ]
+>> then
+>>   echo $x
+>> else
+>>   echo "x is greater than or equal to 6"
+>> fi
+>> ~~~
+>> {: .language-bash}
+> {: .callout}
 >
 >> ## Solution
 >>
@@ -299,46 +322,51 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> ~~~
 >> {: .output}
 > {: .solution}
-{: .discussion}
+{: .challenge}
 
 The final version of the conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
 
-> ## Discussion
+> ## Challenge
 >
-> What does the following IF... THEN... ELSE conditional statement output?
+> What does the following multiple IF... THEN... ELSE conditional statement output?
 >
-> Pseudocode:
+> **Pseudocode:**
 > 1. Set x equal to 7
 > 2. If x is equal to 6, then print "x is equal to 6"
 > 3. Else if x is greater than 6, then print "x is greater than 6"
 > 4. Else if x is less than 6, then print "x is less than 6"
 >
-> ~~~
-> x <- 7
-> if (x = 6) {
->   print("x is equal to 6")
-> } else if (x > 6) {
-> 	print("x is greater than 6")
-> } else if (x < 6) {
-> 	print("x is less than 6")
-> }
-> ~~~
-> {: .language-r}
+> ![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="750" }
+> *[Image source][ifElseInR]*
 >
-> ~~~
-> x=7
-> if [ $x -eq 6 ]
-> then
->   echo "x is equal to 6"
-> elif [ $x -gt 6 ]
-> then
->   echo "x is greater than 6"
-> elif [ $x -lt 6 ]
-> then
->   echo "x is less than 6"
-> fi
-> ~~~
-> {: .language-bash}
+>> ## Code Examples
+>> ~~~
+>> x <- 7
+>> if (x = 6) {
+>>   print("x is equal to 6")
+>> } else if (x > 6) {
+>> 	print("x is greater than 6")
+>> } else if (x < 6) {
+>> 	print("x is less than 6")
+>> }
+>> ~~~
+>> {: .language-r}
+>>
+>> ~~~
+>> x=7
+>> if [ $x -eq 6 ]
+>> then
+>>   echo "x is equal to 6"
+>> elif [ $x -gt 6 ]
+>> then
+>>   echo "x is greater than 6"
+>> elif [ $x -lt 6 ]
+>> then
+>>   echo "x is less than 6"
+>> fi
+>> ~~~
+>> {: .language-bash}
+> {: .callout}
 >
 >> ## Solution
 >>
@@ -348,12 +376,70 @@ The final version of the conditional statement that we will consider further com
 >> ~~~
 >> {: .output}
 > {: .solution}
-{: .discussion}
+{: .challenge}
+
+> ## Additional Challenge
+> 
+> If you are looking for an additional challenge, consider the following nested IF... THEN... ELSE statement:
+>
+> **Pseudocode:**
+> 1. Set x equal to 4
+> 2. If x is greater than 4, then check if x is equal to 6
+> - If x is equal to 6, then print "x is equal to 6"
+> - Else print "x is greater than 4"
+> 3. Else print "x is less than or equal to 4"
+>
+> ![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="750" }
+> *[Image source][nestedIfElseInR]*
+>
+>> ## Code Examples
+>> ~~~
+>> x <- 4
+>> if (x > 4) {
+>>   if (x = 6) {
+>> 	   print("x is equal to 6")
+>> 	 } else {
+>> 	   print("x is greater than 4")
+>> } else {
+>>   print("x is less than or equal to 4")
+>> }
+>> ~~~
+>> {: .language-r}
+>>
+>> ~~~
+>> x=4
+>> if [ $x -gt 4 ]
+>> then
+>>   if [ $x -eq 6 ]
+>>   then
+>>     echo "x is greater than 4"
+>>   else
+>>     echo "x is less than or equal to 4"
+>>   fi
+>> fi
+>> ~~~
+>> {: .language-bash}
+> {: .callout}
+>
+>> ## Solution
+>>
+>> The nested IF... THEN... ELSE statement outputs the following message:
+>> ~~~
+>> x is less than or equal to 4
+>> ~~~
+>> {: .output}
+> {: .solution}
+{: .challenge}
 
 [codingProgramming]: https://techbiason.com/coding-vs-programming/
 [algorithmPseudocode]: https://pediaa.com/difference-between-algorithm-and-pseudocode/
 [controlStructures]: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm
+[loopStatements]: https://www.javatpoint.com/java-for-loop
+[loopsInR]: https://www.geeksforgeeks.org/loops-in-r-for-while-repeat/
 [conditionalStatements]: https://code.org/curriculum/course2/12/Teacher
+[ifThenInPython]: https://innovationyourself.com/conditional-statements-in-python/
+[ifElseInR]: https://www.datasciencemadesimple.com/if-else-condition-r/
+[nestedIfElseInR]: https://www.tutorialgateway.org/nested-if-else-in-r/
 
 {% include links.md %}
 
