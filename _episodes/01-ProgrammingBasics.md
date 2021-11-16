@@ -398,9 +398,10 @@ An even more advanced concept, nested IF... THEN... ELSE statements can increase
 >> x <- 4
 >> if (x > 4) {
 >>   if (x = 6) {
->> 	   print("x is equal to 6")
->> 	 } else {
->> 	   print("x is greater than 4")
+>>     print("x is equal to 6")
+>>   } else {
+>>     print("x is greater than 4")
+>>   }
 >> } else {
 >>   print("x is less than or equal to 4")
 >> }
