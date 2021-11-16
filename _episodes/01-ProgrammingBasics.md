@@ -16,13 +16,11 @@ keypoints:
 - "Coding is the process of transforming the set of instructions for a process into a written language that a computer can interpret."
 - "Algorithms are the set of step-by-step instructions that explain how to solve a given problem."
 - "Pseudocode is the set of instructions for an algorithm written in a plain language."
-- "Boolean Algebra are mathematical expressions that are evaluated to one of two values: true or false."
+- "Boolean algebra uses mathematical expressions that are evaluated to one of two values: true or false."
 - "Conditional Statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then)."
 ---
 
 ## Introduction
-Some of the practical skills required of programmers include the ability to create algorithms, model problems, process data, and manage projects. Many of these same skills are also necessary for the analysis of complex or large biological data sets.
-
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. 
 
 ## Programming vs Coding 
@@ -148,11 +146,11 @@ Iterative statements are defined using either FOR or WHILE loops.
 >> ## Solution
 >>
 >> The FOR loop outputs the current value of x after each iteration:
->> 1
->> 2
->> 3
->> 4
->> 5
+>> - 1
+>> - 2
+>> - 3
+>> - 4
+>> - 5
 > {: .solution}
 {: .discussion}
 
@@ -176,9 +174,9 @@ Iterative statements are defined using either FOR or WHILE loops.
 >> ## Solution
 >>
 >> The WHILE loop outputs the current value of x after each iteration:
->> 1
->> 2
->> 3
+>> - 1
+>> - 2
+>> - 3
 > {: .solution}
 {: .discussion}
 
@@ -202,6 +200,7 @@ Conditional statements are defined using combinations of the IF... THEN... ELSE 
 >> ## Solution
 >>
 >> The IF... THEN statement outputs the value of x if it is less than 6:
+>>
 >> 3
 > {: .solution}
 {: .discussion}
@@ -229,6 +228,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
+>>
 >> x is larger than or equal to 6
 > {: .solution}
 {: .discussion}
@@ -261,6 +261,7 @@ The final version of the conditional statement further combines the IF... THEN..
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
+>>
 >> x is larger than 6
 > {: .solution}
 {: .discussion}

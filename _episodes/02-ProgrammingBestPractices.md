@@ -22,6 +22,8 @@ keypoints:
 ---
 
 ## How to Be a Good Programmer
+Some of the practical skills required of programmers include the ability to create algorithms, model problems, process data, and manage projects. Many of these same skills are also necessary for the analysis of complex or large biological data sets.
+
 The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and answer research questions. It is therefore very important that we consider techniques for improving the reproducibility and reliability of code. 
 
 In this section we will learn about some of the common best practices in programming, which are easy to implememnt into your personal programming process.
@@ -67,58 +69,49 @@ Now, let's put these steps into practice. Keep in mind that the number of steps 
 > - Current weather
 > - Clothes available to you
 >
-> Also, assume that:
-> - You are currently wearing nothing
-> - You will not wear acessories
+> To keep things simple, assume that:
+> - You are currently wearing pajamas
+> - You will wear only one top and one bottom clothing item
 > - You will be outside all day
 > - The weather will not change
 > 
 >> ## Solution
 >>
->> First, we should consider the following steps to determine how to write an algorithm for getting dressed for the day.
+>> In order to determine a solution, we should consider the following steps to determine how to write an algorithm for getting dressed for the day.
 >>
->> 1. Determine the inputs
->> The input are the clothes you are currently wearing, the current weather, and the available clothing.
+>> - First, determine the inputs
+>> 1. Current weather
+>> 2. Available clothing
 >>
->> 2. Determine the outputs
+>> - Second, determine the outputs
 >> The outputs are the clothes that you will be wearing for the day and the order in which they should be put on.
 >>
->> 3. Test a simple example
->> Now, we can try out a simple example by testing some sample inputs of:
->> - The weather outside is cold
->> - You have access to boots, jacket, pants, shirt, and socks
+>> - Third, test a simple example
+>> To try out a simple example we will need to specify sample inputs:
+>> 1. The weather outside is cold
+>> 2. You have access to a pair of pants and a shirt
 >>
 >> Our algorithm might then be:
->> 1. Put on pants
->> 2. Put on shirt
->> 3. Put on socks
->> 5. Put on jacket
->> 6. Put on boots
+>> 1. Walk to where your clothes are kept
+>> 2. Take off pajamas
+>> 3. Take out the the pants and shirt
+>> 4. Put on pants
+>> 5. Put on shirt
 >>
->> 4. Test a complex example
->> Let's try out a more complex example by generalizing the inputs from our simple example.
->> 
->> First, assume you have a way to check the current weather.
->>
->> Next, assume your closet contains the following types of clothing:
->> - Pants, shorts, or other bottom layer items
->> - Jackets, sweaters, or other outer top layer items
->> - Shirts, tank tops, or other inner top layer items
->> - Boots, sandals, or other outer feet layer items
->> - Socks, tights, or other inner feet layer items
+>> - Fourth, test a complex example
+>> Let's try out a more complex example by generalizing the inputs:
+>> 1. Assume you have a way to check the current weather
+>> 2. Assume you have a closet with all types of clothing
 >>
 >> Our algorithm might then be:
 >> 1. Check the weather
->> 2. If the weather is cold, then
+>> 2. Walk to wear you clothes are kept
+>> 3. If the temperature is less than 75 degrees fahrenheit, then
 >> - Put on pants
 >> - Put on shirt
->> - Put on socks
->> - Put on jacket
->> - Put on boots
->> 3. If the weather is warm, then
+>> 4. If the temperature is greater than 75 degrees fahrenheit, then
 >> - Put on shorts
 >> - Put on tank top
->> - Put on sandals
 >>
 >> Note that one way to generalize your algorithm is to use conditional statements, such as the "if" statements in the above example algorithm. Remember that conditonal statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then). So, the outcome of a conditional statement depends on the state of the inputs at that moment.
 > {: .solution}
@@ -134,13 +127,12 @@ Some questions you can ask yourself at this point include:
 
 Considering our simple solution to the previous challenge of writing an algorithm for getting dressed, there remain other ways that the algorithm may be written to be more comprehensive. For example, what if the intended user or audience is a young child? Then it may be necessary to further break down the steps of the algorithm to meet the needs of the user.
 
-So, the first step for our updated algorithm might look like:
-1. Put on pants
-- Hold pants
-- Open waistband
-- Insert right leg into right leg hole of pants
-- Insert left leg into left leg hole of pants
-- Pull left pant leg up so the left foot comes through it
-- Pull pants up from waitsband
+For example, let's re-write step 4 of the simple algorithm from our solution to the above challenge. Instead of leaving the step to "Put on pants", we might break down the step as follows:
+1. Hold pants
+2. Open waistband
+3. Insert right leg into right leg hole of pants
+4. Insert left leg into left leg hole of pants
+5. Pull left pant leg up so the left foot comes through it
+6. Pull pants up from waitsband
 
 {% include links.md %}
