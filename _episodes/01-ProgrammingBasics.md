@@ -138,12 +138,7 @@ The three primary types of [control statements][controlStructures] are:
 ![Control Statements](../fig/lnpls008.gif){: width="500" }
 *[Image source][controlStructures]*
 
-The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops.
-
-![Control Statements](../fig/java-loops.png){: width="500" }
-*[Image source][loopStatements]*
-
-Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
+The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops. Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
 
 ![Control Statements](../fig/for_flowdiagram.png){: width="500" }
 *[Image source][loopsInR]*
