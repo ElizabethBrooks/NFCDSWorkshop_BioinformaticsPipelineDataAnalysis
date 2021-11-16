@@ -143,6 +143,11 @@ The most common [iterative statements][loopStatements] are defined using either 
 ![Control Statements](../fig/java-loops.png){: width="750" }
 *[Image source][loopStatements]*
 
+Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
+
+![Control Statements](../fig/for_flowdiagram.png){: width="750" }
+*[Image source][loopsInR]*
+
 > ## Challenge
 >
 > What does the following FOR loop output?
@@ -150,9 +155,6 @@ The most common [iterative statements][loopStatements] are defined using either 
 > **Pseudocode:**
 > 1. For each x in the sequence 1, 2, 3, 4, 5 
 > - print the value of x
->
-> ![Control Statements](../fig/for_flowdiagram.png){: width="750" }
-> *[Image source][loopsInR]*
 >
 >> ## Code Examples
 >> ~~~
@@ -185,6 +187,11 @@ The most common [iterative statements][loopStatements] are defined using either 
 > {: .solution}
 {: .challenge}
 
+WHILE loops are another type of iterative statement that can be used as a control structure in your code.
+
+![Control Statements](../fig/while_flowdiagram.png){: width="750" }
+*[Image source][loopsInR]*
+
 > ## Challenge
 >
 > What does the following WHILE loop output?
@@ -194,9 +201,6 @@ The most common [iterative statements][loopStatements] are defined using either 
 > 2. While x is less than 3 
 > - print the value of x
 > - increment the value of x by 1
->
-> ![Control Statements](../fig/while_flowdiagram.png){: width="750" }
-> *[Image source][loopsInR]*
 >
 >> ## Code Examples
 >> ~~~
@@ -237,6 +241,9 @@ The most common [conditional statements][conditionalStatements] are defined usin
 
 The most simple form of conditional statement is the IF... THEN form.
 
+![Control Statements](../fig/scala_decision_making.jpeg){: width="750" }
+*[Image source][ifThenInPython]*
+
 > ## Challenge
 >
 > What does the following IF... THEN conditional statement output?
@@ -244,9 +251,6 @@ The most simple form of conditional statement is the IF... THEN form.
 > **Pseudocode:**
 > 1. Set x equal to 3
 > 2. If x is greater than 6, then print the value of x
->
-> ![Control Statements](../fig/scala_decision_making.jpeg){: width="750" }
-> *[Image source][ifThenInPython]*
 >
 >> ## Code Examples
 >> ~~~
@@ -279,6 +283,9 @@ The most simple form of conditional statement is the IF... THEN form.
 
 The next type of conditional statement adds a level of complexity with the IF... THEN... ELSE format.
 
+![Control Statements](../fig/if-else-statement-in-R-11.webp){: width="750" }
+*[Image source][ifElseInR]*
+
 > ## Challenge
 >
 > What does the following IF... THEN... ELSE conditional statement output?
@@ -287,9 +294,6 @@ The next type of conditional statement adds a level of complexity with the IF...
 > 1. Set x equal to 7
 > 2. If x is less than 6, then print the value of x
 > 3. Else print "x is greater than or equal to 6"
->
-> ![Control Statements](../fig/if-else-statement-in-R-11.webp){: width="750" }
-> *[Image source][ifElseInR]*
 >
 >> ## Code Examples
 >> ~~~
@@ -326,6 +330,9 @@ The next type of conditional statement adds a level of complexity with the IF...
 
 The final version of the conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
 
+![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="750" }
+*[Image source][ifElseInR]*
+
 > ## Challenge
 >
 > What does the following multiple IF... THEN... ELSE conditional statement output?
@@ -335,9 +342,6 @@ The final version of the conditional statement that we will consider further com
 > 2. If x is equal to 6, then print "x is equal to 6"
 > 3. Else if x is greater than 6, then print "x is greater than 6"
 > 4. Else if x is less than 6, then print "x is less than 6"
->
-> ![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="750" }
-> *[Image source][ifElseInR]*
 >
 >> ## Code Examples
 >> ~~~
@@ -378,6 +382,11 @@ The final version of the conditional statement that we will consider further com
 > {: .solution}
 {: .challenge}
 
+An even more advanced concept, nested IF... THEN... ELSE statements can increase the flexability of your code by allowing you to specify more complex conditions.
+
+![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="750" }
+*[Image source][nestedIfElseInR]*
+
 > ## Additional Challenge
 > 
 > If you are looking for an additional challenge, consider the following nested IF... THEN... ELSE statement:
@@ -388,9 +397,6 @@ The final version of the conditional statement that we will consider further com
 > - If x is equal to 6, then print "x is equal to 6"
 > - Else print "x is greater than 4"
 > 3. Else print "x is less than or equal to 4"
->
-> ![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="750" }
-> *[Image source][nestedIfElseInR]*
 >
 >> ## Code Examples
 >> ~~~
