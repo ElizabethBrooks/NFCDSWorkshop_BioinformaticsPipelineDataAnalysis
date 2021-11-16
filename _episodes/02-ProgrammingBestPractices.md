@@ -21,10 +21,14 @@ keypoints:
 - "Always include informative documents for your programs."
 ---
 
-## How to Be a Good Programmer
-The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and create publishable results. It is therefore very important that we consider techniques for improving the reproducibility and reliability of code. 
+## Introduction
+In this section we will learn about some of the common best practices in programming, which are easy to implememnt into your personal programming process. We will also explore approaches to solving problems and where to begin with designing algorithms.
 
-In this section we will learn about some of the common best practices in programming, which are easy to implememnt into your personal programming process.
+## How to Be a Good Programmer
+The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and create publishable results. It is therefore very important that we consider [techniques][goodProgrammer] for improving the reproducibility and reliability of code. 
+
+![Good Programmer Characteristics](../fig/codingmindset-sm.png)
+*Image source: https://mitcommlab.mit.edu/broad/commkit/coding-mindset/*
 
 > ## Checklist
 >
@@ -132,5 +136,7 @@ For example, let's re-write step 4 of the simple algorithm from our solution to 
 4. Insert left leg into left leg hole of pants
 5. Pull left pant leg up so the left foot comes through it
 6. Pull pants up from waitsband
+
+[goodProgrammer]: https://mitcommlab.mit.edu/broad/commkit/coding-mindset/
 
 {% include links.md %}
