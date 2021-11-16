@@ -323,7 +323,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 > {: .solution}
 {: .challenge}
 
-The final version of the conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
+The next, more advanced type of conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
 
 ![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="500" }
 *[Image source][ifElseInR]*
