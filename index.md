@@ -13,8 +13,14 @@ This workshop is designed for anyone interested in learning more about programmi
 
 > ## Prerequisites
 >
-> Participants should be comfortable with using a computer and basic statistical methods. 
+> Participants should be comfortable with using a computer and basic statistical methods. Furthermore, participants should have:
+> - used a computer before
+> - limited to no experience with BASH
+> - limited to no experience with R
 {: .prereq}
+
+## Outcomes
+As a hands-on workshop participants will learn what R and Unix/Linux command line tools are available for processing different types of data sets. Additionally, participants will explore how to create custom scripts to automate the analysis of large data sets. This workshop would include an introduction to scripting with a focus on best practices in both programming and data analysis. Comparative techniques for creating simple, modular scripts in both R and BASH will be emphasized.
 
 <!-- {% include syllabus.html %} -->
 

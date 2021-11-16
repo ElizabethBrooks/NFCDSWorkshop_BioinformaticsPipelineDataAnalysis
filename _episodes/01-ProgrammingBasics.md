@@ -266,7 +266,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 > Pseudocode:
 > 1. Set x equal to 7
 > 2. If x is less than 6, then print the value of x
-> 4. Else print "x is greater than or equal to 6"
+> 3. Else print "x is greater than or equal to 6"
 >
 > ~~~
 > x <- 7
@@ -307,12 +307,9 @@ The final version of the conditional statement that we will consider further com
 >
 > Pseudocode:
 > 1. Set x equal to 7
-> 2. If x is equal to 6 
-> 3. Print "x is equal to 6"
-> 4. Else if x is greater than 6
-> 5. print "x is greater than 6"
-> 6. Else if x is less than 6
-> 7. print "x is less than 6"
+> 2. If x is equal to 6, then print "x is equal to 6"
+> 3. Else if x is greater than 6, then print "x is greater than 6"
+> 4. Else if x is less than 6, then print "x is less than 6"
 >
 > ~~~
 > x <- 7

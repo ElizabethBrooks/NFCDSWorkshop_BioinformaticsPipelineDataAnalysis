@@ -1,5 +1,5 @@
 ---
-title: "Data Analysis Basics"
+title: "Introduction to Genomic Data Analysis"
 teaching: 20
 exercises: 10
 questions:

@@ -44,7 +44,10 @@ The development of custom software programs has become increasingly necessary in
 {: .checklist}
 
 ## Ways to Approach Programming Tasks
-Throughout any programming undertaking we should be thinking about our problem solving thought process. This means that you will need to think critically about how you approach solving problems with programming. Often you will find that there are many routes to the same solution, and which route you take may depend on your intended user or available tools.
+Throughout any programming undertaking we should be thinking about our problem solving thought process. This means that you will need to think critically about how you approach [solving coding problems][codingProblems] with programming. Often you will find that there are many routes to the same solution, and which route you take may depend on your intended user or available tools.
+
+![Good Programmer Characteristics](../fig/How-to-Approach-a-Coding-Problem.png){: width="500" }
+*Image source: https://www.geeksforgeeks.org/how-to-approach-a-coding-problem/*
 
 > ## Checklist
 >
@@ -138,5 +141,6 @@ For example, let's re-write step 4 of the simple algorithm from our solution to 
 6. Pull pants up from waitsband
 
 [goodProgrammer]: https://mitcommlab.mit.edu/broad/commkit/coding-mindset/
+[codingProblems]: https://www.geeksforgeeks.org/how-to-approach-a-coding-problem/
 
 {% include links.md %}
