@@ -144,6 +144,9 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >
 > What does the following FOR loop output?
 >
+> Pseudocode:
+> 1. For each x in the sequence 1, 2, 3, 4, 5 print the value of x
+>
 > ~~~
 > for (x in 1:5) {
 >   print(x)
@@ -151,9 +154,13 @@ The most common iterative statements are defined using either FOR or WHILE loops
 > ~~~
 > {: .language-r}
 >
-> Pseudocode:
-> 1. For each x in the sequence 1, 2, 3, 4, 5 
-> 2. Print the value of x
+> ~~~
+> for x in {1..5}
+> do
+>   echo $x
+> done
+> ~~~
+> {: .language-bash}
 >
 >> ## Solution
 >>
@@ -173,6 +180,11 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >
 > What does the following WHILE loop output?
 >
+> Pseudocode:
+> 1. Set x equal to 1
+> 2. While x is less than 3 print the value of x
+> 3. Incrememnt the value of x by 1
+>
 > ~~~
 > x <- 1
 > while (x < 3) {
@@ -182,11 +194,14 @@ The most common iterative statements are defined using either FOR or WHILE loops
 > ~~~
 > {: .language-r}
 >
-> Pseudocode:
-> 1. Set x equal to 1
-> 2. While x is less than 3 
-> 3. Print the value of x
-> 4. Incrememnt the value of x by 1
+> ~~~
+> x=1
+> while [ $x -lt 3 ]
+> do
+>   echo $x
+> done
+> ~~~
+> {: .language-bash}
 >
 >> ## Solution
 >>
@@ -211,24 +226,32 @@ The most simple form of conditional statement is the IF... THEN form.
 >
 > What does the following IF... THEN conditional statement output?
 >
+> Pseudocode:
+> 1. Set x equal to 3
+> 2. If x is greater than 6, then print the value of x
+>
 > ~~~
-> x <- 3
-> if (x < 6) {
+> x <- 7
+> if (x > 6) {
 >   print(x)
 > }
 > ~~~
 > {: .language-r}
 >
-> Pseudocode:
-> 1. Set x equal to 3
-> 2. If x is less than 6 
-> 3. Print the value of x
+> ~~~
+> x=7
+> if [ $x -gt 6 ]
+> then
+>   echo $x
+> fi
+> ~~~
+> {: .language-bash}
 >
 >> ## Solution
 >>
->> The IF... THEN statement outputs the value of x if it is less than 6:
+>> The IF... THEN statement outputs the value of x if it is greater than 6:
 >> ~~~
->> 3
+>> 7
 >> ~~~
 >> {: .output}
 > {: .solution}
@@ -240,64 +263,89 @@ The next type of conditional statement adds a level of complexity with the IF...
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
+> Pseudocode:
+> 1. Set x equal to 7
+> 2. If x is less than 6, then print the value of x
+> 4. Else print "x is greater than or equal to 6"
+>
 > ~~~
 > x <- 7
 > if (x < 6) {
 >   print(x)
 > } else {
-> 	print("x is larger than or equal to 6")
+> 	print("x is greater than or equal to 6")
 > }
 > ~~~
 > {: .language-r}
 >
-> Pseudocode:
-> 1. Set x equal to 7
-> 2. If x is less than 6 
-> 3. Print the value of x
-> 4. Else print "x is larger than or equal to 6"
+> ~~~
+> x=7
+> if [ $x -lt 6 ]
+> then
+>   echo $x
+> else
+>   echo "x is greater than or equal to 6"
+> fi
+> ~~~
+> {: .language-bash}
 >
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
 >> ~~~
->> x is larger than or equal to 6
+>> x is greater than or equal to 6
 >> ~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
 
-The final version of the conditional statement further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
+The final version of the conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
 
 > ## Discussion
 >
 > What does the following IF... THEN... ELSE conditional statement output?
+>
+> Pseudocode:
+> 1. Set x equal to 7
+> 2. If x is equal to 6 
+> 3. Print "x is equal to 6"
+> 4. Else if x is greater than 6
+> 5. print "x is greater than 6"
+> 6. Else if x is less than 6
+> 7. print "x is less than 6"
 >
 > ~~~
 > x <- 7
 > if (x = 6) {
 >   print("x is equal to 6")
 > } else if (x > 6) {
-> 	print("x is larger than 6")
+> 	print("x is greater than 6")
 > } else if (x < 6) {
 > 	print("x is less than 6")
 > }
 > ~~~
 > {: .language-r}
 >
-> Pseudocode:
-> 1. Set x equal to 7
-> 2. If x is equal to 6 
-> 3. Print "x is equal to 6"
-> 4. Else if x is larger than 6
-> 5. print "x is larger than 6"
-> 6. Else if x is less than 6
-> 7. print "x is less than 6"
+> ~~~
+> x=7
+> if [ $x -eq 6 ]
+> then
+>   echo "x is equal to 6"
+> elif [ $x -gt 6 ]
+> then
+>   echo "x is greater than 6"
+> elif [ $x -lt 6 ]
+> then
+>   echo "x is less than 6"
+> fi
+> ~~~
+> {: .language-bash}
 >
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs a message depending on if the value of x is equal to, greater than, or less than 6:
 >> ~~~
->> x is larger than 6
+>> x is greater than 6
 >> ~~~
 >> {: .output}
 > {: .solution}
