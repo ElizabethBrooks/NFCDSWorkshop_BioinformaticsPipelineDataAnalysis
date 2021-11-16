@@ -79,33 +79,31 @@ Now, let's put these steps into practice. Keep in mind that the number of steps 
 >>
 >> In order to determine how to write an algorithm for getting dressed for the day, we should consider the following steps to breaking down a problem.
 >>
->> - First, determine the inputs
+>> **First,** determine the inputs
 >> 1. Current weather
 >> 2. Available clothing
 >>
->> - Second, determine the outputs
+>> **Second,** determine the outputs
 >> 1. The clothes that you will be wearing for the day
 >> 2. The order in which the clothing should be put on
 >>
->> - Third, test a simple example
->>
->> To try out a simple example we will need to specify sample inputs:
+>> **Third,** test a simple example by specifying sample inputs:
 >> 1. The weather outside is cold
 >> 2. You have access to a pair of pants and a shirt
 >>
->> Our algorithm might then be:
+>> Our simple algorithm might then be:
 >> 1. Walk to where your clothes are kept
 >> 2. Take off pajamas
 >> 3. Take out the the pants and shirt
 >> 4. Put on pants
 >> 5. Put on shirt
 >>
->> - Fourth, test a complex example
+>> **Fourth,** test a complex example
 >> Let's try out a more complex example by generalizing the inputs:
 >> 1. Assume you have a way to check the current weather
 >> 2. Assume you have a closet with all types of clothing
 >>
->> Our algorithm might then be:
+>> Our more complex algorithm might then be:
 >> 1. Check the weather
 >> 2. Walk to wear you clothes are kept
 >> 3. If the temperature is less than 75 degrees fahrenheit, then
