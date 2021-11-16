@@ -28,9 +28,12 @@ This workshop is designed for anyone interested in learning more about programmi
 >
 > 3. Since this is an introductory workshop, we will walkthrough installing the necessary software. 
 >
-> 4. Please complete the pre-workshop survey: https://forms.gle/djkoZpj4GeeQA7yQ6
+> 4. Please complete the [pre-workshop survey][preSurvey]: 
+> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf8vLJ8nfJDvoxh8MDUfvpGWByYMG9n6l38Sk-49tB881Rkg/viewform?embedded=true" width="640" height="2931" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 {: .prereq}
 
 <!-- {% include syllabus.html %} -->
+
+[preSurvey]: https://forms.gle/djkoZpj4GeeQA7yQ6
 
 {% include links.md %}
