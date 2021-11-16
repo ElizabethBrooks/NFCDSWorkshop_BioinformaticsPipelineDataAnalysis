@@ -5,7 +5,7 @@ exercises: 30
 questions:
 - "How can I combine R and BASH scripts to automate my data analysis process?"
 objectives:
-- "TBD"
+- "Develop BASH scripting skills to efficiently integrate R scripts into a coherent data analysis pipeline."
 keypoints:
 - "TBD"
 ---

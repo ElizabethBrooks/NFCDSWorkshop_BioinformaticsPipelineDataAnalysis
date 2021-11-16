@@ -3,11 +3,10 @@ title: "BASH Basics"
 teaching: 20
 exercises: 10
 questions:
-- "How do I write code in the R programming language?"
-- "What packages are available to me for biological data analysis in R?"
+- "How do I write code in the BASH programming language?"
+- "What packages are available to me for biological data analysis in BASH?"
 objectives:
-- "Become familiar with the syntax and common functions of the R language."
-- "Be able to install and run function from packages commonly used for data analysis and visualization in R ."
+- "Extend knowledge of R programming to learn about complementary programs used in the Unix/Linux terminal for data analysis."
 keypoints:
 - "TBD"
 ---

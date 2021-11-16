@@ -5,7 +5,7 @@ exercises: 30
 questions:
 - "How can I use R scripts to automate my data analysis process?"
 objectives:
-- "TBD"
+- "Gain hands-on experience and develop skills to be able to use R to visualize and investigate patterns in genomic data."
 keypoints:
 - "TBD"
 ---
