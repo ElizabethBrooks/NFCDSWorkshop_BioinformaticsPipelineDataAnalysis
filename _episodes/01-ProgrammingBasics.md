@@ -169,7 +169,7 @@ The most common [iterative statements][loopStatements] are defined using either 
 >> done
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 >
 >> ## Solution
 >>
@@ -216,7 +216,7 @@ The most common [iterative statements][loopStatements] are defined using either 
 >> done
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 >
 >> ## Solution
 >>
@@ -265,7 +265,7 @@ The most simple form of conditional statement is the IF... THEN form.
 >> fi
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 >
 >> ## Solution
 >>
@@ -312,7 +312,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> fi
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 >
 >> ## Solution
 >>
@@ -366,7 +366,7 @@ The final version of the conditional statement that we will consider further com
 >> fi
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 >
 >> ## Solution
 >>
@@ -419,7 +419,7 @@ The final version of the conditional statement that we will consider further com
 >> fi
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 >
 >> ## Solution
 >>
