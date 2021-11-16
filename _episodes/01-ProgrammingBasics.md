@@ -149,6 +149,7 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >   print(x)
 > }
 > ~~~
+> {: .language-r}
 >
 > Pseudocode:
 > 1. For each x in the sequence 1, 2, 3, 4, 5 
@@ -157,13 +158,13 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ## Solution
 >>
 >> The FOR loop outputs the current value of x at each iteration:
->>~~~
+>> ~~~
 >> 1
 >> 2
 >> 3
 >> 4
 >> 5
->>~~~
+>> ~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -172,11 +173,13 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >
 > What does the following WHILE loop output?
 >
->> x <- 1
->> while (x < 3) {
->>   print(x)
->>   x <- i + 1
->> }
+> ~~~
+> x <- 1
+> while (x < 3) {
+>   print(x)
+>   x <- i + 1
+> }
+> ~~~
 > {: .language-r}
 >
 > Pseudocode:
@@ -188,28 +191,32 @@ The most common iterative statements are defined using either FOR or WHILE loops
 >> ## Solution
 >>
 >> The WHILE loop outputs the current value of x at each iteration:
->>~~~
+>> ~~~
 >> 1
 >> 2
 >> 3
->>~~~
+>> ~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
 
-The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format. The most simple form of conditional statement is the IF... THEN form.
+The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format.
 
 ![Conditional Statements](../fig/vocab.png){: width="500" }
 *Image source: https://code.org/curriculum/course2/12/Teacher*
+
+The most simple form of conditional statement is the IF... THEN form.
 
 > ## Discussion
 >
 > What does the following IF... THEN conditional statement output?
 >
->> x <- 3
->> if (x < 6) {
->>   print(x)
->> }
+> ~~~
+> x <- 3
+> if (x < 6) {
+>   print(x)
+> }
+> ~~~
 > {: .language-r}
 >
 > Pseudocode:
@@ -220,9 +227,9 @@ The most common [conditional statements][conditionalStatements] are defined usin
 >> ## Solution
 >>
 >> The IF... THEN statement outputs the value of x if it is less than 6:
->>~~~
+>> ~~~
 >> 3
->>~~~
+>> ~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -233,12 +240,14 @@ The next type of conditional statement adds a level of complexity with the IF...
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
->> x <- 7
->> if (x < 6) {
->>   print(x)
->> } else {
->> 	print("x is larger than or equal to 6")
->> }
+> ~~~
+> x <- 7
+> if (x < 6) {
+>   print(x)
+> } else {
+> 	print("x is larger than or equal to 6")
+> }
+> ~~~
 > {: .language-r}
 >
 > Pseudocode:
@@ -250,9 +259,9 @@ The next type of conditional statement adds a level of complexity with the IF...
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs the value of x if it is less than 6, else it prints a message:
->>~~~
+>> ~~~
 >> x is larger than or equal to 6
->>~~~
+>> ~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
@@ -263,14 +272,16 @@ The final version of the conditional statement further combines the IF... THEN..
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
->> x <- 7
->> if (x = 6) {
->>   print("x is equal to 6")
->> } else if (x > 6) {
->> 	print("x is larger than 6")
->> } else if (x < 6) {
->> 	print("x is less than 6")
->> }
+> ~~~
+> x <- 7
+> if (x = 6) {
+>   print("x is equal to 6")
+> } else if (x > 6) {
+> 	print("x is larger than 6")
+> } else if (x < 6) {
+> 	print("x is less than 6")
+> }
+> ~~~
 > {: .language-r}
 >
 > Pseudocode:
@@ -285,9 +296,9 @@ The final version of the conditional statement further combines the IF... THEN..
 >> ## Solution
 >>
 >> The IF... THEN... ELSE statement outputs a message depending on if the value of x is equal to, greater than, or less than 6:
->>~~~
+>> ~~~
 >> x is larger than 6
->>~~~
+>> ~~~
 >> {: .output}
 > {: .solution}
 {: .discussion}
