@@ -27,7 +27,7 @@ Some of the practical skills required of programmers include the ability to crea
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
 ![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="500" }
-*Image source: https://techbiason.com/coding-vs-programming/*
+*[Image source][codingProgramming]*
 
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
 
@@ -54,7 +54,7 @@ So although programming and coding have different meanings, they are related. Th
 Although the differences seem small, there are important distinctions that we can make between the concepts of [pseudocode, code, and algorithms][algorithmPseudocode].
 
 ![Pseudocode vs Algorithms](../fig/Difference-Between-Algorithm-and-Pseudocode-Comparison-Summary.jpeg){: width="500" }
-*Image source: https://pediaa.com/difference-between-algorithm-and-pseudocode/*
+*[Image source][algorithmPseudocode]*
 
 Everyone has some experienece with algorithms in their day-to-day life. For example, if you have ever cooked or done some task that requires you to follow instructions with a sequence of steps. 
 
@@ -136,7 +136,7 @@ The three primary types of [control statements][controlStructures] are:
 - Conditional (or selection) statements control which blocks of code are executed, and which are not
 
 ![Control Statements](../fig/lnpls008.gif){: width="500" }
-*Image source: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm*
+*[Image source][controlStructures]*
 
 The most common iterative statements are defined using either FOR or WHILE loops.
 
@@ -220,7 +220,7 @@ The most common iterative statements are defined using either FOR or WHILE loops
 The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format.
 
 ![Conditional Statements](../fig/vocab.png){: width="500" }
-*Image source: https://code.org/curriculum/course2/12/Teacher*
+*[Image source][conditionalStatements]*
 
 The most simple form of conditional statement is the IF... THEN form.
 
