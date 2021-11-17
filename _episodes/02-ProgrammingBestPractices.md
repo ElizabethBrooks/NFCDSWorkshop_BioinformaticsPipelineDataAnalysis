@@ -22,13 +22,15 @@ keypoints:
 ---
 
 ## Introduction
-In this section we will learn about some of the common best practices in programming, which are easy to implememnt into your personal programming process. We will also explore approaches to solving problems and where to begin with designing algorithms.
+In this section we will learn about some of the common best practices in programming, which are easy to implememnt into your programming process. We will also explore approaches to solving problems and where to begin with designing algorithms.
 
 ## How to Be a Good Programmer
 The development of custom software programs has become increasingly necessary in biological research. Scientists are often required to create their own programs to analyze data and create publishable results. It is therefore very important that we consider [techniques for improving][goodProgrammer] the reproducibility and reliability of code. 
 
 ![Good Programmer Characteristics](../fig/codingmindset-sm.png){: width="500" }
 *[Image source][goodProgrammer]*
+
+There are several things to keep in mind while working through your programming process. These are techniques that will help you to solve complex problems, while avoiding common pitfalls.
 
 > ## Checklist
 >
@@ -42,6 +44,8 @@ The development of custom software programs has become increasingly necessary in
 > - Always include informative documents for your programs and data
 > - Carefully structure and track your raw and calculated data
 {: .checklist}
+
+By implementing the above programming techniques, you will be better prepared to create sets of code to analyze complex biological data sets. 
 
 ## Ways to Approach Programming Tasks
 Throughout any programming undertaking we should be thinking about our problem solving thought process. This means that you will need to think critically about how you approach [solving coding problems][codingProblems] with programming. Often you will find that there are many routes to the same solution, and which route you take may depend on your intended user or available tools.
@@ -59,12 +63,17 @@ Throughout any programming undertaking we should be thinking about our problem s
 > 4. Reflect on the results
 {: .checklist}
 
-The first step for approaching problem solving requires us to break down the problem before we can begin creating a solution plan. There are a few techniques we can use to help break down a problem before coding:
+The first step for approaching problem solving requires us to break down the problem before we can begin creating a solution plan. 
 
-1. Determine the inputs
-2. Determine the outputs
-3. Test a simple example
-4. Test a complex example
+> ## Checklist
+>
+> There are a few techniques we can use to help break down a problem before coding.
+>
+> 1. Determine the inputs
+> 2. Determine the outputs
+> 3. Test a simple example
+> 4. Test a complex example
+{: .checklist}
 
 Now, let's put these steps into practice. Keep in mind that the number of steps a task or problem is broken into may depend on the skills of the intended user or available tools.
 

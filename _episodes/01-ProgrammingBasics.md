@@ -26,7 +26,7 @@ Some of the practical skills required of programmers include the ability to crea
 ## Programming vs Coding 
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
-![Programming vs Coding](../fig/What-Are-The-Main-Uses-of-Java-in-The-World-2-1.jpeg){: width="500" }
+![Programming vs Coding](../fig/coding-vs-programming.png.webp){: width="500" }
 *[Image source][codingProgramming]*
 
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
@@ -119,12 +119,12 @@ Note that an expression is a combination of logical operands and operators. In B
 >
 > Hint: Use comparison operators (<, >, =, >=, <=, !=) to add complexity to your expressions!
 >
->> ## Solutions
+>> ## Solution
 >>
->> 1. It is raining and it is Spring
->> 2. I have green eyes and I am not 4 feet tall
->> 3. My cat is hungry or my cat is cute
->> 4. The temperature is < 32 degrees Fahrenheit and it is snowing 
+>> - It is raining and it is Spring
+>> - I have green eyes and I am not 4 feet tall
+>> - My cat is hungry or my cat is cute
+>> - The temperature is < 32 degrees Fahrenheit and it is snowing 
 > {: .solution}
 {: .discussion}
 
@@ -148,7 +148,8 @@ The most common [iterative statements][loopStatements] are defined using either 
 > What does the following FOR loop output?
 >
 > **Pseudocode:**
-> 1. For each x in the sequence 1, 2, 3, 4, 5 
+> 1. For each value in the sequence 1, 2, 3, 4, 5 
+> - Assign x the current value
 > - print the value of x
 >
 >> ## Code Examples
@@ -192,7 +193,7 @@ WHILE loops are another type of iterative statement that can be used as a contro
 > What does the following WHILE loop output?
 >
 > **Pseudocode:**
-> 1. Set x equal to 1
+> 1. Assign x the value of 1
 > 2. While x is less than 3 
 > - print the value of x
 > - increment the value of x by 1
@@ -244,7 +245,7 @@ The most simple form of conditional statement is the IF... THEN form.
 > What does the following IF... THEN conditional statement output?
 >
 > **Pseudocode:**
-> 1. Set x equal to 3
+> 1. Assign x the value of 3
 > 2. If x is greater than 6, then print the value of x
 >
 >> ## Code Examples
@@ -286,7 +287,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 > What does the following IF... THEN... ELSE conditional statement output?
 >
 > **Pseudocode:**
-> 1. Set x equal to 7
+> 1. Assign x the value of 7
 > 2. If x is less than 6, then print the value of x
 > 3. Else print "x is greater than or equal to 6"
 >
@@ -333,7 +334,7 @@ The next, more advanced type of conditional statement that we will consider furt
 > What does the following multiple IF... THEN... ELSE conditional statement output?
 >
 > **Pseudocode:**
-> 1. Set x equal to 7
+> 1. Assign x the value of 7
 > 2. If x is equal to 6, then print "x is equal to 6"
 > 3. Else if x is greater than 6, then print "x is greater than 6"
 > 4. Else if x is less than 6, then print "x is less than 6"
@@ -377,17 +378,19 @@ The next, more advanced type of conditional statement that we will consider furt
 > {: .solution}
 {: .challenge}
 
+### Advanced Concept
+
 An even more advanced concept, nested IF... THEN... ELSE statements can increase the flexability of your code by allowing you to specify more complex conditions.
 
 ![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="500" }
 *[Image source][nestedIfElseInR]*
 
-> ## Additional Challenge
+> ## Advanced Challenge
 > 
 > If you are looking for an additional challenge, consider the following nested IF... THEN... ELSE statement:
 >
 > **Pseudocode:**
-> 1. Set x equal to 4
+> 1. Assign x the value of 4
 > 2. If x is greater than 4, then check if x is equal to 6
 > - If x is equal to 6, then print "x is equal to 6"
 > - Else print "x is greater than 4"
@@ -433,7 +436,7 @@ An even more advanced concept, nested IF... THEN... ELSE statements can increase
 > {: .solution}
 {: .challenge}
 
-[codingProgramming]: https://techbiason.com/coding-vs-programming/
+[codingProgramming]: https://www.goodcore.co.uk/blog/coding-vs-programming/
 [algorithmPseudocode]: https://pediaa.com/difference-between-algorithm-and-pseudocode/
 [controlStructures]: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm
 [loopStatements]: https://www.javatpoint.com/java-for-loop
