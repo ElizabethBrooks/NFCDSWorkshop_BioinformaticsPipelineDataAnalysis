@@ -117,16 +117,26 @@ Note that an expression is a combination of logical operands and operators. In B
 >
 > What are some examples of boolean expressions?
 >
-> Hint: Use comparison operators (<, >, =, >=, <=, !=) to add complexity to your expressions!
+> **Hint:** 
+> Use a combination of the following operators to add complexity to your expressions!
+> 1. Comparison operators (>, <, =, >=, <=, !=)
+> 2. Boolean operators (AND, OR, NOT, or AND NOT)
 >
 >> ## Solution
 >>
->> - It is raining and it is Spring
+>> - It is raining outside
+>> - The oven temperature = 350 degrees Fahrenheit
 >> - I have green eyes and I am not 4 feet tall
 >> - My cat is hungry or my cat is cute
 >> - The temperature is < 32 degrees Fahrenheit and it is snowing 
+>> - My grade != 100
 > {: .solution}
 {: .discussion}
+
+There are some [basic properties][booleanLaws] of Boolean logic to keep in mind while designing your code.
+
+![Control Statements](../fig/image002.jpeg){: width="500" }
+*[Image source][booleanLaws]*
 
 We can combine boolean expressions with basic control statements to set how programs will complete a task. Control statments allow you to make have flexible outcomes by selecting which section of codes are executed. 
 
@@ -436,8 +446,13 @@ An even more advanced concept, nested IF... THEN... ELSE statements can increase
 > {: .solution}
 {: .challenge}
 
+### Concept Check
+In this lesson we explored the following control structures:
+
+
 [codingProgramming]: https://www.goodcore.co.uk/blog/coding-vs-programming/
 [algorithmPseudocode]: https://pediaa.com/difference-between-algorithm-and-pseudocode/
+[booleanLaws]: http://www.yorku.ca/pkashiya/Boolean_Algebra_Properties.htm
 [controlStructures]: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm
 [loopStatements]: https://www.javatpoint.com/java-for-loop
 [loopsInR]: https://www.geeksforgeeks.org/loops-in-r-for-while-repeat/
