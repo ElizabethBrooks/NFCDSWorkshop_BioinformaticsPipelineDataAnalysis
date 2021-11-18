@@ -113,7 +113,7 @@ A fundamental concept of computer programming, Boolean logic is the mathematical
 
 Note that an expression is a combination of logical operands and operators. In Boolean logic the operands are statements that can be proven true or false, and the operators are the logical AND, OR and NOT.
 
-> ## Discussion
+> ## Challenge
 >
 > What are some examples of boolean expressions?
 >
@@ -125,20 +125,19 @@ Note that an expression is a combination of logical operands and operators. In B
 >> ## Solution
 >>
 >> - It is raining outside
->> - The oven temperature = 350 degrees Fahrenheit
->> - I have green eyes and I am not 4 feet tall
->> - My cat is hungry or my cat is cute
->> - The temperature is < 32 degrees Fahrenheit and it is snowing 
 >> - My grade != 100
+>> - I have green eyes OR I am 4 feet tall
+>> - My cat is hungry AND NOT cute
+>> - The temperature is < 32 degrees Fahrenheit AND it is snowing 
 > {: .solution}
-{: .discussion}
+{: .challenge}
 
 There are some [basic properties][booleanLaws] of Boolean logic to keep in mind while designing your code.
 
 ![Control Statements](../fig/image002.jpeg){: width="500" }
 *[Image source][booleanLaws]*
 
-We can combine boolean expressions with basic control statements to set how programs will complete a task. Control statments allow you to make have flexible outcomes by selecting which section of codes are executed. 
+We can combine boolean expressions with control statements to set how programs will complete a task. Control statments allow you to make have flexible outcomes by selecting which section of codes are executed. 
 
 The three primary types of [control statements][controlStructures] are: 
 - Sequential statmenetes are executed in the default ordering
@@ -240,7 +239,7 @@ WHILE loops are another type of iterative statement that can be used as a contro
 > {: .solution}
 {: .challenge}
 
-The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN... ELSE format.
+The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN format.
 
 ![Conditional Statements](../fig/vocab.png){: width="500" }
 *[Image source][conditionalStatements]*
@@ -255,7 +254,7 @@ The most simple form of conditional statement is the IF... THEN form.
 > What does the following IF... THEN conditional statement output?
 >
 > **Pseudocode:**
-> 1. Assign x the value of 3
+> 1. Assign x the value of 7
 > 2. If x is greater than 6, then print the value of x
 >
 >> ## Code Examples
@@ -334,7 +333,7 @@ The next type of conditional statement adds a level of complexity with the IF...
 > {: .solution}
 {: .challenge}
 
-The next, more advanced type of conditional statement that we will consider further combines the IF... THEN... ELSE tags to make a statememnt with many alternative outcomes.
+A more advanced type of conditional statement combines multiple IF... THEN... ELSE statements to make a complex statememnt with many alternative outcomes.
 
 ![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="500" }
 *[Image source][ifElseInR]*
@@ -447,7 +446,26 @@ An even more advanced concept, nested IF... THEN... ELSE statements can increase
 {: .challenge}
 
 ### Concept Check
-In this lesson we explored the following control structures:
+In this lesson we discussed Boolean logic and explored the following control structures:
+- Sequential statmenetes
+- Iterative statements
+- Conditional (or selection) statements
+
+> ## Discussion
+>
+> What are the outputs of the following sequential and nested conditional statements?
+>
+>
+>
+> What are the similarities and differences between these sequential and nested conditional statements?
+>
+> 
+>
+>> ## Solution
+>>
+>> 
+> {: .solution}
+{: .discussion}
 
 
 [codingProgramming]: https://www.goodcore.co.uk/blog/coding-vs-programming/
