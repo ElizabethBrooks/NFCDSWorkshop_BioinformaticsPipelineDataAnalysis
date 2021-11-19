@@ -37,14 +37,14 @@ Based on your personal experiences, let's discuss our current understanding of t
 
 > ## Discussion - Programming vs Coding
 >
-> With the person next to you, come up with a simgle sentence to describe programming.
+> With the person next to you, come up with a single sentence to describe programming.
 >
 >> ## Solution
 >>
 >> Programming is the process of creating instructions or set of related activities to achieve a task or goal.
 > {: .solution}
 >
-> With the person next to you, come up with a simgle sentence to describe coding.
+> With the person next to you, come up with a single sentence to describe coding.
 >
 >> ## Solution
 >>
@@ -62,7 +62,7 @@ Everyone has some experienece with algorithms in their day-to-day life. For exam
 
 > ## Discussion - Algorithms
 >
-> With the person next to you, come up with a simgle sentence to describe algorithms.
+> With the person next to you, come up with a single sentence to describe algorithms.
 >
 >> ## Solution
 >>
@@ -74,7 +74,7 @@ Algorithms need to be represented by some form of language in order to be unders
 
 > ## Discussion - Pseudocode
 >
-> With the person next to you, come up with a simgle sentence to describe pseudocode.
+> With the person next to you, come up with a single sentence to describe pseudocode.
 >
 >> ## Solution
 >>
