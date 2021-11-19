@@ -263,7 +263,7 @@ The most common and simple form of [conditional statements][conditionalStatement
 Situations requiring conditional descisions come up all the time in life, for example:
 
 - IF it rains, THEN the ground will be wet
-- IF I brush my teeth, THEN I don't get cavities
+- IF I brush my teeth, THEN I won't get cavities
 - IF my coffee = 100 degrees celsius AND I take a sip, THEN I will burn my tounge
 
 > ## Challenge - Conditional Statements 1
