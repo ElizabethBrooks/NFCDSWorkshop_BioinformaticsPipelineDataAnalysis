@@ -23,32 +23,34 @@ keypoints:
 ## Introduction
 Some of the practical skills required of programmers include the ability to create algorithms, model problems, process data, and manage projects. Many of these same skills are also necessary for the analysis of complex or large biological data sets.
 
+**INTRO SLIDESHOW**
+
 ## Programming vs Coding 
 Before we begin learning about how to write helpful programs for data analysis, it is important that we consider fundamental concepts and best practices in programming. While sometimes used interchangeably, [programming and coding][codingProgramming] have different definitions. 
 
 ![Programming vs Coding](../fig/coding-vs-programming.png.webp){: width="500" }
 *[Image source][codingProgramming]*
 
+So although programming and coding have different meanings, they are related. The goal of coding is to create the code that acts as a set of computer instructions for a part of a programming project. The goal of programming on the other hand, is to produce programs that are complete and ready to use software products.
+
 Based on your personal experiences, let's discuss our current understanding of these important concepts.
 
 > ## Discussion - Programming vs Coding
 >
-> What is programming?
+> With the person next to you, come up with a simgle sentence to describe programming.
 >
 >> ## Solution
 >>
 >> Programming is the process of creating instructions or set of related activities to achieve a task or goal.
 > {: .solution}
 >
-> What is coding?
+> With the person next to you, come up with a simgle sentence to describe coding.
 >
 >> ## Solution
 >>
 >> Coding is the process of transforming the set of instructions for a process into a written language that a computer can interpret.
 > {: .solution}
 {: .discussion}
-
-So although programming and coding have different meanings, they are related. The goal of coding is to create the code that acts as a set of computer instructions for a part of a programming project. The goal of programming on the other hand, is to produce programs that are complete and ready to use software products.
 
 ## Pseudocode, Code, and Algorithms... Oh My!
 Although the differences seem small, there are important distinctions that we can make between the concepts of [pseudocode, code, and algorithms][algorithmPseudocode].
@@ -60,7 +62,7 @@ Everyone has some experienece with algorithms in their day-to-day life. For exam
 
 > ## Discussion - Algorithms
 >
-> What are algorithms?
+> With the person next to you, come up with a simgle sentence to describe algorithms.
 >
 >> ## Solution
 >>
@@ -72,7 +74,7 @@ Algorithms need to be represented by some form of language in order to be unders
 
 > ## Discussion - Pseudocode
 >
-> What is pseudocode?
+> With the person next to you, come up with a simgle sentence to describe pseudocode.
 >
 >> ## Solution
 >>
