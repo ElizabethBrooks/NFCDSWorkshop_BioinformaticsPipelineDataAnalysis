@@ -19,6 +19,7 @@ keypoints:
 - "Make small changes and plan for mistakes."
 - "Collaborate with others whenever possible."
 - "Always include informative documents for your programs."
+- "Copy and paste!"
 ---
 
 ## Introduction
