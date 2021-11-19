@@ -17,7 +17,7 @@ keypoints:
 - "Algorithms are the set of step-by-step instructions that explain how to solve a given problem."
 - "Pseudocode is the set of instructions for an algorithm written in a plain language."
 - "Boolean algebra uses mathematical expressions that are evaluated to one of two values: true or false."
-- "Conditional statements are used in programming to handle descisions, and they have two parts: hypothesis (if) and conclusion (then)."
+- "Control statments allow you to have flexible outcomes by selecting which pieces of codes are executed, or not."
 ---
 
 ## Introduction
@@ -109,13 +109,25 @@ As a first step before you begin developing an algorithm or writing any code, it
 The primary advantage to using pseudocode in your programming process is that it improves the readability of your algorithms. By first writing algorithms for programs in a plain language, it allows you to break down a complex problem into smaller and more manageable pieces for coding. Furthermore, it gives you the chance to easily identify the most complex and potentially troublesome portions for code development.
 
 ## Programming with Logic
-A fundamental concept of computer programming, Boolean logic is the mathematical logic underlying Boolean algebra. In Boolean algebra mathematical expressions are evaluated to one of two values: TRUE or FALSE. Since an expression may only take on one of two values, Boolean logic is considered "two valued logic".
+A fundamental concept of computer programming, Boolean logic is the mathematical logic underlying Boolean algebra. In Boolean algebra expressions are evaluated to one of two values: TRUE or FALSE. Since an expression may only take on one of two values, Boolean logic is considered "two valued logic".
+
+![Boolean Expressions](../fig/f5751338ef502ed0471c1bc92cddb564-image-1480345911160.png){: width="500" }
+*[Image source][booleanExp]*
 
 Note that an expression is a combination of logical operands and operators. In Boolean logic the operands are statements that can be proven true or false, and the operators are the logical AND, OR and NOT.
 
-> ## Challenge
+> ## Challenge - Boolean Expressions
 >
-> What are some examples of boolean expressions?
+> What are some examples of simple boolean expressions?
+>
+>> ## Solution
+>>
+>> - It is raining
+>> - My cat is hungry
+>> - The temperature is < 32 degrees Fahrenheit 
+> {: .solution}
+>
+> What are some examples of compound boolean expressions?
 >
 > **Hint:** 
 > Use a combination of the following operators to add complexity to your expressions!
@@ -124,20 +136,13 @@ Note that an expression is a combination of logical operands and operators. In B
 >
 >> ## Solution
 >>
->> - It is raining outside
->> - My grade != 100
->> - I have green eyes OR I am 4 feet tall
+>> - It is raining OR it is cloudy 
 >> - My cat is hungry AND NOT cute
 >> - The temperature is < 32 degrees Fahrenheit AND it is snowing 
 > {: .solution}
 {: .challenge}
 
-There are some [basic properties][booleanLaws] of Boolean logic to keep in mind while designing your code.
-
-![Control Statements](../fig/image002.jpeg){: width="500" }
-*[Image source][booleanLaws]*
-
-We can combine boolean expressions with control statements to set how programs will complete a task. Control statments allow you to make have flexible outcomes by selecting which section of codes are executed. 
+We can combine boolean expressions with control statements to specify how programs will complete a task. Control statments allow you to have flexible outcomes by selecting which pieces of codes are executed, or not. 
 
 The three primary types of [control statements][controlStructures] are: 
 - Sequential statmenetes are executed in the default ordering
@@ -147,12 +152,12 @@ The three primary types of [control statements][controlStructures] are:
 ![Control Statements](../fig/lnpls008.gif){: width="500" }
 *[Image source][controlStructures]*
 
-The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops. Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
+Iterative statements allow you to execute the same piece of code a specified number of times, or until a condition is reached. The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops. Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
 
-![Control Statements](../fig/for_flowdiagram.png){: width="500" }
+![Iterative FOR Statements](../fig/for_flowdiagram.png){: width="500" }
 *[Image source][loopsInR]*
 
-> ## Challenge
+> ## Challenge - Iterative Statements 1
 >
 > What does the following FOR loop output?
 >
@@ -192,12 +197,12 @@ The most common [iterative statements][loopStatements] are defined using either 
 > {: .solution}
 {: .challenge}
 
-WHILE loops are another type of iterative statement that can be used as a control structure in your code.
+WHILE loops are another type of iterative statement that can be used as a control structure in your code. This type of iterative statement will continue to execute a piece of code until a condition is reached.
 
-![Control Statements](../fig/while_flowdiagram.png){: width="500" }
+![Iterative WHILE Statements](../fig/while_flowdiagram.png){: width="500" }
 *[Image source][loopsInR]*
 
-> ## Challenge
+> ## Challenge - Iterative Statements 2
 >
 > What does the following WHILE loop output?
 >
@@ -246,10 +251,10 @@ The most common [conditional statements][conditionalStatements] are defined usin
 
 The most simple form of conditional statement is the IF... THEN form.
 
-![Control Statements](../fig/scala_decision_making.jpeg){: width="500" }
+![Conditional IF... THEN Statements](../fig/scala_decision_making.jpeg){: width="500" }
 *[Image source][ifThenInPython]*
 
-> ## Challenge
+> ## Challenge - Conditional Statements 1
 >
 > What does the following IF... THEN conditional statement output?
 >
@@ -288,10 +293,10 @@ The most simple form of conditional statement is the IF... THEN form.
 
 The next type of conditional statement adds a level of complexity with the IF... THEN... ELSE format.
 
-![Control Statements](../fig/if-else-statement-in-R-11.webp){: width="500" }
+![Conditional IF... THEN... ELSE Statements](../fig/if-else-statement-in-R-11.webp){: width="500" }
 *[Image source][ifElseInR]*
 
-> ## Challenge
+> ## Challenge - Conditional Statements 2
 >
 > What does the following IF... THEN... ELSE conditional statement output?
 >
@@ -333,14 +338,14 @@ The next type of conditional statement adds a level of complexity with the IF...
 > {: .solution}
 {: .challenge}
 
-A more advanced type of conditional statement combines multiple IF... THEN... ELSE statements to make a complex statememnt with many alternative outcomes.
+A more advanced type of conditional statement combines multiple IF... THEN... ELSE statements to make a compound statememnt with many alternative outcomes.
 
-![Control Statements](../fig/if-else-statement-in-R-12.webp){: width="500" }
+![Conditional Compound Statements](../fig/if-else-statement-in-R-12.webp){: width="500" }
 *[Image source][ifElseInR]*
 
-> ## Challenge
+> ## Challenge - Conditional Statements 3
 >
-> What does the following multiple IF... THEN... ELSE conditional statement output?
+> What does the following compound IF... THEN... ELSE conditional statement output?
 >
 > **Pseudocode:**
 > 1. Assign x the value of 7
@@ -391,10 +396,10 @@ A more advanced type of conditional statement combines multiple IF... THEN... EL
 
 An even more advanced concept, nested IF... THEN... ELSE statements can increase the flexability of your code by allowing you to specify more complex conditions.
 
-![Control Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="500" }
+![Conditional Nested Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="500" }
 *[Image source][nestedIfElseInR]*
 
-> ## Advanced Challenge
+> ## Advanced Challenge 1
 > 
 > If you are looking for an additional challenge, consider the following nested IF... THEN... ELSE statement:
 >
@@ -445,13 +450,7 @@ An even more advanced concept, nested IF... THEN... ELSE statements can increase
 > {: .solution}
 {: .challenge}
 
-### Concept Check
-In this lesson we discussed Boolean logic and explored the following control structures:
-- Sequential statmenetes
-- Iterative statements
-- Conditional (or selection) statements
-
-> ## Discussion
+> ## Advanced Challenge 2
 >
 > What are the outputs of the following sequential and nested conditional statements?
 >
@@ -465,12 +464,18 @@ In this lesson we discussed Boolean logic and explored the following control str
 >>
 >> 
 > {: .solution}
-{: .discussion}
+{: .challenge}
+
+### Final Concept Check
+In this lesson we discussed Boolean logic and explored the following control structures:
+- Sequential statmenetes
+- Iterative statements
+- Conditional (or selection) statements
 
 
 [codingProgramming]: https://www.goodcore.co.uk/blog/coding-vs-programming/
 [algorithmPseudocode]: https://pediaa.com/difference-between-algorithm-and-pseudocode/
-[booleanLaws]: http://www.yorku.ca/pkashiya/Boolean_Algebra_Properties.htm
+[booleanExp]: https://curriculum.code.org/csp-18/unit5/9/
 [controlStructures]: https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/controlstructures.htm
 [loopStatements]: https://www.javatpoint.com/java-for-loop
 [loopsInR]: https://www.geeksforgeeks.org/loops-in-r-for-while-repeat/
