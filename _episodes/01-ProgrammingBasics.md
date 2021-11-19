@@ -159,9 +159,6 @@ The three primary types of [control structures][controlStructures] are:
 
 The most common type of control structures are [sequential statements][seqStatements]. These are indicated by code statements written one after another, are are executed line by line. This means that the statements are performed in a top to bottom sequence according to how they are written.
 
-![Control Statements](../fig/Flowchart1.jpeg){: width="500" }
-*[Image source][seqStatements]*
-
 The following is an example of a sequential statement with every-day actions.
 
 **Pseudocode:**
