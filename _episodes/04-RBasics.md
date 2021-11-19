@@ -20,13 +20,7 @@ The three primary types of [control statements][controlStructures] are:
 - Iterative statements control the number of times a block of code is executed
 - Conditional (or selection) statements control which blocks of code are executed, and which are not
 
-![Control Statements](../fig/lnpls008.gif){: width="500" }
-*[Image source][controlStructures]*
-
 The most common type of control structure are [sequential statements][seqStatements]. These are indicated by code statements written one after another, are are executed line by line. This means that the statements are performed in a top to bottom sequence according to how they are written.
-
-![Control Statements](../fig/Flowchart1.jpeg){: width="500" }
-*[Image source][seqStatements]*
 
 > ## Challenge - Sequential Statements
 >
@@ -57,9 +51,6 @@ The most common type of control structure are [sequential statements][seqStateme
 {: .challenge}
 
 Iterative statements allow you to execute the same piece of code a specified number of times, or until a condition is reached. The most common [iterative statements][loopStatements] are defined using either FOR or WHILE loops. Let's start by looking at a flow diagram for a FOR loop, which dipicts the flow of information from inputs to outputs.
-
-![Iterative FOR Statements](../fig/for_flowdiagram.png){: width="500" }
-*[Image source][loopsInR]*
 
 > ## Challenge - Iterative Statements 1
 >
@@ -102,9 +93,6 @@ Iterative statements allow you to execute the same piece of code a specified num
 {: .challenge}
 
 WHILE loops are another type of iterative statement that can be used as a control structure in your code. This type of iterative statement will continue to execute a piece of code until a condition is reached.
-
-![Iterative WHILE Statements](../fig/while_flowdiagram.png){: width="500" }
-*[Image source][loopsInR]*
 
 > ## Challenge - Iterative Statements 2
 >
@@ -150,13 +138,7 @@ WHILE loops are another type of iterative statement that can be used as a contro
 
 The most common [conditional statements][conditionalStatements] are defined using combinations of the IF... THEN format.
 
-![Conditional Statements](../fig/vocab.png){: width="500" }
-*[Image source][conditionalStatements]*
-
 The most simple form of conditional statement is the IF... THEN form.
-
-![Conditional IF... THEN Statements](../fig/scala_decision_making.jpeg){: width="500" }
-*[Image source][ifThenInPython]*
 
 > ## Challenge - Conditional Statements 1
 >
@@ -196,9 +178,6 @@ The most simple form of conditional statement is the IF... THEN form.
 {: .challenge}
 
 The next type of conditional statement adds a level of complexity with the IF... THEN... ELSE format.
-
-![Conditional IF... THEN... ELSE Statements](../fig/if-else-statement-in-R-11.webp){: width="500" }
-*[Image source][ifElseInR]*
 
 > ## Challenge - Conditional Statements 2
 >
@@ -243,9 +222,6 @@ The next type of conditional statement adds a level of complexity with the IF...
 {: .challenge}
 
 A more advanced type of conditional statement combines multiple IF... THEN... ELSE statements to make a compound statememnt with many alternative outcomes.
-
-![Conditional Compound Statements](../fig/if-else-statement-in-R-12.webp){: width="500" }
-*[Image source][ifElseInR]*
 
 > ## Challenge - Conditional Statements 3
 >
@@ -299,9 +275,6 @@ A more advanced type of conditional statement combines multiple IF... THEN... EL
 ### Advanced Concept
 
 An even more advanced concept, nested IF... THEN... ELSE statements can increase the flexability of your code by allowing you to specify more complex conditions.
-
-![Conditional Nested Statements](../fig/NESTED-IF-FLOW-CHART.webp){: width="500" }
-*[Image source][nestedIfElseInR]*
 
 > ## Advanced Challenge 1
 > 
