@@ -1,6 +1,6 @@
 ---
 title: "Combining R and BASH Scripting"
-teaching: 20
+teaching: 10
 exercises: 30
 questions:
 - "How can I combine R and BASH scripts to automate my data analysis workflow?"
