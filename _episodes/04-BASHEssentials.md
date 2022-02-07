@@ -1,5 +1,5 @@
 ---
-title: "BASH Basics"
+title: "BASH Essentials"
 teaching: 20
 exercises: 10
 questions:
