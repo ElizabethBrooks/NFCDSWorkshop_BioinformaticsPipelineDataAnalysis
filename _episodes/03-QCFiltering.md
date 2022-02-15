@@ -1,5 +1,5 @@
 ---
-title: "BASH Data Analysis Tutorial"
+title: "Quality Control & Filtering"
 teaching: 10
 exercises: 30
 questions:

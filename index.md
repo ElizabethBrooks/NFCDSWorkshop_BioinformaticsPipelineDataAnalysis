@@ -23,8 +23,8 @@ This lesson is designed for anyone interested in learning how to combine R and B
 >
 > 1. Participants should be comfortable with using a computer and basic statistical methods. Furthermore, participants should have:
 > - used a computer before
-> - limited to no experience with BASH
-> - limited to no experience with R
+> - limited experience with BASH
+> - limited experience with R
 >
 > 2. Each participant needs to have access to a computer with Unix/Linux or the Windows Ubuntu app. If you are attending the workshop in person, then a computer will be available for you. 
 >
@@ -39,7 +39,7 @@ This lesson is designed for anyone interested in learning how to combine R and B
 
 <!-- {% include syllabus.html %} -->
 
-[preSurvey]: https://forms.gle/djkoZpj4GeeQA7yQ6
-[postSurvey]: https://forms.gle/Gg4PMerdxVXULtEAA
+<!-- {% [preSurvey]: https://forms.gle/djkoZpj4GeeQA7yQ6 %} -->
+<!-- {% [postSurvey]: https://forms.gle/Gg4PMerdxVXULtEAA %} -->
 
 {% include links.md %}
