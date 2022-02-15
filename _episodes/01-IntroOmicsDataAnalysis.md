@@ -86,6 +86,7 @@ Bioinformaticians develop algorithms and use computer programming to investigate
 >> - computing
 >> - problem solving
 >> - critical thinking
+>{: .solution}
 {: .discussion}
 
 

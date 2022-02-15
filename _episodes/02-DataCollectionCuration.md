@@ -165,7 +165,7 @@ First, we need to install the [SRA Toolkit][toolkitSRA] before we can download t
 >> fastq-dump was killed (signal 13 SIGPIPE)
 >> ~~~
 >> {: .output}
-> {: .callout}
+> {: .solution}
 {: .challenge}
 
 Now that we have the SRA Toolkit installed we can proceed with collecting the transcriptomic data we need for our bioinformatics analysis. Remeber that we are following the example of the study performed by the authors of "[Digital gene expression profiling in larvae of *Tribolium castaneum* at different periods post UV-B exposure][paperCite]".
@@ -212,7 +212,7 @@ Now that we have the SRA Toolkit installed we can proceed with collecting the tr
 >> fastq-dump --gzip SRR8288567
 >> ~~~
 >> {: .language-bash}
-> {: .callout}
+> {: .solution}
 {; .challenge}
 
 In order to access the data stored in these databases you will need to 
