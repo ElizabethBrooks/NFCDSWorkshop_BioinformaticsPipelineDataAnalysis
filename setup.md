@@ -117,19 +117,19 @@ vdb-config -i
 {: .language-bash}
 
 This should bring up the following menu:
-![SRA Configuration Menu](../fig/ScreenShotConfigSRA.png){: width="500" }
+![SRA Configuration Menu](fig/ScreenShotConfigSRA.png){: width="500" }
 Where you should make sure to:
 - enable (mark with X) the "Remote Access" option on the Main screen
 - move to the "Cache" tab by clicking the tab and and pressing *enter*
   - enable "local file-caching"
   - set the "Location of user-repository" to an empty folder, which may be a new subdirectory that you can create using the configuration menu:
-![SRA Configuration Menu Subdir](../fig/ScreenShotConfigSubdir.png){: width="500" }
+![SRA Configuration Menu Subdir](fig/ScreenShotConfigSubdir.png){: width="500" }
   - confirm the selected the direcory 
-  ![SRA Configuration Menu Confirm Selection](../fig/ScreenShotConfigConfirm.png){: width="500" }
+  ![SRA Configuration Menu Confirm Selection](fig/ScreenShotConfigConfirm.png){: width="500" }
 - go to the "CP" (cloud provider) tab and accept to "report cloud instance identity"
-![SRA Configuration CP Selection](../fig/ScreenShotCP.png){: width="500" }
+![SRA Configuration CP Selection](fig/ScreenShotCP.png){: width="500" }
 - save your changes to the configuration of the SRA Toolkit software
-![SRA Configuration Menu Save](../fig/ScreenShotSaveSRA.png){: width="500" }
+![SRA Configuration Menu Save](fig/ScreenShotSaveSRA.png){: width="500" }
 - you may now exit the configuration menu
 
 *Step 6*
