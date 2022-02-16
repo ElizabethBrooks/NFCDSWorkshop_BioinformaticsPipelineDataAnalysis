@@ -185,9 +185,9 @@ FastQC is distributed as a DMG image file.
 - Drag the application from there to wherever you want to install it on your machine.
 - Once you've copied the application double click it to open it.
 
-*Important!*
+**_Important_!**
 
-FastQC is not a signed application therefore it may initially be blocked by the Gatekeeper application. 
+FastQC is not a signed application therefore it may initially be blocked by the Gatekeeper application on the Mac OS. 
 - To avoid this open FastQC by right clicking on the app and selecting open.
 - This may prompt you to allow it to open. 
 - If it is still blocked go to **System Preferences > Security and Privacy** and you should see an option
@@ -210,7 +210,7 @@ FastQC is a java application. In order to run it needs your system to have a sui
 - There are a number of different JREs available however the ones we have tested are the latest Oracle runtime environments and those from the adoptOpenJDK project (https://adoptopenjdk.net/).  
 - You need to download and install a suitable 64-bit JRE and make sure that the java application is in your path (most installers will take care of this for you).
 
-*Important!*
+**_Important_!**
 
 On linux most distributions will have java installed already so you might not need to do anything. If java isn't installed then you can add it by doing:
 - Ubuntu / Mint: 
