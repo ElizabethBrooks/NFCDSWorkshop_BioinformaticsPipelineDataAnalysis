@@ -76,95 +76,99 @@ To download the SRA toolkit:
  
 #### Mac OS Tips
 
-*Steps 1 & 2*
+> ## Steps 1 & 2
+>
+> If you recieve an error when trying to use the *tar* command to unpack the downloaded software, try [adding the *-L* flag][flagFix] like so to the following *curl* command.
+> ~~~
+> curl -L --output sratoolkit.tar.gz http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-mac64.tar.gz
+> ~~~
+> {: .language-bash}
+> 
+> Now you should be able to use the following *tar* command without error:
+> ~~~
+> tar -vxzf sratoolkit.tar.gz
+> ~~~
+> {: .language-bash}
+{: .solution}
 
-If you recieve an error when trying to use the *tar* command to unpack the downloaded software, try [adding the *-L* flag][flagFix] like so to the following *curl* command.
-~~~
-curl -L --output sratoolkit.tar.gz http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-mac64.tar.gz
-~~~
-{: .language-bash}
+> ## Steps 3 & 4
+> 
+> If you do not recieve the expected similar output of "/Users/JoeUser/sratoolkit.2.4.0-1.mac64/bin/fastq-dump" from the *which fastq-dump* command, make sure that you use *ls* to check the name of the file unpacked by the previous *tar* command. For example:
+> ~~~
+> ls
+> ~~~
+> {: .language-bash}
+> 
+> This shows us the files in our current directory, including the following just unpacked file:
+> ~~~
+> sratoolkit.2.11.2-mac64
+> ~~~
+> {: .output}
+> 
+> So, this means we need to modify the command in the installation instructions as follows:
+> ~~~
+> export PATH=$PATH:$PWD/sratoolkit.2.11.2-mac64/bin
+> ~~~
+> {: .language-bash}
+> 
+> Now, when we run the following **which** command we see the desired similar output:
+> ~~~
+> which fastq-dump
+> ~~~
+> {: .language-bash}
+> ~~~
+> /YOUR/PATH/sratoolkit.2.11.2-mac64/bin/fastq-dump
+> ~~~
+> {: .output}
+{: .solution}
 
-Now you should be able to use the following *tar* command without error:
-~~~
-tar -vxzf sratoolkit.tar.gz
-~~~
-{: .language-bash}
+> ## Step 5
+> 
+> Make sure to run the following configuration command and navigate through the [configuration interface][sraConfig] by proceeding through the instructions.
+> ~~~
+> vdb-config -i
+> ~~~
+> {: .language-bash}
+> 
+> This should bring up the following menu:
+> ![SRA Configuration Menu](fig/ScreenShotConfigSRA.png){: width="500" }
+> Where you should make sure to:
+> - enable (mark with X) the "Remote Access" option on the Main screen
+> - move to the "Cache" tab by clicking the tab and and pressing *enter*
+>   - enable "local file-caching"
+>   - set the "Location of user-repository" to an empty folder, which may be a new subdirectory that you can create using the configuration menu:
+> ![SRA Configuration Menu Subdir](fig/ScreenShotConfigSubdir.png){: width="500" }
+>   - confirm the selected the direcory 
+>   ![SRA Configuration Menu Confirm Selection](fig/ScreenShotConfigConfirm.png){: width="500" }
+> - go to the "CP" (cloud provider) tab and accept to "report cloud instance identity"
+> ![SRA Configuration CP Selection](fig/ScreenShotCP.png){: width="500" }
+> - save your changes to the configuration of the SRA Toolkit software
+> ![SRA Configuration Menu Save](fig/ScreenShotSaveSRA.png){: width="500" }
+> - you may now exit the configuration menu
+{: .solution}
 
-*Steps 3 & 4*
-
-If you do not recieve the expected similar output of "/Users/JoeUser/sratoolkit.2.4.0-1.mac64/bin/fastq-dump" from the *which fastq-dump* command, make sure that you use *ls* to check the name of the file unpacked by the previous *tar* command. For example:
-~~~
-ls
-~~~
-{: .language-bash}
-
-This shows us the files in our current directory, including the following just unpacked file:
-~~~
-sratoolkit.2.11.2-mac64
-~~~
-{: .output}
-
-So, this means we need to modify the command in the installation instructions as follows:
-~~~
-export PATH=$PATH:$PWD/sratoolkit.2.11.2-mac64/bin
-~~~
-{: .language-bash}
-
-Now, when we run the following **which** command we see the desired similar output:
-~~~
-which fastq-dump
-~~~
-{: .language-bash}
-~~~
-/YOUR/PATH/sratoolkit.2.11.2-mac64/bin/fastq-dump
-~~~
-{: .output}
-
-*Step 5*
-
-Make sure to run the following configuration command and navigate through the [configuration interface][sraConfig] by proceeding through the instructions.
-~~~
-vdb-config -i
-~~~
-{: .language-bash}
-
-This should bring up the following menu:
-![SRA Configuration Menu](fig/ScreenShotConfigSRA.png){: width="500" }
-Where you should make sure to:
-- enable (mark with X) the "Remote Access" option on the Main screen
-- move to the "Cache" tab by clicking the tab and and pressing *enter*
-  - enable "local file-caching"
-  - set the "Location of user-repository" to an empty folder, which may be a new subdirectory that you can create using the configuration menu:
-![SRA Configuration Menu Subdir](fig/ScreenShotConfigSubdir.png){: width="500" }
-  - confirm the selected the direcory 
-  ![SRA Configuration Menu Confirm Selection](fig/ScreenShotConfigConfirm.png){: width="500" }
-- go to the "CP" (cloud provider) tab and accept to "report cloud instance identity"
-![SRA Configuration CP Selection](fig/ScreenShotCP.png){: width="500" }
-- save your changes to the configuration of the SRA Toolkit software
-![SRA Configuration Menu Save](fig/ScreenShotSaveSRA.png){: width="500" }
-- you may now exit the configuration menu
-
-*Step 6*
-
-Now you should be able to run the following command without error:
-~~~
-fastq-dump --stdout SRR390728 | head -n 8
-~~~
-{: .language-bash}
-
-And recieve the following output:
-~~~
-@SRR390728.1 1 length=72
-CATTCTTCACGTAGTTCTCGAGCCTTGGTTTTCAGCGATGGAGAATGACTTTGACAAGCTGAGAGAAGNTNC
-+SRR390728.1 1 length=72
-;;;;;;;;;;;;;;;;;;;;;;;;;;;9;;665142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;96&&&&(
-@SRR390728.2 2 length=72
-AAGTAGGTCTCGTCTGTGTTTTCTACGAGCTTGTGTTCCAGCTGACCCACTCCCTGGGTGGGGGGACTGGGT
-+SRR390728.2 2 length=72
-;;;;;;;;;;;;;;;;;4;;;;3;393.1+4&&5&&;;;;;;;;;;;;;;;;;;;;;<9;<;;;;;464262
-fastq-dump was killed (signal 13 SIGPIPE)
-~~~
-{: .output}
+> ## Step 6
+> 
+> Now you should be able to run the following command without error:
+> ~~~
+> fastq-dump --stdout SRR390728 | head -n 8
+> ~~~
+> {: .language-bash}
+> 
+> And recieve the following output:
+> ~~~
+> @SRR390728.1 1 length=72
+> CATTCTTCACGTAGTTCTCGAGCCTTGGTTTTCAGCGATGGAGAATGACTTTGACAAGCTGAGAGAAGNTNC
+> +SRR390728.1 1 length=72
+> ;;;;;;;;;;;;;;;;;;;;;;;;;;;9;;665142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;96&&&&(
+> @SRR390728.2 2 length=72
+> AAGTAGGTCTCGTCTGTGTTTTCTACGAGCTTGTGTTCCAGCTGACCCACTCCCTGGGTGGGGGGACTGGGT
+> +SRR390728.2 2 length=72
+> ;;;;;;;;;;;;;;;;;4;;;;3;393.1+4&&5&&;;;;;;;;;;;;;;;;;;;;;<9;<;;;;;464262
+> fastq-dump was killed (signal 13 SIGPIPE)
+> ~~~
+> {: .output}
+{: .solution}
 
 
 ### FastQC
