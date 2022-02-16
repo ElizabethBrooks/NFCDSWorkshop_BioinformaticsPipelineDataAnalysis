@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Omics Data Analysis"
-teaching: 20
-exercises: 10
+teaching: 10
+exercises: 0
 questions:
 - "What is bioinformatics and biostatistics?"
 - "What are the similarities between bioinformatics and biostatistics?"
@@ -95,32 +95,26 @@ Bioinformaticians develop algorithms and use computer programming to investigate
 Together bioinformatics and biostatistics are important interdisciplinary fields for those conducting research in a wide variety of biological sciences. A typical bioinformatics or biostatistics data analysis workflow will have multiple steps, which may include:
 1. experimental design
 2. data collection
-3. quality control and filtering
-4. statistical analysis of omics data
-5. data visualization
-6. interpretation of results
+3. quality control
+4. data preparation
+5. statistical analysis of omics data
+6. data visualization
+7. interpretation of results
 
 The following graphic depicts a general worklfow for preparing, analyzing, and visualzing results from transcriptomic RNA sequencing data. 
 
 ![RNA Sequencing Data Analysis Pipeline](../fig/fbinf-01-693836-g001.jpeg){: width="800" }
 *[Image source][omicsWorkflow]*
 
-In this workshop you will gain experience in performing different aspects of bioinformatics and biostatistical data analysis by working through a workflow for analyzing gene expression data. The steps of the general bioinformatics or biostaistics data analysis workflow that we will be focusing on in this workshop are:
-1. data collection
-2. quality control and filtering
-3. statistical analysis of omics data
-4. data visualization
-
-
-## The Benefits of Scripting
-
-As we now know, the analysis of biological data using bioinformatics or biostatistical analysis is often a process that requires multiple steps. The primary goal of any bioinformatics analysis workflow is to give meaning to large and complex biological data sets. This often requires the development of code that is generalized and can be automated to run on multiple similar data sets, which may have small differences in their structure or content.
-
-![What is Shell Scripting?](../fig/what_is_shell_scripting.jpeg){: width="500" }
-*[Image source][scriptingBenefits]*
-
-The coding exercises in this workshop are designed to give you experience with developing and running your own shell scripts using BASH programming. Additionally, you will have a chance to perform statistical analysis using your own R scripts that you run using BASH scripts. These are important skills for anyone interested in developing a bioinformatics script pipeline for analyzing large and complex biological data sets.
-
+In this workshop you will gain experience in performing different aspects of bioinformatics and biostatistical data analysis by working through a workflow for analyzing gene expression data. The steps in the bioinformatics workflow for this workshop are:
+1. data collection - SRA toolkit
+2. quality control - fastqc
+3. data preparation
+- convert genomic data format - gffread
+- align transcriptomic data - hisat2
+- quantify transcript alignments - featureCounts
+4. basic statistical analysis and visualization (exact tests) - edgeR
+5. advanced statistical analysis and visualization (generalized linear models) - edgeR
 
 
 [bioinfoInfo]: https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-bioinformatics/
@@ -128,6 +122,5 @@ The coding exercises in this workshop are designed to give you experience with d
 [biostats]: https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_biostatisticsbasics/bs704_biostatisticsbasics_print.html
 [bioinfoStats]: https://cgm.sjtu.edu.cn/summer_school/
 [omicsWorkflow]: https://www.frontiersin.org/articles/10.3389/fbinf.2021.693836/full
-[scriptingBenefits]: https://www.interviewbit.com/shell-scripting-interview-questions/ 
 
 {% include links.md %}

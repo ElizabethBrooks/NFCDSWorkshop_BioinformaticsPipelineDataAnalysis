@@ -26,9 +26,10 @@ This lesson is designed for anyone interested in learning how to combine R and B
 > - limited experience with BASH
 > - limited experience with R
 >
-> 2. Each participant needs to have access to a computer with Unix/Linux or the Windows Ubuntu app. If you are attending the workshop in person, then a computer will be available for you. 
+> 2. Each participant needs to have access to a computer with Unix/Linux or the Windows Ubuntu app, and the necessary bioinformatics software. To get started, follow the directions in the [Setup](setup.html) tab.
 >
-> 3. Since this is an introductory workshop, we will walkthrough installing the necessary software. 
+> 3. Since this is an introductory workshop, we will be available 30 minutes prior to the workshop to walkthrough installing the necessary software. 
+>
 > 4. Please complete the [pre-workshop survey][preSurvey] before getting started with the workshop.
 {: .prereq}
 
