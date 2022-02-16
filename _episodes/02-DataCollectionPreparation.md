@@ -3,16 +3,23 @@ title: "Omics Data Collection & Preparation"
 teaching: 15
 exercises: 30
 questions:
+- "What is the experimental design for the data set we are using?"
 - "How do I naviagate the terminal?"
 - "How should I prepare data for analysis?"
 - "What are the most common file formats of transcriptomic and genomic data?"
 - "What are some databases and software tools I can use to collect omics data?"
 objectives:
+- "Gain an understanding of the source of our data."
+- "Become familiar with how transcriptomic and genomic data is structured."
+- "Be able to install and use necessary bioinformatics software tools."
 - "Become familiar with best practices in preparing data for analysis."
 - "Gain hands-on experience and develop skills to be able to use BASH to gather omic data for analysis."
 keypoints:
+- "Explore available omics databases before you design your analysis workflow"
+- "Thoroughly explore the supplamental materials of research study papers."
+- "Make sure to install any necessry software in advance."
 - "Always include informative documents for your data."
-- "Carefully structure and track your raw and calculated data."
+- "Carefully name and store your raw and calculated data files."
 ---
 
 ## Study Design & Data Collection
@@ -54,7 +61,12 @@ The transcription of genes can be measured using *next-generation* sequencing te
 ![What is RNA Sequencing?](../fig/A-schematic-representation-of-the-RNA-sequencing-protocol.png){: width="800" }
 *[Image source][rnaProtocol]*
 
-Transcription can provide whole genome-wide RNA expression profiles, and is useful for identifying key factors influencing transcription in different environmental conditions. For example, consider the following plot of transcription sequence coverage for a gene model (green) in a species of *Daphnia*, which has been subjected to a control of visible light (blue) and treatment of UV radiation (red).
+Transcription can provide whole genome-wide RNA expression profiles, and is useful for identifying key factors influencing transcription in different environmental conditions. This is achieved by processing transcriptomic data through a bioinformatics pipeline similar to the following:
+
+![Differential Expression Analysis Pipeline](../fig/Fig11-updated.png){: width="800" }
+*[Image source][deAnalysis]*
+
+For example, consider the following plot of transcription sequence coverage for a gene model (green) in a species of *Daphnia*, which has been subjected to a control of visible light (blue) and treatment of UV radiation (red).
 
 ![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="500" }
 
@@ -178,6 +190,32 @@ With the SRA Toolkit installed, we can proceed with collecting the transcriptomi
 {; .challenge}
 
 
+### Transcriptomic Data Quality Control
+
+An important part of any bioinformatics analysis workflow is the assesment and quality control of your data. In this workshop we are using RNA sequencing reads, which may need to be cleaned if they are *raw* and include extra pieces of unnecessary data (e.g., adapter sequences.
+
+**Note:** be sure that you have installed the [FastQC][fastqcCite] software program before we proceed with the bioinformatics analysis workflow.
+
+> ## Software Prerequisites
+>
+> Further information and tips for installing the FastQC software may be found on the [Setup](setup.html) page.
+{: .prereq}
+
+To check if the transcriptomic data that we downloaded has been cleaned already, we need to use the [FastQC][fastqcCite] bioinformatics software tool. 
+
+> ## Challenge
+>
+> Let's use the following fastqc command to view the quality of one of the sequence read data sets.
+>
+> ~~~
+> fastqc SRR8288561.fastq.gz --extract
+> ~~~
+> {: .language-bash}
+>
+> Note that you can also use the FastQC application to view the quality of transcript data using a user interface.
+{: .challenge}
+
+
 ## Genomic Data Collection
 
 Next, we need to collect the neccessary genomic data. Where you get your genomic data may depend on several factors. For example, some or all of the data that you need may be available through an online database. 
@@ -290,6 +328,7 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 [databases]: https://browse.welch.jhmi.edu/datasets/genomic-databases
 [ibCite]: http://v2.insect-genome.com/
 [dnaProcesses]: https://www.khanacademy.org/science/biology/gene-expression-central-dogma/transcription-of-dna-into-rna/a/overview-of-transcription
+[deAnalysis]: https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/
 [rnaProtocol]: https://www.researchgate.net/figure/A-schematic-representation-of-the-RNA-sequencing-protocol_fig1_261205828
 [dataFormatting]: https://rnnh.github.io/bioinfo-notebook/docs/file_formats.html
 [fastqFormat]: https://support.illumina.com/bulletins/2016/04/fastq-files-explained.html
@@ -308,6 +347,6 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 [featureFiles]: https://seqan.readthedocs.io/en/master/Tutorial/InputOutput/GffAndGtfIO.html#:~:text=The%20GFF%20and%20GTF%20formats,sometimes%20called%20%E2%80%9CGFF%202.5%E2%80%9D.&text=The%20main%20difference%20is%20the,smaller%20differences%20in%20the%20format.
 [gffreadMan]: http://manpages.ubuntu.com/manpages/trusty/man1/gffread.1.html
 [rnaMapping]: https://www.technologynetworks.com/genomics/articles/rna-seq-basics-applications-and-protocol-299461
-
+[fastqcCite]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
 {% include links.md %}

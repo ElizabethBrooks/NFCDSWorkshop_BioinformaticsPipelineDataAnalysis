@@ -201,6 +201,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > colnames(list) <- rownames(targets)
 > head(list)
 > ~~~
+> {: .language-r}
 >
 > This is a good point to generate some interesting plots of our input data set before we begin preparing the raw gene counts for the exact test.
 > So first, we will now plot the library sizes of our sequencing reads before normalization using the **barplot** function.
@@ -209,6 +210,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > # plot the library sizes before normalization
 > barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
 > ~~~
+> {: .language-r}
 >
 > Next, we need to filter the raw gene counts by expression levels and remove counts of lowly expressed genes.
 >
@@ -218,6 +220,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > summary(keep)
 > list <- list[keep, , keep.lib.sizes=FALSE]
 > ~~~
+> {: .language-r}
 >
 > The filtered raw counts are then normalized with **calcNormFactors** according to the weighted trimmed mean of M-values (TMM) to eliminate composition biases between libraries. The normalized gene counts are output in counts per million (CPM).
 >
@@ -229,6 +232,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > #Write normalized counts to file
 > normList <- cpm(list, normalized.lib.sizes=TRUE)
 > ~~~
+> {: .language-r}
 >
 > Now that we have normalized gene counts for our samples we should generate some informative plots of our normalized data. First, we can verify the TMM normalization with a mean difference (MD) plot of all log fold change (logFC) against average count size.
 >
@@ -238,6 +242,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > plotMD(cpm(list, log=TRUE), column=1)
 > abline(h=0, col="red", lty=2, lwd=2)
 > ~~~
+> {: .language-r}
 >
 > Next, we will use **plotMDS** to display the relative similarities of the samples and view the differences between the expression profiles of different samples. 
 >
@@ -259,6 +264,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > plotMDS(list, col=colors[group], pch=points[group])
 > legend("topleft", legend=levels(group), pch=points, col=colors, ncol=2)
 > ~~~
+> {: .language-r}
 >
 > The design matrix for our data also needs to be specified before we can perform the F-tests. The experimental design is parametrized with a one-way layout and one coefficient is assigned to each group.
 >
@@ -269,6 +275,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > colnames(design) <- levels(group)
 > #design
 > ~~~
+> {: .language-r}
 >
 > With the normalized gene counts and design matrix we can now generate the negative binomial (NB) dispersion estimates using the **estimateDisp** function. The NB dispersion estimates reflect the overall biological variability under the QL framework in edgeR. This allows us to use the plotBCV function to generate a genewise biological coefficient of variation (BCV) plot of dispersion estimates. 
 >
@@ -280,6 +287,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > #Write plot to file
 > plotBCV(list)
 > ~~~
+> {: .language-r}
 >
 > Next, we estimate the QL dispersions for all genes using the **glmQLFit** function. This detects the gene-specific variability above and below the overall level. The dispersion are then plotted with the **plotQLDisp** function.
 >
@@ -290,6 +298,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > #Write plot to file
 > plotQLDisp(fit)
 > ~~~
+> {: .language-r}
 >
 > Now we are ready to begin defining and testing contrasts of our experimental design. The first comparison we will make is used to test our hypothesis that the means of the *treatment* factor are equal.
 >
@@ -309,6 +318,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > plotMD(anov.treat_cntrl)
 > abline(h=c(-1, 1), col="blue")
 > ~~~
+> {: .language-r}
 >
 > The second comparison we will make is used to test our hypothesis that the means of the *hours* factor are equal.
 >
@@ -326,6 +336,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > plotMD(anov.24h_4h)
 > abline(h=c(-1, 1), col="blue")
 > ~~~
+> {: .language-r}
 >
 > The final comparison we will make is to test our hypothesis that there is no *interaction* between the two factors (treatment and tolerance).  To make our last contrast we will test whether the mean effects of the two factors are equal. 
 >

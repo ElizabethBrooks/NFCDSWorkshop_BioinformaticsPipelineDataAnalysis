@@ -3,20 +3,29 @@ title: "Statistical Analysis of Omics Data"
 teaching: 15
 exercises: 30
 questions:
-- "What statistical methods do I need to analyze my data?"
-- "What packages are available to me for biological data analysis in R?"
+- "How do I need to prepare my data for analysis in R?"
+- "What statistical methods do I need to analyze this data set?"
+- "What packages are available to me for biostatistical data analysis in R?"
+- "How do I perform differential gene expression analysis using R packages?"
 objectives:
-- "Gain hands-on experience and develop skills to be able to use R to visualize and investigate patterns in genomic data."
-- "Be able to install and run function from packages commonly used for data analysis and visualization in R."
+- "Become familiar with methods in R for quantifying transcriptomic gene expression data."
+- "Gain hands-on experience and develop skills to be able to use R to visualize and investigate patterns in omics data."
+- "Be able to install and load the necessary biostatistics R packages."
+- "Be able to run functions from biostatistics packages for data analysis and visualization in R."
 keypoints:
-- "TBD"
+- "The BiocManager is is a great tool for installing Bioconductor packages in R."
+- "Make sure to use the ? symbol to check the documentation for most R functions."
+- "Fragments of sequences from RNA sequencing may be mapped to a reference genome and quantified."
+- "The edgeR manual has many good examples of differential expression analysis on different data sets."
 ---
 
 ## Omics Data Preparation - R
 
-Now that we have the transcript sequence reads aligned to the reference genome, we can begin to quantify the number of reads that map to each genomic feature from the features file. Recall that we are able to count the number of reads that map to each feature in a genome to compare the effects of a treatment, such as UV radiation exposure.
+Now that we have the transcript sequence reads aligned (mapped) to the reference genome, we can begin to quantify the number of reads that map to each genomic feature from the features file. Recall that we are able to count the number of reads that map to each feature in a genome to compare the effects of a treatment, such as UV radiation exposure.
 
 ![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="500" }
+
+A benefit of being able to map transcript reads is the ability to [determine the differential expression][deAnalysis] of genes under stress. Remember that transcripts produced by RNA sequencing technologies are fragments of gene sequences that have been transcribed (expressed).
 
 **Note:** be sure that you have loaded the [Rsubread][rsubreadCite] R library before we proceed with the bioinformatics analysis workflow.
 
@@ -166,6 +175,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > # plot the library sizes before normalization
 > barplot(list$samples$lib.size*1e-6, names=1:6, ylab="Library size (millions)")
 > ~~~
+> {: .language-r}
 >
 > Next, we will use the **plotMDS** function to display the relative similarities of the samples and view batch and treatment effects before normalization. 
 >
@@ -174,6 +184,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > # and to view batch and treatment effects before normalization
 > plotMDS(list, col=rep(1:6, each=3))
 > ~~~
+> {: .language-r}
 >
 > There is no purpose in analyzing genes that are not expressed in either experimental condition (treatment or control), so raw gene counts are first filtered by expression levels.
 >
@@ -191,6 +202,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > list$samples
 > dim(list)
 > ~~~
+> {: .language-r}
 >
 > Now that we have normalized gene counts for our samples we should generate the same set of previous plots for comparison.
 >
@@ -202,6 +214,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > # and to view batch and treatment effects after normalization
 > plotMDS(list, col=rep(1:3, each=3))
 > ~~~
+> {: .language-r}
 >
 > It can also be useful to view the moderated log-counts-per-million after normalization using the **cpm** function results with **heatmap**.
 >
@@ -211,6 +224,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > logcpm <- cpm(list, log=TRUE)
 > heatmap(logcpm)
 > ~~~
+> {: .language-r}
 >
 > With the normalized gene counts we can also produce a matrix of pseudo-counts to estimate the common and tagwise dispersions. This allows us to use the **plotBCV** function to generate a genewise biological coefficient of variation (BCV) plot of dispersion estimates.
 >
@@ -223,6 +237,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > # view dispersion estimates and biological coefficient of variation
 > plotBCV(list)
 > ~~~
+> {: .language-r}
 >
 > Now, we are ready to perform exact tests with edgeR using the **exactTest** function.
 >
@@ -237,6 +252,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > resultsTbl.keep <- resultsTbl$FDR <= 0.05
 > resultsTblFiltered <- resultsTbl[resultsTbl.keep,]
 > ~~~
+> {: .language-r}
 >
 > Using the resulting differentially expressed (DE) genes from the exact test we can view the counts per million for the top genes of each sample.
 >
@@ -248,6 +264,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > # view the total number of differentially expressed genes at a p-value of 0.05
 > summary(decideTests(tested))
 > ~~~
+> {: .language-r}
 >
 > We can also generate a mean difference (MD) plot of the log fold change (logFC) against the log counts per million (logcpm) using the **plotMD** function. DE genes are highlighted and the blue lines indicate 2-fold changes. 
 >
@@ -257,6 +274,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > plotMD(tested)
 > abline(h=c(-1, 1), col="blue")
 > ~~~
+> {: .language-r}
 >
 > As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
 >
@@ -267,7 +285,7 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > {: .language-r}
 {: .challenge}
 
-
+[deAnalysis]: https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 

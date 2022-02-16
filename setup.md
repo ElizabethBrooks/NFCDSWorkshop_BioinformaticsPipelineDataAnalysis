@@ -3,7 +3,7 @@ layout: page
 title: Setup
 ---
 
-# Required Programming Language Software
+## **Required Programming Language Software**
 
 These lessons require the installation of R, RStudio, and BASH. The R open-source software is an object-oriented programming language for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows, 
 and MacOS. 
@@ -13,7 +13,7 @@ highlighting editor that supports direct code execution, and a variety of robust
 
 The command line terminal available to Mac OS and Linux is a powerful tool and where the magic happens. It’s excellent for software development, file management, remote analysis, and a myriad of other tasks.
  
-## Windows Tips
+### Windows Tips
 
 1. To download R, visit [https://cran.r-project.org/](https://cran.r-project.org/) and at the top of the page, select the Windows operating system.
 - Select the "Download R for Windows" link on the main page.
@@ -49,7 +49,7 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 - Then enter a username and password specific to your Ubuntu installation, which don’t need to be the same as your Windows 10 credentials. With this step complete, you’ll find yourself at the Ubuntu bash command line.
 
 
-## Mac OS Tips
+### Mac OS Tips
 
 1. To download R, visit [https://cran.r-project.org/](https://cran.r-project.org/) and at the top of the page, select the macOS operating system.
 - Select the "Download R for macOS" link on the main page.
@@ -64,7 +64,9 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 - Open the installer and follow the installation instructions.
 
 
-## Required Bioinformatics Software
+## **Required Bioinformatics Software**
+
+### SRA Toolkit
 
 In this workshop we will collect the transcriptomic data we need from the sequence read archive (SRA). Specifically, the transcript sequence data for the paper investigating the effects of UV-B exposure on the larvae of the red flour beetle.
 
@@ -72,7 +74,7 @@ To download the SRA toolkit:
 1. navigate to the [installation instructions][installSRA]
 2. find the appropriate instructions for your operating system (OS)
  
-## Mac OS Tips
+#### Mac OS Tips
 
 *Steps 1 & 2*
 
@@ -108,9 +110,13 @@ export PATH=$PATH:$PWD/sratoolkit.2.11.2-mac64/bin
 ~~~
 {: .language-bash}
 
-Now, when we run the *which fastq-dump* command we see the desired similar output:
+Now, when we run the following **which** command we see the desired similar output:
 ~~~
-/Users/bamflappy/sratoolkit.2.11.2-mac64/bin/fastq-dump
+which fastq-dump
+~~~
+{: .language-bash}
+~~~
+/YOUR/PATH/sratoolkit.2.11.2-mac64/bin/fastq-dump
 ~~~
 {: .output}
 
@@ -159,3 +165,144 @@ AAGTAGGTCTCGTCTGTGTTTTCTACGAGCTTGTGTTCCAGCTGACCCACTCCCTGGGTGGGGGGACTGGGT
 fastq-dump was killed (signal 13 SIGPIPE)
 ~~~
 {: .output}
+
+
+### FastQC
+
+We will be using the [FastQC][fastqcCite] bioinformatics software tool to check if the quality of the transcriptomic data that we will be using in this workshop. 
+
+To install the FastQC software application, or for the command line, follow the directions in their [installation instructions][fastqcInstall] document. Some important notes from their documentation follows.
+
+**Software Application Installation - OSX**
+
+FastQC is distributed as a DMG image file. 
+- Download the image from the project page and double click it to open it.
+- You should see the FastQC application appear in a Finder window. 
+- Drag the application from there to wherever you want to install it on your machine.
+- Once you've copied the application double click it to open it.
+
+*Important!*
+
+FastQC is not a signed application therefore it may initially be blocked by the Gatekeeper application. 
+- To avoid this open FastQC by right clicking on the app and selecting open.
+- This may prompt you to allow it to open. 
+- If it is still blocked go to **System Preferences > Security and Privacy** and you should see an option
+to allow the application to open.  
+- You only need to do this once and the preference should be remembered by OSX.
+
+> ## Tip!
+> 
+> A simple way to install the FastQC command line tool is using the following **brew** command in the terminal:
+>
+> ~~~
+> brew install fastqc
+> ~~~
+> {: .language-bash}
+{: .callout}
+
+**Software Application Installation - Windows & Linux**
+
+FastQC is a java application. In order to run it needs your system to have a suitable Java Runtime Environment (JRE) installed. Before you try to run FastQC you should therefore ensure that you have a suitable JRE. 
+- There are a number of different JREs available however the ones we have tested are the latest Oracle runtime environments and those from the adoptOpenJDK project (https://adoptopenjdk.net/).  
+- You need to download and install a suitable 64-bit JRE and make sure that the java application is in your path (most installers will take care of this for you).
+
+*Important!*
+
+On linux most distributions will have java installed already so you might not need to do anything. If java isn't installed then you can add it by doing:
+- Ubuntu / Mint: 
+~~~
+sudo apt install default-jre
+~~~
+{: .language-bash}
+- CentOS / Redhat: 
+~~~
+sudo yum install java-1.8.0-openjdk
+~~~
+{: .language-bash}
+
+**Command Line Tool Installation**
+
+To run FastQC non-interactively you should use the fastqc wrapper script to launch the program. You will probably want to use the zipped install file on every platform (even OSX).
+
+
+### gffread
+
+There are a few different ways that you could use to install the gffread software tool. 
+- The primary source is from the [official website][gffCite], which includes the software packages for download at the bottom of the page in the "Obtaining gffcompare" section. 
+- Another place that you can download the software packages for gffread is through the [Anaconda][anacondaCite] website, or using the conda command line tool.
+- It is also possible to build the program from the source packages available through their [GitHub repository][gffGit], and following their instructions in the "Installation" section of the README document.
+
+> ## Tip!
+>
+> On the Mac OS is is possible to use **conda** to install the gffread command line tool. 
+> **Note:** this does require a few extra steps for Z shel (zsh) users, which includes Mac user of the recent Catalina OS version.
+>
+> ~~~
+> wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+> 
+> bash Miniconda3-latest-MacOSX-x86_64.sh -b -p $HOME/miniconda
+> 
+> source /YOUR/PATH/miniconda/bin/activate
+> 
+> conda init zsh
+> 
+> conda list
+> 
+> conda install -c bioconda gffread
+> ~~~
+> {: .language-bash}
+{: .callout}
+
+
+### Hisat2
+
+We will be using the [Hisat2][hisat2Cite] bioinformatics software tools to prepare the transcriptomic sequence data files for statistical analysis by aligning the transcriptomic data to a reference genome.
+
+To install Hisat2 follow the instructions on their [manual page][hisat2Man] in the "Building from source" section.
+First, download the [source package from the Download section on the right side][hisat2Source]. 
+- unzip the file
+- change to the unzipped directory
+- build the HISAT2 tools by running GNU make (usually with the command make, but sometimes with gmake) with no arguments. If building with MinGW, run make from the MSYS environment.
+
+> ## Tip!
+>
+> In order to run Hisat2 using the command line, you will need to your new HISAT2 directory to your [PATH][pathVar] environment variable.
+> To do this, follow your operating system’s instructions for adding the directory to your PATH. For example, on Mac OS:
+>
+> ~~~
+> export PATH=$PATH:$PWD/hisat2-2.2.1
+> ~~~
+> {: .language-bash}
+{: .callout}
+
+
+### R Packages - Rsubread & edgeR
+
+The final pieces of software you will need to complete the analysis in this workshop are the Rsubread and edgeR R packages. These packages allow you to perform different biostatistical analysis on omics data.
+
+The [BiocManager][biocCite] makes it easy to install Bioconductor packages, including the Rsubread and edgeR packages in R. The following R code can be used to install these packages, for example.
+
+Note that the first step in installing any Bioconductor package is to make sure that you have the BiocManager installed *using the R programming language*.
+
+~~~
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("Rsubread")
+
+BiocManager::install("edgeR")
+~~~
+{: .language-r}
+
+
+[sraConfig]: https://github.com/ncbi/sra-tools/wiki/03.-Quick-Toolkit-Configuration
+[fastqcCite]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+[fastqcInstall]: https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt
+[gffCite]: http://ccb.jhu.edu/software/stringtie/gff.shtml
+[anacondaCite]: https://anaconda.org/bioconda/gffread
+[gffGit]: https://github.com/gpertea/gffread
+[hisat2Cite]: http://daehwankimlab.github.io/hisat2/
+[hisat2Man]: http://daehwankimlab.github.io/hisat2/manual/
+[hisat2Source]: http://daehwankimlab.github.io/hisat2/download/
+[pathVar]: https://en.wikipedia.org/wiki/PATH_(variable)
+[biocCite]: https://cran.r-project.org/web/packages/BiocManager/vignettes/BiocManager.html
