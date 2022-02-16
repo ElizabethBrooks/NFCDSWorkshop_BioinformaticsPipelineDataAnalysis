@@ -14,6 +14,7 @@ highlighting editor that supports direct code execution, and a variety of robust
 The command line terminal available to Mac OS and Linux is a powerful tool and where the magic happens. It’s excellent for software development, file management, remote analysis, and a myriad of other tasks.
  
 ## Windows Tips
+
 1. To download R, visit [https://cran.r-project.org/](https://cran.r-project.org/) and at the top of the page, select the Windows operating system.
 - Select the "Download R for Windows" link on the main page.
 - Select the "base" link in the Subdirectories.
@@ -49,6 +50,7 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 
 
 ## Mac OS Tips
+
 1. To download R, visit [https://cran.r-project.org/](https://cran.r-project.org/) and at the top of the page, select the macOS operating system.
 - Select the "Download R for macOS" link on the main page.
 - Select the "base" link in the Subdirectories.
@@ -71,7 +73,9 @@ To download the SRA toolkit:
 2. find the appropriate instructions for your operating system (OS)
  
 ## Mac OS Tips
+
 *Steps 1 & 2*
+
 If you recieve an error when trying to use the *tar* command to unpack the downloaded software, try [adding the *-L* flag][flagFix] like so to the following *curl* command.
 ~~~
 curl -L --output sratoolkit.tar.gz http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-mac64.tar.gz
@@ -85,6 +89,7 @@ tar -vxzf sratoolkit.tar.gz
 {: .language-bash}
 
 *Steps 3 & 4*
+
 If you do not recieve the expected similar output of "/Users/JoeUser/sratoolkit.2.4.0-1.mac64/bin/fastq-dump" from the *which fastq-dump* command, make sure that you use *ls* to check the name of the file unpacked by the previous *tar* command. For example:
 ~~~
 ls
@@ -110,6 +115,7 @@ Now, when we run the *which fastq-dump* command we see the desired similar outpu
 {: .output}
 
 *Step 5*
+
 Make sure to run the following configuration command and navigate through the [configuration interface][sraConfig] by proceeding through the instructions.
 ~~~
 vdb-config -i
@@ -133,6 +139,7 @@ Where you should make sure to:
 - you may now exit the configuration menu
 
 *Step 6*
+
 Now you should be able to run the following command without error:
 ~~~
 fastq-dump --stdout SRR390728 | head -n 8
