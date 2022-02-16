@@ -1,6 +1,6 @@
 ---
 title: "Omics Data Collection & Preparation"
-teaching: 10
+teaching: 15
 exercises: 30
 questions:
 - "How do I naviagate the terminal?"

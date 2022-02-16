@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Omics Data Analysis"
-teaching: 10
-exercises: 0
+teaching: 15
+exercises: 15
 questions:
 - "What is bioinformatics and biostatistics?"
 - "What are the similarities between bioinformatics and biostatistics?"

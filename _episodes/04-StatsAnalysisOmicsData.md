@@ -1,6 +1,6 @@
 ---
 title: "Statistical Analysis of Omics Data"
-teaching: 10
+teaching: 15
 exercises: 30
 questions:
 - "What statistical methods do I need to analyze my data?"

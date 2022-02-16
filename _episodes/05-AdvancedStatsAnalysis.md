@@ -1,7 +1,7 @@
 ---
-title: "Advanced Statistical Analysis of Omics Data"
-teaching: 10
-exercises: 30
+title: "Advanced Statistical Analysis of Omics Data (Optional)"
+teaching: 0
+exercises: 0
 questions:
 - "What statistical methods do I need to analyze my data?"
 - "What packages are available to me for biological data analysis in R?"

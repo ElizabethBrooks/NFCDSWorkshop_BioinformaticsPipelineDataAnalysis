@@ -1,7 +1,7 @@
 ---
 title: "Bioinformatics Workflow Pipelining"
 teaching: 10
-exercises: 10
+exercises: 15
 questions:
 - "How can I use R and BASH scripts to automate my data analysis process?"
 objectives:
