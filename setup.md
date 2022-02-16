@@ -299,6 +299,9 @@ BiocManager::install("edgeR")
 {: .language-r}
 
 
+[toolkitSRA]: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc
+[installSRA]: https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit
+[flagFix]: https://stackoverflow.com/questions/42268180/tar-unrecognized-archive-format-error-when-trying-to-unpack-flower-photos-tgz
 [sraConfig]: https://github.com/ncbi/sra-tools/wiki/03.-Quick-Toolkit-Configuration
 [fastqcCite]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 [fastqcInstall]: https://raw.githubusercontent.com/s-andrews/FastQC/master/INSTALL.txt
