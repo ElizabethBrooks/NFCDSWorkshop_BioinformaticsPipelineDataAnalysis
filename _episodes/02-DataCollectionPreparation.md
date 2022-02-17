@@ -99,97 +99,104 @@ The SRA Toolkit allows you to retrieve data from the SRA for a specific research
 
 With the SRA Toolkit installed, we can proceed with collecting the transcriptomic data we need for our bioinformatics analysis. Remeber that we are following the example of the study performed by the authors of "[Digital gene expression profiling in larvae of *Tribolium castaneum* at different periods post UV-B exposure][paperCite]".
 
-> ## Challenge
+
+#### **_Coding Challenge_**
+
+Let's find the transcriptomic data we need by navigating the internet. This data may be accessed by:
+1. go to the paper on the publisher's website
+
+> ## Tip! - Task 1
 >
-> Let's find the transcriptomic data we need by navigating the internet. This data may be accessed by:
-> 1. go to the paper on the publisher's website
+> A simple way to gain access to a specific publication is by searching the name of a paper using the [Hesburgh Library website][hlWebsite]
+{: .callout}
+
+2. search the paper for the SRA "accession" number associated with the study
+
+> ## Tip! - Task 2
 >
->> ## Tip! - Task 1
->>
->> A simple way to gain access to a specific publication is by searching the name of a paper using the [Hesburgh Library website][hlWebsite]
+> Search the paper for "accession" (Mac: command+f, Windows: cntrl+f) and copy the *Accession No.* 
+>> ### Solution
+>> The *Accession No.* is PRJNA504739 for the transcriptomic data.
 > {: .solution}
+{: .callout}
+
+3. find the list of accession numbers for the set of transcriptomic data associated with the study by searching for the previously found study accession number using the "[SRA Run Selector][runSelector]" on the NCBI website. It is here you will find futher information about each of the sample files as well.
+
+> ## Solution - Task 3
 >
-> 2. search the paper for the SRA "accession" number associated with the study
+> To find the list of accession numbers for the transcripts:
+> - enter the accession number you found in the paper in the search box as follows:
+> ![Example SRA Accession Search](../fig/ScreenShotSRA.png){: width="500" }
+{: .solution}
+
+**_Basic Analysis_**
+
+4. in order to save time, we will retrieve a subset of the transcriptomic sequence data for the study. Determine the SRA accession numbers for the following samples on the results page:
+- Trc_1
+- Trc_2
+- Trc_4
+- Trc_5
+
+**Note:** you will need to download at least four of the sample sequence files to run the basic statistical analysis in this workshop.
+
+> ## Solution - Task 4
 >
->> ## Tip! - Task 2
->>
->> Search the paper for "accession" (Mac: command+f, Windows: cntrl+f) and copy the *Accession No.* 
->>> ### Solution
->>> The *Accession No.* is PRJNA504739 for the transcriptomic data.
->> {: .solution}
+> The four SRA accession numbers are:
+> - SRR8288561
+> - SRR8288562
+> - SRR8288564
+> - SRR8288557
+> Be aware that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, note that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
+{: .solution}
+
+5. use the following *prefetch* and *fastq-dump* [command formats][samDump] from the SRA Toolkit in the terminal:
+~~~ 
+prefetch <accession number>
+fastq-dump <accession number> --output-file <accession number>.sam
+~~~
+{: .language-bash}
+
+> ## Solution - Task 5
 >
-> 3. find the list of accession numbers for the set of transcriptomic data associated with the study by searching for the previously found study accession number using the "[SRA Run Selector][runSelector]" on the NCBI website. It is here you will find futher information about each of the sample files as well.
->
->> ## Tip! - Task 3
->>
->> To find the list of accession numbers for the transcripts:
->> - enter the accession number you found in the paper in the search box as follows:
->> ![Example SRA Accession Search](../fig/ScreenShotSRA.png){: width="500" }
-> {: .solution}
->
-> *Basic Analysis*
-> 4. in order to save time, we will retrieve a subset of the transcriptomic sequence data for the study. Determine the SRA accession numbers for the following samples on the results page:
-> - Trc_1
-> - Trc_2
-> - Trc_4
-> - Trc_5
-> **Note:** you will need to download at least four of the sample sequence files to run the basic statistical analysis in this workshop.
->
->> ## Tip! - Task 4
->>
->> The four SRA accession numbers are:
->> - SRR8288561
->> - SRR8288562
->> - SRR8288564
->> - SRR8288557
->> Note that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, note that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
-> {: .solution}
->
-> *Advanced Analysis*
-> 4. Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
->
->> ## Tip! - Advanced Task 4
->>
->> It is possible to download the full list of SRA accession numbers for all the samples associated with the study by selecting to download the total accession list from the "Select" section of the page.
->> ![Example SRA Accession Search](../fig/ScreenShotResultsSRA.png){: width="500" }
-> {: .solution}
->
-> *Basic Analysis*
-> 5. use the following *prefetch* and *fastq-dump* [command formats][samDump] from the SRA Toolkit in the terminal:
+> Use the following *prefetch* and *fastq-dump* commands and accession numbers, which will take a few moments:
 > ~~~ 
-> prefetch <accession number>
-> fastq-dump <accession number> --output-file <accession number>.sam
+> prefetch SRR8288561 SRR8288562 SRR8288564 SRR8288557
+> fastq-dump --gzip SRR8288561 
+> fastq-dump --gzip SRR8288562 
+> fastq-dump --gzip SRR8288564
+> fastq-dump --gzip SRR8288557
+> ~~~
+{: .solution}
+
+**_Advanced Analysis_**
+
+The following steps can be done to retrieve additional data to be able to complete more advanced statistical analyses later.
+
+4. Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
+
+> ## Solution - Advanced Task 4
+>
+> It is possible to download the full list of SRA accession numbers for all the samples associated with the study by selecting to download the total accession list from the "Select" section of the page.
+> ![Example SRA Accession Search](../fig/ScreenShotResultsSRA.png){: width="500" }
+{: .solution}
+
+5. Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
+
+> ## Solution - Advanced Task 5
+>
+> To retrieve the full set of samples, use the following *prefetch* and *fastq-dump* commands and accession numbers. This will take several moments.
+> ~~~ 
+> prefetch SRR8288561 SRR8288562 SRR8288563 SRR8288564 SRR8288557 SRR8288560 SRR8288558 SRR8288559 SRR8288565 SRR8288566 SRR8288567 SRR8288568
+> fastq-dump --gzip SRR8288561; fastq-dump --gzip SRR8288562; fastq-dump --gzip SRR8288563; fastq-dump --gzip SRR8288564; fastq-dump --gzip SRR8288557; fastq-dump --gzip SRR8288560
+> fastq-dump --gzip SRR8288558; fastq-dump --gzip SRR8288559; fastq-dump --gzip SRR8288565; fastq-dump --gzip SRR8288566; fastq-dump --gzip SRR8288567; fastq-dump --gzip SRR8288568
 > ~~~
 > {: .language-bash}
->
->> ## Tip! - Task 5
->>
->> Use the following *prefetch* and *fastq-dump* commands and accession numbers, which will take a few moments:
->> ~~~ 
->> prefetch SRR8288561 SRR8288562 SRR8288564 SRR8288557
->> fastq-dump --gzip SRR8288561 
->> fastq-dump --gzip SRR8288562 
->> fastq-dump --gzip SRR8288564
->> fastq-dump --gzip SRR8288557
->> ~~~
-> {: .solution}
->
-> *Advanced Analysis*
-> 5. Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
->
->> ## Tip! - Advanced Task 5
->>
->> To retrieve the full set of samples, use the following *prefetch* and *fastq-dump* commands and accession numbers. This will take several moments.
->> ~~~ 
->> prefetch SRR8288561 SRR8288562 SRR8288563 SRR8288564 SRR8288557 SRR8288560 SRR8288558 SRR8288559 SRR8288565 SRR8288566 SRR8288567 SRR8288568
->> fastq-dump --gzip SRR8288561; fastq-dump --gzip SRR8288562; fastq-dump --gzip SRR8288563; fastq-dump --gzip SRR8288564; fastq-dump --gzip SRR8288557; fastq-dump --gzip SRR8288560
->> fastq-dump --gzip SRR8288558; fastq-dump --gzip SRR8288559; fastq-dump --gzip SRR8288565; fastq-dump --gzip SRR8288566; fastq-dump --gzip SRR8288567; fastq-dump --gzip SRR8288568
->> ~~~
->> {: .language-bash}
-> {: .solution}
-{; .challenge}
+{: .solution}
 
-**Note** that if a terminal command is taking a long time to run, you may use the [**Cntrl + C** keyboard shortcut][killShortcut] to kill it and force it to stop running.
+> ## Tip!
+> 
+> **Note:** that if a terminal command is taking a long time to run, you may use the [**Cntrl + C** keyboard shortcut][killShortcut] to kill it and force it to stop running.
+{: .callout}
 
 
 ### Transcriptomic Data Quality Control
@@ -205,7 +212,7 @@ An important part of any bioinformatics analysis workflow is the assesment and q
 
 To check if the transcriptomic data that we downloaded has been cleaned already, we need to use the [FastQC][fastqcCite] bioinformatics software tool. 
 
-> ## Challenge
+> ## Coding Challenge
 >
 > Let's use the following fastqc command to view the quality of one of the sequence read data sets.
 >
@@ -214,7 +221,7 @@ To check if the transcriptomic data that we downloaded has been cleaned already,
 > ~~~
 > {: .language-bash}
 >
-> Note that you can also use the FastQC application to view the quality of transcript data using a user interface.
+> Be aware that you can also use the FastQC application to view the quality of transcript data using a user interface.
 {: .challenge}
 
 
@@ -241,7 +248,7 @@ Depedning on the organisms that you are working with, you may need to locate dat
 - reference genome
 - genomic features
 
-> ## Tip!
+> ## Challenge
 > 
 > Navigate to the [*Tribolium castaneum* organism page][tbPage] of the InsectBase website and under the "Download" section of the page:
 > 1. click the red word **Genome**
@@ -278,7 +285,7 @@ Now that we have the necessary transcript and genomic data, we can begin the pro
 
 The first step in our bioinformatics workflow is to convert one of the genomic data files to the format expected by our *downstread* analysis tools. The genome features file that we downloaded from InsectBase for *Tribolium castaneum* is in the *gff3* format, but it needs to be in *gtf* format to use with Hisat2. This is because there are some important [formatting differences][featureFiles] between the two genomic feature file types.
 
-> ## Challenge
+> ## Coding Challenge
 >
 > Let's use the gffread command line tool to convert the genomic features file from *gff3* to *gtf* format.
 > **Hint:** check out the [manual page for gffread][gffreadMan] to learn more about the different options.
@@ -297,12 +304,13 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 ![What is RNA Sequence Read Mapping](../fig/dnasequencingb1529596261132.png){: width="500" }
 *[Image source][rnaMapping]*
 
-> ## Challenge
+> ## Coding Challenge
 >
 > Let's use the Hisat2 command line tool to map the transcriptomic sequence reads to the reference genome of *Tribolium castaneum*. This is done in two steps.
 > **Hint:** check out the [manual page for Hisat2][hisat2Cite] to learn more about the different options.
 >
-> *Step 1*
+> **_Step 1_**
+>
 > First, we need to build a HISAT2 index from the set of DNA sequences for *Tribolium castaneum* contained in the reference genome *fasta* file. The build files that are produced by running the following command are needed to map the aligned reads to the reference using the hisat2 commands in the next step (*Step 2*).
 >
 > ~~~
@@ -310,7 +318,8 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 > ~~~
 > {: .language-bash}
 >
-> *Step 2*
+> **_Step 2_**
+>
 > Second, we can use the hisat2 command to map **each** read to the reference genome. This results in an output *sam* file for each of the input compressed transcript sequence *fastq.gz* files.
 >
 > ~~~
