@@ -62,12 +62,7 @@ The transcription of genes can be measured using *next-generation* sequencing te
 ![What is RNA Sequencing?](../fig/A-schematic-representation-of-the-RNA-sequencing-protocol.png){: width="500" }
 *[Image source][rnaProtocol]*
 
-Transcription can provide whole genome-wide RNA expression profiles, and is useful for identifying key factors influencing transcription in different environmental conditions. This is achieved by processing transcriptomic data through a bioinformatics pipeline similar to the following:
-
-![Differential Expression Analysis Pipeline](../fig/Fig11-updated.png){: width="800" }
-*[Image source][deAnalysis]*
-
-For example, consider the following plot of transcription sequence coverage for a gene model (green) in a species of *Daphnia*, which has been subjected to a control of visible light (blue) and treatment of UV radiation (red).
+Transcription can provide whole genome-wide RNA expression profiles, and is useful for identifying key factors influencing transcription in different environmental conditions. For example, consider the following plot of transcription sequence coverage for a gene model (green) in a species of *Daphnia*, which has been subjected to a control of visible light (blue) and treatment of UV radiation (red).
 
 ![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="800" }
 
