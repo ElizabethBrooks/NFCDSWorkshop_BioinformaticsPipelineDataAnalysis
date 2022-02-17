@@ -86,11 +86,11 @@ In this workshop we will be using transcription sequence data in the [FASTQ form
 ![Example FASTQ File Formatting](../fig/A-sample-of-the-FASTQ-file.png){: width="800" }
 *[Image source][fastqEx]*
 
-**Note:** Make sure that the [SRA Toolkit][toolkitSRA] is installed before we proceed to download the transcriptomic data we need. To download the SRA toolkit:
-1. navigate to the [installation instructions][installSRA]
-2. find the appropriate instructions for your operating system (OS)
-
 > ## Software Prerequisite
+>
+> **Note:** Make sure that the [SRA Toolkit][toolkitSRA] is installed before we proceed to download the transcriptomic data we need. To download the SRA toolkit:
+> 1. navigate to the [installation instructions][installSRA]
+> 2. find the appropriate instructions for your operating system (OS)
 >
 > Further information and tips for installing the SRA toolkit may be found on the [Setup](setup.html) page.
 {: .prereq}
@@ -196,9 +196,9 @@ With the SRA Toolkit installed, we can proceed with collecting the transcriptomi
 
 An important part of any bioinformatics analysis workflow is the assesment and quality control of your data. In this workshop we are using RNA sequencing reads, which may need to be cleaned if they are *raw* and include extra pieces of unnecessary data (e.g., adapter sequences.
 
-**Note:** be sure that you have installed the [FastQC][fastqcCite] software program before we proceed with the bioinformatics analysis workflow.
-
 > ## Software Prerequisites
+>
+> **Note:** be sure that you have installed the [FastQC][fastqcCite] software program before we proceed with the bioinformatics analysis workflow.
 >
 > Further information and tips for installing the FastQC software may be found on the [Setup](setup.html) page.
 {: .prereq}
@@ -263,12 +263,12 @@ Now that we have the necessary transcript and genomic data, we can begin the pro
 4. basic statistical analysis and visualization (exact tests) - [edgeR][edgeRCite]
 5. advanced statistical analysis and visualization (generalized linear models) - [edgeR][edgeRCite]
 
-**Note:** be sure that you have installed the following software before we proceed with the bioinformatics analysis workflow.
-- [Fastqc][fastqcCite]
-- [gffread][gffreadCite]
-- [Hisat2][hisat2Cite]
-
 > ## Software Prerequisites
+>
+> **Note:** be sure that you have installed the following software before we proceed with the bioinformatics analysis workflow.
+> - [Fastqc][fastqcCite]
+> - [gffread][gffreadCite]
+> - [Hisat2][hisat2Cite]
 >
 > Further information and tips for installing the fastqc, gffread, and hisat2 software programs may be found on the [Setup](setup.html) page.
 {: .prereq}

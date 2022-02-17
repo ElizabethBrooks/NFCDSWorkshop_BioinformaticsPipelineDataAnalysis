@@ -20,10 +20,10 @@ Now that we have the transcript sequence reads aligned to the reference genome, 
 
 ![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="800" }
 
-**Note:** be sure that you have loaded the [Rsubread][rsubreadCite] R library before we proceed with the bioinformatics analysis workflow.
-
 > ## Software Prerequisites
 >
+> **Note:** be sure that you have loaded the [Rsubread][rsubreadCite] R library before we proceed with the bioinformatics analysis workflow.
+> 
 > Further information and tips for installing the Rsubread R library may be found on the [Setup](setup.html) page.
 {: .prereq}
 

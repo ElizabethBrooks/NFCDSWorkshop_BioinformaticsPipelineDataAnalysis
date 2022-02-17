@@ -27,9 +27,9 @@ Now that we have the transcript sequence reads aligned (mapped) to the reference
 
 A benefit of being able to map transcript reads is the ability to [determine the differential expression][deAnalysis] of genes under stress. Remember that transcripts produced by RNA sequencing technologies are fragments of gene sequences that have been transcribed (expressed).
 
-**Note:** be sure that you have loaded the [Rsubread][rsubreadCite] R library before we proceed with the bioinformatics analysis workflow.
-
 > ## Software Prerequisites
+>
+> **Note:** be sure that you have loaded the [Rsubread][rsubreadCite] R library before we proceed with the bioinformatics analysis workflow.
 >
 > Further information and tips for installing the Rsubread R library may be found on the [Setup](setup.html) page.
 {: .prereq}
@@ -137,9 +137,9 @@ It is apparent from the above experimental design layout that we are at least ab
 
 After normalization of raw counts we will perform genewise exact tests for differences in the means between two groups of gene counts. Specifically, the two experimental groups of treatment and control for the *Tribolium castaneum* transcript sequence data.
 
-**Note:** be sure that you have loaded the [edgeR][edgeRCite] R library before we proceed with the bioinformatics analysis workflow.
-
 > ## Software Prerequisites
+>
+> **Note:** be sure that you have loaded the [edgeR][edgeRCite] R library before we proceed with the bioinformatics analysis workflow.
 >
 > Further information and tips for installing the edgeR R library may be found on the [Setup](setup.html) page.
 {: .prereq}
