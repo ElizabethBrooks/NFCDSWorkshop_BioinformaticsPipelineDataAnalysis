@@ -104,7 +104,7 @@ With the SRA Toolkit installed, we can proceed with collecting the transcriptomi
 
 Let's find the transcriptomic data we need by navigating the internet. This data may be accessed by:
 
-**_Step 1_**
+#### Step 1
 
 Go to the paper on the publisher's website.
 
@@ -113,7 +113,7 @@ Go to the paper on the publisher's website.
 > A simple way to gain access to a specific publication is by searching the name of a paper using the [Hesburgh Library website][hlWebsite]
 {: .callout}
 
-**_Step 2_**
+#### Step 2
 
 Search the paper for the SRA "accession" number associated with the study.
 
@@ -127,7 +127,7 @@ Search the paper for the SRA "accession" number associated with the study.
 > The *Accession No.* is PRJNA504739 for the transcriptomic data.
 {: .solution}
 
-**_Step 3_**
+#### Step 3
 
 Find the list of accession numbers for the set of transcriptomic data associated with the study by searching for the previously found study accession number using the "[SRA Run Selector][runSelector]" on the NCBI website. It is here you will find futher information about each of the sample files as well.
 
@@ -138,7 +138,7 @@ Find the list of accession numbers for the set of transcriptomic data associated
 > ![Example SRA Accession Search](../fig/ScreenShotSRA.png){: width="500" }
 {: .solution}
 
-**_Step 4 - Basic Analysis_**
+#### Step 4 - Basic Analysis
 
 In order to save time, we will retrieve a subset of the transcriptomic sequence data for the study. Determine the SRA accession numbers for the following samples on the results page:
 - Trc_1
@@ -158,7 +158,7 @@ In order to save time, we will retrieve a subset of the transcriptomic sequence 
 > Be aware that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, note that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
 {: .solution}
 
-**_Step 5 - Basic Analysis_**
+#### Step 5 - Basic Analysis
 
 Use the following *prefetch* and *fastq-dump* [command formats][samDump] from the SRA Toolkit in the terminal:
 ~~~ 
@@ -184,7 +184,7 @@ fastq-dump <accession number> --output-file <accession number>.sam
 
 The following alternative steps 4 and 5 can be done to retrieve additional data to be able to complete more advanced statistical analyses later.
 
-**_Step 4 - Advanced Analysis_**
+#### Step 4 - Advanced Analysis
 
 Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
 
@@ -194,7 +194,7 @@ Retrieve the total accession list for the study, which has the SRA accession num
 > ![Example SRA Accession Search](../fig/ScreenShotResultsSRA.png){: width="500" }
 {: .solution}
 
-**_Step 5 - Advanced Analysis_**
+#### Step 5 - Advanced Analysis
 
 Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
 
@@ -239,6 +239,8 @@ To check if the transcriptomic data that we downloaded has been cleaned already,
 >
 > Be aware that you can also use the FastQC application to view the quality of transcript data using a user interface.
 {: .challenge}
+
+Now we can compare the results that we recieved from the analysis of this sample to the docummentation for FastQC, which include a "[Good Illumina Data][goodEx]" example and a "[Bad Illumina Data][badEx]" example.
 
 
 ## Genomic Data Collection
@@ -400,5 +402,7 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 [fastaFormat]: https://www.reviversoft.com/en/file-extensions/fa#:~:text=fa%20extension%20use%20the%20FASTA,related%20pieces%20of%20scientific%20information.
 [fastaEx]: https://www.researchgate.net/figure/A-sample-of-the-Multi-FASTA-file_fig1_309134977 
 [gff3Format]: https://learn.gencore.bio.nyu.edu/ngs-file-formats/gff3-format/
+[goodEx]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html
+[badEx]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html
 
 {% include links.md %}
