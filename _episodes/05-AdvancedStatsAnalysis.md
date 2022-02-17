@@ -150,8 +150,8 @@ Generalized linear models (GLM) are a classic method for analyzing RNA-seq expre
 | SRR8288561 | cntrl | 4h |
 | SRR8288562 | cntrl | 4h |
 | SRR8288563 | cntrl | 4h |
-| SRR8288564 | cntrl | 4h |
-| SRR8288557 | cntrl | 4h |
+| SRR8288564 | treat | 4h |
+| SRR8288557 | treat | 4h |
 | SRR8288560 | treat | 4h |
 | SRR8288558 | cntrl | 24h |
 | SRR8288567 | cntrl | 24h |
