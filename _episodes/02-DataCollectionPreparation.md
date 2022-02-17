@@ -133,7 +133,7 @@ With the SRA Toolkit installed, we can proceed with collecting the transcriptomi
 > - Trc_2
 > - Trc_4
 > - Trc_5
-> **Important:** you will need to download at least four of the sample sequence files to run the basic statistical analysis in this workshop.
+> **Note:** you will need to download at least four of the sample sequence files to run the basic statistical analysis in this workshop.
 >
 >> ## Tip! - Task 4
 >>
