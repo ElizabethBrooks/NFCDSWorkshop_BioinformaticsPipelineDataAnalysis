@@ -359,7 +359,7 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 >
 > **_Step 2_**
 >
-> Second, we can use the hisat2 command to map **each** read to the reference genome. This results in an output *sam* file for each of the input compressed transcript sequence *fastq.gz* files.
+> Second, we can use the hisat2 command to map **each** read to the reference genome. This results in an output *sam* file for each of the input compressed transcript sequence **fastq.gz** files.
 >
 > ~~~
 > hisat2 -q -x TriboliumBuild -U SRR8288561.fastq.gz -S SRR8288561_accepted_hits.sam
@@ -404,5 +404,6 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 [gff3Format]: https://learn.gencore.bio.nyu.edu/ngs-file-formats/gff3-format/
 [goodEx]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html
 [badEx]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html
+[edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 
 {% include links.md %}
