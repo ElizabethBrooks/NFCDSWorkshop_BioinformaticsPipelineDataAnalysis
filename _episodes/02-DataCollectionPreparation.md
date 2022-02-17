@@ -111,7 +111,7 @@ Let's find the transcriptomic data we need by navigating the internet. This data
 
 #### Step 1
 
-Go to the paper on the publisher's website.
+Go to the paper on the publisher's website, and be sure you have access to the full article. Recall, "[Digital gene expression profiling in larvae of *Tribolium castaneum* at different periods post UV-B exposure][paperCite]".
 
 > ## Tip! - Task 1
 >
