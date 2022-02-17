@@ -3,13 +3,20 @@ title: "Advanced Statistical Analysis of Omics Data (Optional)"
 teaching: 0
 exercises: 0
 questions:
-- "What statistical methods do I need to analyze my data?"
-- "What packages are available to me for biological data analysis in R?"
+- "How do I need to prepare my data for analysis in R?"
+- "What standard statistical methods do I need to analyze this data set?"
+- "What packages are available to me for biostatistical data analysis in R?"
+- "How do I perform advanced differential gene expression analysis using R packages?"
 objectives:
-- "Gain hands-on experience and develop skills to be able to use R to visualize and investigate patterns in genomic data."
-- "Be able to install and run function from packages commonly used for data analysis and visualization in R."
+- "Become familiar with advanced statistical methods in R for quantifying transcriptomic gene expression data."
+- "Gain hands-on experience and develop skills to be able to use R to visualize and investigate patterns in omics data."
+- "Be able to install and load the necessary biostatistics R packages."
+- "Be able to run functions from biostatistics packages for data analysis and visualization in R."
 keypoints:
-- "TBD"
+- "The BiocManager is is a great tool for installing Bioconductor packages in R."
+- "Make sure to use the ? symbol to check the documentation for most R functions."
+- "Fragments of sequences from RNA sequencing may be mapped to a reference genome and quantified."
+- "The edgeR manual has many good examples of differential expression analysis on different data sets."
 ---
 
 ## **Advanced Statistical Analysis Example**
@@ -19,6 +26,18 @@ keypoints:
 Now that we have the transcript sequence reads aligned to the reference genome, we can begin to quantify the number of reads that map to each genomic feature from the features file. Recall that we are able to count the number of reads that map to each feature in a genome to compare the effects of a treatment, such as UV radiation exposure.
 
 ![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="800" }
+
+> ## Scripting & Pipelining Tip!
+>
+> Remember that the primary benefit of scripting is the ability to save modular pieces of code to re-use later. As a first step to designing a pipeline, it is a good idea to work through a simple example using data. While you are working through the exercises in this workshop, make sure to store the pieces of code that you write to perform each task. 
+>
+> Recall that the file extension for R scripts is **.r** or **.R**.
+>
+> **Note:** it is highly recommended that you also write a comment for each piece of code that states why you are using that piece of code. Also, you may wish to leave a comment about the purpose, or what that piece of code does.
+{: .callout}
+
+
+### Coding Challenge
 
 > ## Software Prerequisites
 >

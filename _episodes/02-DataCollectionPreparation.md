@@ -103,6 +103,15 @@ With the SRA Toolkit installed, we can proceed with collecting the transcriptomi
 
 ### Coding Challenge - Data Collection for Basic Statisticl Analysis
 
+> ## Scripting & Pipelining Tip!
+>
+> The primary benefit of scripting is the ability to save modular pieces of code to re-use later. As a first step to designing a pipeline, it is a good idea to work through a simple example using data. While you are working through the exercises in this workshop, make sure to store the pieces of code that you write to perform each task. 
+>
+> Recall that the file extension for BASH scripts is **.sh**.
+>
+> **Note:** it is highly recommended that you also write a comment for each piece of code that states why you are using that piece of code. Also, you may wish to leave a comment about the purpose, or what that piece of code does.
+{: .callout}
+
 Let's find the transcriptomic data we need by navigating the internet. This data may be accessed by:
 
 #### Step 1
@@ -179,6 +188,11 @@ fastq-dump <accession number> --output-file <accession number>.sam
 > fastq-dump --gzip SRR8288557
 > ~~~
 {: .solution}
+
+> ## Scripting & Pipelining Tip!
+>
+> Remember to save these pieces of code in files with the **.sh** extension While you are working through these exercises!
+{: .callout}
 
 
 ### Coding Challenge - Data Collection for Advanced Statisticl Analysis
