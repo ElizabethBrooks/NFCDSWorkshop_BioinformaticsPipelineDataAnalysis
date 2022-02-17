@@ -31,7 +31,7 @@ As a first step, we will begin with collecting some data for analysis. In this w
 
 UV radiation is common to many envrioments and it varies in widely in its intensity and composition, such as differing ratios of UV-A and UV-B radiation. The different forms of UV radaition have distinct, and frequently harmful effects on organisms and biological systems. For example, the following diagram depicts the effects of different forms of UV radiation on the skin.
 
-![Effects of UV Radiaition on the Dermis](../fig/molecules-19-06202-g001.webp){: width="800" }
+![Effects of UV Radiaition on the Dermis](../fig/molecules-19-06202-g001.webp){: width="500" }
 *[Image source][radiationEffects]*
 
 UV radiation is considered an important environmental *stressor* that organisms need to defend against. There are three primary methods for defending against UV radiation:
@@ -53,12 +53,12 @@ Before we proceed with our bioinformatics analysis we should consider the data t
 
 First, we will need to use transcription sequence data. Transcription is the [first step in gene expression][dnaProcesses], which involves copying the DNA sequence of a gene to make a RNA molecule. For a protein-coding gene, the RNA copy (transcript) carries the information needed to build a polypeptide (protein or protein subunit).
 
-![The Processes of Transcription & Translation](../fig/20ce29384b2e7ff0cdea72acaa5b1dbd7287ab00.png){: width="800" }
+![The Processes of Transcription & Translation](../fig/20ce29384b2e7ff0cdea72acaa5b1dbd7287ab00.png){: width="500" }
 *[Image source][dnaProcesses]*
 
 The transcription of genes can be measured using *next-generation* sequencing techniques that produces millions of sequences (reads) in a short time. This process depicted in the following schematic representation of a RNA sequencing protocol. 
 
-![What is RNA Sequencing?](../fig/A-schematic-representation-of-the-RNA-sequencing-protocol.png){: width="800" }
+![What is RNA Sequencing?](../fig/A-schematic-representation-of-the-RNA-sequencing-protocol.png){: width="500" }
 *[Image source][rnaProtocol]*
 
 Transcription can provide whole genome-wide RNA expression profiles, and is useful for identifying key factors influencing transcription in different environmental conditions. This is achieved by processing transcriptomic data through a bioinformatics pipeline similar to the following:
@@ -100,17 +100,21 @@ The SRA Toolkit allows you to retrieve data from the SRA for a specific research
 With the SRA Toolkit installed, we can proceed with collecting the transcriptomic data we need for our bioinformatics analysis. Remeber that we are following the example of the study performed by the authors of "[Digital gene expression profiling in larvae of *Tribolium castaneum* at different periods post UV-B exposure][paperCite]".
 
 
-#### **_Coding Challenge_**
+### Coding Challenge - Data Collection for Basic Statisticl Analysis
 
 Let's find the transcriptomic data we need by navigating the internet. This data may be accessed by:
-1. go to the paper on the publisher's website
+
+**_Step 1_**
+
+Go to the paper on the publisher's website.
 
 > ## Tip! - Task 1
 >
 > A simple way to gain access to a specific publication is by searching the name of a paper using the [Hesburgh Library website][hlWebsite]
 {: .callout}
 
-2. search the paper for the SRA "accession" number associated with the study
+**_Step 2_**
+Search the paper for the SRA "accession" number associated with the study.
 
 > ## Tip! - Task 2
 >
@@ -120,7 +124,9 @@ Let's find the transcriptomic data we need by navigating the internet. This data
 > {: .solution}
 {: .callout}
 
-3. find the list of accession numbers for the set of transcriptomic data associated with the study by searching for the previously found study accession number using the "[SRA Run Selector][runSelector]" on the NCBI website. It is here you will find futher information about each of the sample files as well.
+**_Step 3_**
+
+Find the list of accession numbers for the set of transcriptomic data associated with the study by searching for the previously found study accession number using the "[SRA Run Selector][runSelector]" on the NCBI website. It is here you will find futher information about each of the sample files as well.
 
 > ## Solution - Task 3
 >
@@ -129,9 +135,9 @@ Let's find the transcriptomic data we need by navigating the internet. This data
 > ![Example SRA Accession Search](../fig/ScreenShotSRA.png){: width="500" }
 {: .solution}
 
-**_Basic Analysis_**
+**_Step 4 - Basic Analysis_**
 
-4. in order to save time, we will retrieve a subset of the transcriptomic sequence data for the study. Determine the SRA accession numbers for the following samples on the results page:
+In order to save time, we will retrieve a subset of the transcriptomic sequence data for the study. Determine the SRA accession numbers for the following samples on the results page:
 - Trc_1
 - Trc_2
 - Trc_4
@@ -149,7 +155,9 @@ Let's find the transcriptomic data we need by navigating the internet. This data
 > Be aware that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, note that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
 {: .solution}
 
-5. use the following *prefetch* and *fastq-dump* [command formats][samDump] from the SRA Toolkit in the terminal:
+**_Step 5 - Basic Analysis_**
+
+Use the following *prefetch* and *fastq-dump* [command formats][samDump] from the SRA Toolkit in the terminal:
 ~~~ 
 prefetch <accession number>
 fastq-dump <accession number> --output-file <accession number>.sam
@@ -168,11 +176,14 @@ fastq-dump <accession number> --output-file <accession number>.sam
 > ~~~
 {: .solution}
 
-**_Advanced Analysis_**
 
-The following steps can be done to retrieve additional data to be able to complete more advanced statistical analyses later.
+### Coding Challenge - Data Collection for Advanced Statisticl Analysis
 
-4. Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
+The following alternative steps 4 and 5 can be done to retrieve additional data to be able to complete more advanced statistical analyses later.
+
+**_Step 4 - Advanced Analysis_**
+
+Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
 
 > ## Solution - Advanced Task 4
 >
@@ -180,7 +191,9 @@ The following steps can be done to retrieve additional data to be able to comple
 > ![Example SRA Accession Search](../fig/ScreenShotResultsSRA.png){: width="500" }
 {: .solution}
 
-5. Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
+**_Step 5 - Advanced Analysis_**
+
+Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
 
 > ## Solution - Advanced Task 5
 >
