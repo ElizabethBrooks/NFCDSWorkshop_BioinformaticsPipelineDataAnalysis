@@ -27,6 +27,9 @@ Now that we have the transcript sequence reads aligned (mapped) to the reference
 
 A benefit of being able to map transcript reads is the ability to [determine the differential expression][deAnalysis] of genes under stress. Remember that transcripts produced by RNA sequencing technologies are fragments of gene sequences that have been transcribed (expressed).
 
+
+### Coding Challenge
+
 > ## Software Prerequisites
 >
 > **Note:** be sure that you have loaded the [Rsubread][rsubreadCite] R library before we proceed with the bioinformatics analysis workflow.
@@ -53,6 +56,13 @@ The **featureCounts** function of the Rsubread library allows us to count the nu
 > ~~~
 > {: .language-r}
 {: .callout}
+
+As a first step, we need to quantify (count) the number of transcript sequence reads that have mapped (aligned) to the features of the *Tribolium castaneum* genome.
+
+![Example FASTQ File Formatting](../fig/count-fig2.png){: width="800" }
+*[Image source][countFig]*
+
+So to quantify the read fragments that map to the genomic features of the red flour beetle genome, we will use the **fetureCounts** function with the output Hisat2 sam files from the previous step of the bioinformatics workflow.
 
 ~~~
 # control samples at 4h
@@ -314,6 +324,6 @@ plotSmear(tested)
 [deAnalysis]: https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
-
+[countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 
 {% include links.md %}

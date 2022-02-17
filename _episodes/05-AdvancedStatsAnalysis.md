@@ -47,6 +47,11 @@ The **featureCounts** function of the Rsubread library allows us to count the nu
 > {: .language-r}
 {: .callout}
 
+As a first step, we need to quantify (count) the number of transcript sequence reads that have mapped (aligned) to the features of the *Tribolium castaneum* genome.
+
+![Example FASTQ File Formatting](../fig/count-fig2.png){: width="800" }
+*[Image source][countFig]*
+
 So to quantify the read fragments that map to the genomic features of the red flour beetle genome, we will use the **fetureCounts** function with the output Hisat2 sam files from the previous step of the bioinformatics workflow.
 
 ~~~
@@ -392,5 +397,6 @@ abline(h=c(-1, 1), col="blue")
 
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+[countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 
 {% include links.md %}
