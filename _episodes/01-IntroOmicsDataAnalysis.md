@@ -138,5 +138,7 @@ The coding exercises in this workshop are designed to give you experience with d
 [hisat2Cite]: http://daehwankimlab.github.io/hisat2/
 [featureFiles]: https://seqan.readthedocs.io/en/master/Tutorial/InputOutput/GffAndGtfIO.html#:~:text=The%20GFF%20and%20GTF%20formats,sometimes%20called%20%E2%80%9CGFF%202.5%E2%80%9D.&text=The%20main%20difference%20is%20the,smaller%20differences%20in%20the%20format.
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+[experienceCite]: https://www.abstract.tech/blog/let-people-die-in-virtual-reality
+
 
 {% include links.md %}

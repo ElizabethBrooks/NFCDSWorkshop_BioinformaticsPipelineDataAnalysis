@@ -36,7 +36,6 @@ So, we can use BASH scripting to create modular pieces of code for use in bioinf
 
 
 [scriptingBenefits]: https://www.interviewbit.com/shell-scripting-interview-questions/ 
-[experienceCite]: https://www.abstract.tech/blog/let-people-die-in-virtual-reality
 [interpreterComp]: https://www.geeksforgeeks.org/difference-between-assembler-and-interpreter/ 
 
 {% include links.md %}
