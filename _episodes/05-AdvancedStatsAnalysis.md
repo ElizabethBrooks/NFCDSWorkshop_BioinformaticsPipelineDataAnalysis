@@ -344,7 +344,7 @@ abline(h=c(-1, 1), col="blue")
 
 > ## Plot
 >
-> ![Treatment vs Control Effect](../fig/glmQLF_ptreat_cntrl.png){: width="500" }
+> ![Treatment vs Control Effect](../fig/glmQLF_treat_cntrl.png){: width="500" }
 {: .solution}
 
 The second comparison we will make is used to test our hypothesis that the means of the *hours* factor are equal.
