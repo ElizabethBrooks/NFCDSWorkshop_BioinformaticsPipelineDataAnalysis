@@ -23,10 +23,7 @@ The analysis of biological data using bioinformatics or biostatistical analysis 
 
 By creating a pipeline of scripts, it is possible to automate much of the bioinformatics workflow. This means making modular scripts to perform different steps of the analysis process. 
 
-The coding exercises in this workshop are designed to give you experience with developing and running your own shell scripts using BASH programming. Additionally, you will have a chance to perform statistical analysis using your own R scripts that you run using BASH scripts. These are important skills for anyone interested in developing a bioinformatics script pipeline for analyzing large and complex biological data sets.
 
-![Dwight's Suggestion](../fig/experience.gif){: width="500" }
-*[Image source][experienceCite]*
 
 
 ## BASH Scripting

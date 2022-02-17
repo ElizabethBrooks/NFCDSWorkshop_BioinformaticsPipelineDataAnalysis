@@ -270,6 +270,27 @@ Depedning on the organisms that you are working with, you may need to locate dat
 > This will automatically begin downloading each of the necessary genomic data files.
 {: .callout}
 
+The reference genome is in the [FASTA file format][fastaFormat], and has the **.fa** file extension. This format is commonly used when storing DNA sequence data.
+
+![Fasta Format Example](../fig/A-sample-of-the-Multi-FASTA-file.png){: width="800" }
+*[Image source][fastaEx]*
+
+The genomic features file is in the [GFF3 file format][gff3Format], and has the **.gff3** file extension. This format is a tab-delimited text file that describes the information about any feature of a nucleic acid or protein sequence. These features may include anything from coding sequences (CDS), microRNAs, binding domains, open reading frames (ORFs), etc.
+
+> ## Checklist
+>
+> GFF3 has 9 required fields, though not all are utilized (either blank or a default value of **.**):
+> - Sequence ID - a string with the ID of the sequence
+> - Source - describes the algorithm or the procedure that generated this feature
+> - Feature Type - describes what the feature is (mRNA, domain, exon, etc.)
+> - Feature Start - starting position for the feature
+> - Feature End - ending position for the feature
+> - Score - typically E-values for sequence similarity and P-values for predictions
+> - Strand - a single character that indicates the strand of the feature
+> - Phase - indicates where the feature begins with reference to the reading frame
+> - Atributes - a semicolon-separated list of tag-value pairs, providing additional information about each feature
+{: .checklist}
+
 
 ## Omics Data Preparation - Command Line
 
@@ -373,5 +394,8 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 [gffreadMan]: http://manpages.ubuntu.com/manpages/trusty/man1/gffread.1.html
 [rnaMapping]: https://www.technologynetworks.com/genomics/articles/rna-seq-basics-applications-and-protocol-299461
 [killShortcut]: https://medium.com/tooling-tips/how-to-easily-stop-a-terminal-command-15d4324109f
+[fastaFormat]: https://www.reviversoft.com/en/file-extensions/fa#:~:text=fa%20extension%20use%20the%20FASTA,related%20pieces%20of%20scientific%20information.
+[fastaEx]: https://www.researchgate.net/figure/A-sample-of-the-Multi-FASTA-file_fig1_309134977 
+[gff3Format]: https://learn.gencore.bio.nyu.edu/ngs-file-formats/gff3-format/
 
 {% include links.md %}

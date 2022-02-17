@@ -121,6 +121,11 @@ In this workshop you will gain experience in performing different aspects of bio
 4. basic statistical analysis and visualization (exact tests) - [edgeR][edgeRCite]
 5. advanced statistical analysis and visualization (generalized linear models) - [edgeR][edgeRCite]
 
+The coding exercises in this workshop are designed to give you experience with developing and running your own shell scripts using BASH programming. Additionally, you will have a chance to perform statistical analysis using your own R scripts that you run using BASH scripts. These are important skills for anyone interested in developing a bioinformatics script pipeline for analyzing large and complex biological data sets.
+
+![Dwight's Suggestion](../fig/experience.gif){: width="500" }
+*[Image source][experienceCite]*
+
 
 [bioinfoInfo]: https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-bioinformatics/
 [omicsInfo]: https://www.researchgate.net/figure/Overview-of-different-omics-sciences-such-as-genomics-transcriptomics-and-proteomics_fig1_333003279
