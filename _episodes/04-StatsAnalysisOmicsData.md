@@ -23,7 +23,7 @@ keypoints:
 
 Now that we have the transcript sequence reads aligned (mapped) to the reference genome, we can begin to quantify the number of reads that map to each genomic feature from the features file. Recall that we are able to count the number of reads that map to each feature in a genome to compare the effects of a treatment, such as UV radiation exposure.
 
-![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="500" }
+![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="800" }
 
 A benefit of being able to map transcript reads is the ability to [determine the differential expression][deAnalysis] of genes under stress. Remember that transcripts produced by RNA sequencing technologies are fragments of gene sequences that have been transcribed (expressed).
 
@@ -122,12 +122,12 @@ The types of contrasts you can make will depend on the design of your study and 
 
 | sample | treatment |
 | ------- | ------- |
-| SRR8288561 | cntrl
-| SRR8288562 | cntrl
-| SRR8288563 | cntrl
-| SRR8288564 | cntrl
-| SRR8288557 | cntrl
-| SRR8288560 | treat
+| SRR8288561 | cntrl |
+| SRR8288562 | cntrl |
+| SRR8288563 | cntrl |
+| SRR8288564 | treat |
+| SRR8288557 | treat |
+| SRR8288560 | treat |
 
 **Note** in the treatment column:
 - cntrl - control treatment

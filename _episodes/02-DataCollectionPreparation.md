@@ -68,7 +68,7 @@ Transcription can provide whole genome-wide RNA expression profiles, and is usef
 
 For example, consider the following plot of transcription sequence coverage for a gene model (green) in a species of *Daphnia*, which has been subjected to a control of visible light (blue) and treatment of UV radiation (red).
 
-![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="500" }
+![Gene Model Expression Coverage Plot](../fig/fadedCoverage_dp_gene15097.jpeg){: width="800" }
 
 As we can see, the coding sequences (CDS) of the predicted gene model are more highlighy expressed in the tratment of UV radiation. This is visible by the red peaks of transcription sequence read coverage, which are showing the higher frequency of sequence reads from the UV treatment matching up (mapping) to the CDS than the visible light sequences.
 
@@ -254,14 +254,14 @@ Depedning on the organisms that you are working with, you may need to locate dat
 ## Omics Data Preparation - Command Line
 
 Now that we have the necessary transcript and genomic data, we can begin the process of preparing our data for statistical analysis. This will require proceeding through several steps of the bioinformatics workflow. Recall:
-1. data collection - SRA toolkit
-2. quality control - fastqc
+1. data collection - [SRA toolkit][toolkitSRA]
+2. quality control - [fastqc][fastqcCite]
 3. data preparation
-- convert genomic data format - gffread
-- align transcriptomic data - hisat2
-- quantify transcript alignments - featureCounts
-4. basic statistical analysis and visualization (exact tests) - edgeR
-5. advanced statistical analysis and visualization (generalized linear models) - edgeR
+- convert genomic data format - [gffread][gffreadCite]
+- align transcriptomic data - [hisat2][hisat2Cite]
+- quantify transcript alignments - [featureCounts][featureFiles]
+4. basic statistical analysis and visualization (exact tests) - [edgeR][edgeRCite]
+5. advanced statistical analysis and visualization (generalized linear models) - [edgeR][edgeRCite]
 
 **Note:** be sure that you have installed the following software before we proceed with the bioinformatics analysis workflow.
 - [Fastqc][fastqcCite]
@@ -294,7 +294,7 @@ The first step in our bioinformatics workflow is to convert one of the genomic d
 
 Next, we need to prepare the transcriptomic sequence data files for statistical analysis by aligning the reads to the reference genome. Recall that our RNA sequence analysis workflow involves mapping the shattered reads to a reference genome.
 
-![What is RNA Sequence Read Mapping](../fig/dnasequencingb1529596261132.png){: width="800" }
+![What is RNA Sequence Read Mapping](../fig/dnasequencingb1529596261132.png){: width="500" }
 *[Image source][rnaMapping]*
 
 > ## Challenge
