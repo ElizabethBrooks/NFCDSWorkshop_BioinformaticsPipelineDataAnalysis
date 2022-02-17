@@ -1,6 +1,6 @@
 ---
 title: "Statistical Analysis of Omics Data"
-teaching: 15
+teaching: 30
 exercises: 30
 questions:
 - "How do I need to prepare my data for analysis in R?"

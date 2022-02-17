@@ -1,6 +1,6 @@
 ---
 title: "Omics Data Collection & Preparation"
-teaching: 15
+teaching: 30
 exercises: 30
 questions:
 - "What is the experimental design for the data set we are using?"
@@ -14,6 +14,7 @@ objectives:
 - "Be able to install and use necessary bioinformatics software tools."
 - "Become familiar with best practices in preparing data for analysis."
 - "Gain hands-on experience and develop skills to be able to use BASH to gather omic data for analysis."
+- "Develop BASH scripting skills to efficiently integrate R scripts into a coherent data analysis pipeline."
 keypoints:
 - "Explore available omics databases before you design your analysis workflow"
 - "Thoroughly explore the supplamental materials of research study papers."

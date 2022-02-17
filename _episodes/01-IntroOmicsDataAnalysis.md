@@ -1,12 +1,13 @@
 ---
 title: "Introduction to Omics Data Analysis"
-teaching: 15
-exercises: 15
+teaching: 20
+exercises: 5
 questions:
 - "What is bioinformatics and biostatistics?"
 - "What are the similarities between bioinformatics and biostatistics?"
 - "How can I combine R and BASH scripts to automate my data analysis workflow?"
 - "What will we be covering in this workshop?"
+- "How can I use R and BASH scripts to automate my data analysis process?"
 objectives:
 - "Learn the key features of the bioinformatics and biostatistics fields."
 - "Discover the similarities between bioinformatics and biostatistics."
@@ -121,12 +122,37 @@ In this workshop you will gain experience in performing different aspects of bio
 4. basic statistical analysis and visualization (exact tests) - [edgeR][edgeRCite]
 5. advanced statistical analysis and visualization (generalized linear models) - [edgeR][edgeRCite]
 
+
+## Pipelining & The Benefits of Scripting
+
+The primary goal of any bioinformatics analysis workflow is to give meaning to large and complex biological data sets. This often requires the development of code that is generalized and can be automated to run on multiple similar data sets, which may have small differences in their structure or content.
+
+![What is Shell Scripting?](../fig/what_is_shell_scripting.jpeg){: width="500" }
+*[Image source][scriptingBenefits]*
+
+As we have seen, the analysis of biological data using bioinformatics or biostatistical analysis is often a process that requires multiple steps. Furthermore, these steps often need to be completed in a specific order to achieve a final result. This process involves the output of a previous step being used as input to the subsequent step. This flow of outputs, to inputs, to a final result can be depicted as water flowing from one pipe to the next.
+
+![Pipelineing Depiction](../fig/noun-pvc-pipes-147592.png){: width="500" }
+
+By creating a pipeline of scripts, it is possible to automate much of the bioinformatics workflow. This means making modular scripts to perform different steps of the analysis process. 
+
+
+## BASH Scripting
+
 The coding exercises in this workshop are designed to give you experience with developing and running your own shell scripts using BASH programming. Additionally, you will have a chance to perform statistical analysis using your own R scripts that you run using BASH scripts. These are important skills for anyone interested in developing a bioinformatics script pipeline for analyzing large and complex biological data sets.
 
 ![Dwight's Suggestion](../fig/experience.gif){: width="500" }
 *[Image source][experienceCite]*
 
+We can use BASH scripting to create modular pieces of code for use in bioinformatics data analysis pipelines. BASH scripts are text files that have the **.sh** file extension. These are text files that you can use to save the lines of BASH code that you want the interpreter componenet of the computer operating system to execute (run).
 
+![The Interpreter Operating System Component](../fig/interpreter.png){: width="800" }
+*[Image source][interpreterComp]*
+
+
+
+[scriptingBenefits]: https://www.interviewbit.com/shell-scripting-interview-questions/ 
+[interpreterComp]: https://www.geeksforgeeks.org/difference-between-assembler-and-interpreter/ 
 [bioinfoInfo]: https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-bioinformatics/
 [omicsInfo]: https://www.researchgate.net/figure/Overview-of-different-omics-sciences-such-as-genomics-transcriptomics-and-proteomics_fig1_333003279
 [biostats]: https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_biostatisticsbasics/bs704_biostatisticsbasics_print.html
