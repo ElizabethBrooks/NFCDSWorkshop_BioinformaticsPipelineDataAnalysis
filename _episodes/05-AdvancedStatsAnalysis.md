@@ -31,6 +31,8 @@ Now that we have the transcript sequence reads aligned to the reference genome, 
 >
 > Remember that the primary benefit of scripting is the ability to save modular pieces of code to re-use later. As a first step to designing a pipeline, it is a good idea to work through a simple example using data. While you are working through the exercises in this workshop, make sure to store the pieces of code that you write to perform each task. 
 >
+> After going through your bioinformatics workflow with a simple data example to make an initial scripting pipeline, it is helpful to test your pipeline with a more complicated example. This will allow you to identify the pieces of your pipeline that may easily be generalized for future analysis. For example, defining your script to allow users to enter names for the files they wish to process when they run the script.
+>
 > Recall that the file extension for R scripts is **.r** or **.R**.
 >
 > **Note:** it is highly recommended that you also write a comment for each piece of code that states why you are using that piece of code. Also, you may wish to leave a comment about the purpose, or what that piece of code does.
