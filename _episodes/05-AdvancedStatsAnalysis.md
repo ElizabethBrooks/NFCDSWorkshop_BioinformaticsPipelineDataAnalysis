@@ -159,7 +159,7 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > {: .language-r}
 >
 > The **groupingFactors.csv** file has the following layout.
-> ![RNA Sequencing Data Analysis Pipeline](../fig/csvEx.png){: width="500" }
+> ![RNA Sequencing Data Analysis Pipeline](../fig/csvEx.png){: width="250" }
 {: .callout}
 
 We will use the edgeR library in R with the data frame of transcript sequence read counts from the previous step of the bioinformatics workflow.
