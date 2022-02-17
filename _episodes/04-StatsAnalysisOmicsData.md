@@ -125,7 +125,7 @@ head(tribolium_counts)
 
 ## Statistical Analysis - Exact Tests
 
-With our transcript sequence data now aligned and quantified, we can begin to perform some statistical analysis of the data. Exact tests often are a good place to start with differential expression analysis of genomic data sets. 
+With our transcript sequence data now aligned and quantified, we can begin to perform some statistical analysis of the data. Exact tests often are a good place to start with differential expression analysis of genomic data sets. These tests are the [classic edgeR approach][edgerMan] to make pairwise comparisons between the groups.
 
 The types of contrasts you can make will depend on the design of your study and data set. The experimental design of the data we are using in this workshopis as follows:
 
@@ -334,5 +334,6 @@ plotSmear(tested)
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
+[edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 
 {% include links.md %}

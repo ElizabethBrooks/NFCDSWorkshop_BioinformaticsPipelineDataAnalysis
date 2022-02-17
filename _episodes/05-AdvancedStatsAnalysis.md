@@ -143,7 +143,7 @@ head(tribolium_counts)
 
 ## Advanced Statistical Analysis - Generalized Linear Models
 
-Generalized linear models (GLM) are a classic method for analyzing RNA-seq expression data. In contrast to exact tests, GLMs allow for more general comparisons. As usual, the types of comparisons you can make will depend on the design of your study. In our case:
+Generalized linear models (GLM) are [another classic edgeR method][edgerMan] for analyzing RNA-seq expression data. In contrast to exact tests, GLMs allow for more general comparisons. As usual, the types of comparisons you can make will depend on the design of your study. In our case:
 
 | sample | treatment | hours |
 | ------- | ------- | ------- |
@@ -419,5 +419,6 @@ abline(h=c(-1, 1), col="blue")
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
+[edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 
 {% include links.md %}
