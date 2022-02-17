@@ -139,15 +139,15 @@ By creating a pipeline of scripts, it is possible to automate much of the bioinf
 
 ## BASH Scripting
 
-The coding exercises in this workshop are designed to give you experience with developing and running your own shell scripts using BASH programming. Additionally, you will have a chance to perform statistical analysis using your own R scripts that you run using BASH scripts. These are important skills for anyone interested in developing a bioinformatics script pipeline for analyzing large and complex biological data sets.
-
-![Dwight's Suggestion](../fig/experience.gif){: width="500" }
-*[Image source][experienceCite]*
-
 We can use BASH scripting to create modular pieces of code for use in bioinformatics data analysis pipelines. BASH scripts are text files that have the **.sh** file extension. These are text files that you can use to save the lines of BASH code that you want the interpreter componenet of the computer operating system to execute (run).
 
 ![The Interpreter Operating System Component](../fig/interpreter.png){: width="800" }
 *[Image source][interpreterComp]*
+
+The coding exercises in this workshop are designed to give you experience with developing and running your own shell scripts using BASH programming. Additionally, you will have a chance to perform statistical analysis using your own R scripts that you run using BASH scripts. These are important skills for anyone interested in developing a bioinformatics script pipeline for analyzing large and complex biological data sets.
+
+![Dwight's Suggestion](../fig/experience.gif){: width="500" }
+*[Image source][experienceCite]*
 
 
 
