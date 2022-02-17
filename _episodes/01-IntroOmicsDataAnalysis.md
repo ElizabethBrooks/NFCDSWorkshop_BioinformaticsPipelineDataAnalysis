@@ -107,14 +107,14 @@ The following graphic depicts a general worklfow for preparing, analyzing, and v
 *[Image source][omicsWorkflow]*
 
 In this workshop you will gain experience in performing different aspects of bioinformatics and biostatistical data analysis by working through a workflow for analyzing gene expression data. The steps in the bioinformatics workflow for this workshop are:
-1. data collection - SRA toolkit
-2. quality control - fastqc
+1. data collection - [SRA toolkit][toolkitSRA]
+2. quality control - [fastqc][fastqcCite]
 3. data preparation
-- convert genomic data format - gffread
-- align transcriptomic data - hisat2
-- quantify transcript alignments - featureCounts
-4. basic statistical analysis and visualization (exact tests) - edgeR
-5. advanced statistical analysis and visualization (generalized linear models) - edgeR
+- convert genomic data format - [gffread][gffreadCite]
+- align transcriptomic data - [hisat2][hisat2Cite]
+- quantify transcript alignments - [featureCounts][featureFiles]
+4. basic statistical analysis and visualization (exact tests) - [edgeR][edgeRCite]
+5. advanced statistical analysis and visualization (generalized linear models) - [edgeR][edgeRCite]
 
 
 [bioinfoInfo]: https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-bioinformatics/
@@ -122,5 +122,11 @@ In this workshop you will gain experience in performing different aspects of bio
 [biostats]: https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_biostatisticsbasics/bs704_biostatisticsbasics_print.html
 [bioinfoStats]: https://cgm.sjtu.edu.cn/summer_school/
 [omicsWorkflow]: https://www.frontiersin.org/articles/10.3389/fbinf.2021.693836/full
+[toolkitSRA]: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc
+[fastqcCite]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+[gffreadCite]: http://ccb.jhu.edu/software/stringtie/gff.shtml
+[hisat2Cite]: http://daehwankimlab.github.io/hisat2/
+[featureFiles]: https://seqan.readthedocs.io/en/master/Tutorial/InputOutput/GffAndGtfIO.html#:~:text=The%20GFF%20and%20GTF%20formats,sometimes%20called%20%E2%80%9CGFF%202.5%E2%80%9D.&text=The%20main%20difference%20is%20the,smaller%20differences%20in%20the%20format.
+[edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 
 {% include links.md %}

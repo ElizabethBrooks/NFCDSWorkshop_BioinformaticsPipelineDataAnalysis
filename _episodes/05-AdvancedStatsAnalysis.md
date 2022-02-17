@@ -212,6 +212,11 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > ~~~
 > {: .language-r}
 >
+>> ## Plot
+>>
+>> ![Barplot Before Normalization](../fig/glmQLF_barplotBefore.png){: width="500" }
+> {: .solution}
+>
 > Next, we need to filter the raw gene counts by expression levels and remove counts of lowly expressed genes.
 >
 > ~~~
@@ -244,6 +249,11 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > ~~~
 > {: .language-r}
 >
+>> ## Plot
+>>
+>> ![MD Plot After Normalization](../fig/glmQLF_plotMDAfter.png){: width="500" }
+> {: .solution}
+>
 > Next, we will use **plotMDS** to display the relative similarities of the samples and view the differences between the expression profiles of different samples. 
 >
 >> ## Tips!
@@ -265,6 +275,13 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > legend("topleft", legend=levels(group), pch=points, col=colors, ncol=2)
 > ~~~
 > {: .language-r}
+>
+>> ## Plots
+>>
+>> ![MDS Plot After Normalization](../fig/glmQLF_plotMDS_noLegend.png){: width="500" }
+>>
+>> ![MDS Plot After Normalization with Legend](../fig/glmQLF_plotMDS_legend.png){: width="500" }
+> {: .solution}
 >
 > The design matrix for our data also needs to be specified before we can perform the F-tests. The experimental design is parametrized with a one-way layout and one coefficient is assigned to each group.
 >
@@ -289,6 +306,11 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > ~~~
 > {: .language-r}
 >
+>> ## Plot
+>>
+>> ![BCV Plot](../fig/glmQLF_plotBCVAfter.png){: width="500" }
+> {: .solution}
+>
 > Next, we estimate the QL dispersions for all genes using the **glmQLFit** function. This detects the gene-specific variability above and below the overall level. The dispersion are then plotted with the **plotQLDisp** function.
 >
 > ~~~
@@ -299,6 +321,11 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > plotQLDisp(fit)
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![QL Dispersion Plot](../fig/glmQLF_plotQLDisp.png){: width="500" }
+> {: .solution}
 >
 > Now we are ready to begin defining and testing contrasts of our experimental design. The first comparison we will make is used to test our hypothesis that the means of the *treatment* factor are equal.
 >
@@ -320,6 +347,11 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > ~~~
 > {: .language-r}
 >
+>> ## Plot
+>>
+>> ![Treatment vs Control Effect](../fig/glmQLF_ptreat_cntrl.png){: width="500" }
+> {: .solution}
+>
 > The second comparison we will make is used to test our hypothesis that the means of the *hours* factor are equal.
 >
 > ~~~
@@ -337,6 +369,11 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > abline(h=c(-1, 1), col="blue")
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![24h vs 4h Effect](../fig/glmQLF_24h_4h.png){: width="500" }
+> {: .solution}
 >
 > The final comparison we will make is to test our hypothesis that there is no *interaction* between the two factors (treatment and tolerance).  To make our last contrast we will test whether the mean effects of the two factors are equal. 
 >
@@ -356,13 +393,15 @@ Note that, we choose to use QL F-tests over likelihood ratio tests (LRT) since i
 > abline(h=c(-1, 1), col="blue")
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![Interaction Effect](../fig/glmQLF_interaction.png){: width="500" }
+> {: .solution}
 {: .challenge}
-
-
 
 
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
-
 
 {% include links.md %}

@@ -189,6 +189,8 @@ With the SRA Toolkit installed, we can proceed with collecting the transcriptomi
 > {: .solution}
 {; .challenge}
 
+**Note** that if a terminal command is taking a long time to run, you may use the [**Cntrl + C** keyboard shortcut][killShortcut] to kill it and force it to stop running.
+
 
 ### Transcriptomic Data Quality Control
 
@@ -271,6 +273,7 @@ Now that we have the necessary transcript and genomic data, we can begin the pro
 > Further information and tips for installing the fastqc, gffread, and hisat2 software programs may be found on the [Setup](setup.html) page.
 {: .prereq}
 
+
 ### Convert Genomic Data Format
 
 The first step in our bioinformatics workflow is to convert one of the genomic data files to the format expected by our *downstread* analysis tools. The genome features file that we downloaded from InsectBase for *Tribolium castaneum* is in the *gff3* format, but it needs to be in *gtf* format to use with Hisat2. This is because there are some important [formatting differences][featureFiles] between the two genomic feature file types.
@@ -347,6 +350,6 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 [featureFiles]: https://seqan.readthedocs.io/en/master/Tutorial/InputOutput/GffAndGtfIO.html#:~:text=The%20GFF%20and%20GTF%20formats,sometimes%20called%20%E2%80%9CGFF%202.5%E2%80%9D.&text=The%20main%20difference%20is%20the,smaller%20differences%20in%20the%20format.
 [gffreadMan]: http://manpages.ubuntu.com/manpages/trusty/man1/gffread.1.html
 [rnaMapping]: https://www.technologynetworks.com/genomics/articles/rna-seq-basics-applications-and-protocol-299461
-[fastqcCite]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+[killShortcut]: https://medium.com/tooling-tips/how-to-easily-stop-a-terminal-command-15d4324109f
 
 {% include links.md %}

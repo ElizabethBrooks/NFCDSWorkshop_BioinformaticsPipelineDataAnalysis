@@ -177,6 +177,11 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > ~~~
 > {: .language-r}
 >
+>> ## Plot
+>>
+>> ![Barplot Before Normalization](../fig/exactTest_barplotBefore.png){: width="500" }
+> {: .solution}
+>
 > Next, we will use the **plotMDS** function to display the relative similarities of the samples and view batch and treatment effects before normalization. 
 >
 > ~~~
@@ -185,6 +190,11 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > plotMDS(list, col=rep(1:6, each=3))
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![MDS Plot Before Normalization](../fig/exactTest_plotMDSBefore.png){: width="500" }
+> {: .solution}
 >
 > There is no purpose in analyzing genes that are not expressed in either experimental condition (treatment or control), so raw gene counts are first filtered by expression levels.
 >
@@ -216,6 +226,13 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > ~~~
 > {: .language-r}
 >
+>> ## Plots
+>>
+>> ![Barplot After Normalization](../fig/exactTest_barplotAfter.png){: width="500" }
+>>
+>> ![MDS Plot After Normalization](../fig/exactTest_plotMDSAfter.png){: width="500" }
+> {: .solution}
+>
 > It can also be useful to view the moderated log-counts-per-million after normalization using the **cpm** function results with **heatmap**.
 >
 > ~~~
@@ -225,6 +242,11 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > heatmap(logcpm)
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![Heatmap After Normalization](../fig/exactTest_heatmapAfter.png){: width="500" }
+> {: .solution}
 >
 > With the normalized gene counts we can also produce a matrix of pseudo-counts to estimate the common and tagwise dispersions. This allows us to use the **plotBCV** function to generate a genewise biological coefficient of variation (BCV) plot of dispersion estimates.
 >
@@ -238,6 +260,11 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > plotBCV(list)
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![BCV Plot](../fig/exactTest_plotBCVAfter.png){: width="500" }
+> {: .solution}
 >
 > Now, we are ready to perform exact tests with edgeR using the **exactTest** function.
 >
@@ -276,6 +303,11 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > ~~~
 > {: .language-r}
 >
+>> ## Plot
+>>
+>> ![MD Plot with AB Line](../fig/exactTest_plotMD_abline.png){: width="500" }
+> {: .solution}
+>
 > As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
 >
 > ~~~
@@ -283,6 +315,11 @@ After normalization of raw counts we will perform genewise exact tests for diffe
 > plotSmear(tested)
 > ~~~
 > {: .language-r}
+>
+>> ## Plot
+>>
+>> ![Smear Plot](../fig/exactTest_plotSmear.png){: width="500" }
+> {: .solution}
 {: .challenge}
 
 [deAnalysis]: https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/
