@@ -273,7 +273,7 @@ Now that we have the necessary transcript and genomic data, we can begin the pro
 
 ### Convert Genomic Data Format
 
-The first step in our bioinformatics workflow is to convert one of the genomic data files to the format expected by our *downstread* analysis tools. The genome features file that we downloaded from InsectBase for *Tribolium castaneum* is in the *gff3* format, but it needs to be in *gtf* format to use with Hisat2. This is because there are some important [formatting differences]][featureFiles] between the two genomic feature file types.
+The first step in our bioinformatics workflow is to convert one of the genomic data files to the format expected by our *downstread* analysis tools. The genome features file that we downloaded from InsectBase for *Tribolium castaneum* is in the *gff3* format, but it needs to be in *gtf* format to use with Hisat2. This is because there are some important [formatting differences][featureFiles] between the two genomic feature file types.
 
 > ## Challenge
 >
