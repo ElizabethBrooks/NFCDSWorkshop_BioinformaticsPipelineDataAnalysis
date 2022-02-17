@@ -22,7 +22,7 @@ keypoints:
 
 Biostatistics is the [application of statistical methods][biostats] to the designing, analyzing, and interpreting of big biological data such as genetic sequences. This requires the development and application of computational algorithms in order to conduct different complex statistical analyses.
 
-![Bioinformatics vs Biostats](../fig/bioinfoStats.jpeg){: width="800" }
+![What is Biostats?](../fig/bioStats.jpeg){: width="800" }
 *[Image source][bioinfoStats]*
 
 The goal of biostatistical analyses are to answer questions and solve problems in a variety of biological fields, ranging from medicine to agriculture. For example, biostaticians are able to use mathematics study the determining factors that impact the health of people in order to arrive at conclusions about disorders and diseases.
@@ -49,7 +49,12 @@ The goal of biostatistical analyses are to answer questions and solve problems i
 
 ## What is Bioinformatics?
 
-Bioinfotmatics is a interdisciplinary field that combines techniques and knowledge from both computer science and biology. It is a computational field that involves the analysis of complex genetic data. This commonly includes DNA, RNA, or protein sequence data. Bioinformatics data is generated through various omics technologies used to analyze different types of biological molecules. Omics technologies include genetic, transcriptomic, proteomic, and metabolomic data. 
+Bioinfotmatics is a interdisciplinary field that combines techniques and knowledge from both computer science and biology. It is a computational field that involves the analysis of complex genetic data. This commonly includes DNA, RNA, or protein sequence data. 
+
+![What is Bioinformatics?](../fig/bioInfo.jpeg){: width="800" }
+*[Image source][bioinfoStats]*
+
+Bioinformatics data is generated through various omics technologies used to analyze different types of biological molecules. Omics technologies include genetic, transcriptomic, proteomic, and metabolomic data. 
 
 ![Genomics Overview](../fig/Overview-of-different-omics-sciences-such-as-genomics-transcriptomics-and-proteomics.png){: width="800" }
 *[Image source][omicsInfo]*
