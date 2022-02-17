@@ -114,15 +114,18 @@ Go to the paper on the publisher's website.
 {: .callout}
 
 **_Step 2_**
+
 Search the paper for the SRA "accession" number associated with the study.
 
 > ## Tip! - Task 2
 >
 > Search the paper for "accession" (Mac: command+f, Windows: cntrl+f) and copy the *Accession No.* 
->> ### Solution
->> The *Accession No.* is PRJNA504739 for the transcriptomic data.
-> {: .solution}
 {: .callout}
+
+> ## Solution - Task 2
+>
+> The *Accession No.* is PRJNA504739 for the transcriptomic data.
+{: .solution}
 
 **_Step 3_**
 
