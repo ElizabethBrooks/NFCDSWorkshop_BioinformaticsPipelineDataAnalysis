@@ -125,9 +125,18 @@ head(tribolium_counts)
 
 ## Statistical Analysis - Exact Tests
 
-With our transcript sequence data now aligned and quantified, we can begin to perform some statistical analysis of the data. Exact tests often are a good place to start with differential expression analysis of genomic data sets. These tests are the [classic edgeR approach][edgerMan] to make pairwise comparisons between the groups.
+With our transcript sequence data now aligned and quantified, we can begin to perform some statistical analysis of the data. For next generation squencing data (e.g., RNA sequences), it is a common task to identify differentially expressed genes (tags) between two (or more) groups. Exact tests often are a good place to start with differential expression analysis of transcriptomic data sets. These tests are the [classic edgeR approach][edgerMan] to make pairwise comparisons between the groups.
 
-The types of contrasts you can make will depend on the design of your study and data set. The experimental design of the data we are using in this workshopis as follows:
+Once negative binomial models are fitted and dispersion estimates are obtained, we can proceed with testing procedures for determining differential expression of the genes in our *Tribolium castaneum* reference genmoe using the **exactTest** function of edgeR. 
+
+**Note:** the exact test is based on the qCML methods. By knowing the conditional distribution for the sum of counts in a group, we can compute exact p-values by summing over all sums of counts that have a probability less than the probability under the null hypothesis of the observed sum of counts. 
+
+> ## Tip!
+>
+> The exact test for the negative binomial distribution has strong parallels with Fisher’s exact test, and is *only applicable to experiments with a single factor*.
+{: .callout}
+
+So, the types of contrasts you can make will depend on the design of your study and data set. The experimental design of the data we are using in this workshopis as follows:
 
 | sample | treatment |
 | ------- | ------- |
