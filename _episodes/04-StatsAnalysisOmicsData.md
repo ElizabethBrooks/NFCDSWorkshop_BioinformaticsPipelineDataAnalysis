@@ -77,12 +77,10 @@ So to quantify the read fragments that map to the genomic features of the red fl
 # control samples at 4h
 cntrl1_fc <- featureCounts(files="SRR8288561_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl2_fc <- featureCounts(files="SRR8288562_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
-cntrl3_fc <- featureCounts(files="SRR8288563_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 
 # treatment samples at 4h
 treat1_fc <- featureCounts(files="SRR8288564_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 treat2_fc <- featureCounts(files="SRR8288557_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
-treat3_fc <- featureCounts(files="SRR8288560_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 ~~~
 {: .language-r}
 
@@ -105,10 +103,8 @@ Before we can move on to any statistical analysis, we need to prepare the data b
 tribolium_counts <- data.frame(
   SRR8288561 = unname(cntrl1_fc$counts),
   SRR8288562 = unname(cntrl2_fc$counts),
-  SRR8288563 = unname(cntrl2_fc$counts),
   SRR8288564 = unname(treat1_fc$counts),
-  SRR8288557 = unname(treat2_fc$counts),
-  SRR8288560 = unname(treat2_fc$counts)
+  SRR8288557 = unname(treat2_fc$counts)
 )
 
 # checkout what the resulting counts data frame looks like
@@ -142,10 +138,8 @@ So, the types of contrasts you can make will depend on the design of your study 
 | ------- | ------- |
 | SRR8288561 | cntrl |
 | SRR8288562 | cntrl |
-| SRR8288563 | cntrl |
 | SRR8288564 | treat |
 | SRR8288557 | treat |
-| SRR8288560 | treat |
 
 **Note** in the treatment column:
 - cntrl - control treatment
@@ -177,7 +171,7 @@ First, we need to describe the layout of samples in our transcript sequence read
 
 ~~~
 # add grouping factor to specify the layout of the count data frame
-group <- factor(c("cntrl","cntrl","cntrl","treat","treat","treat"))
+group <- factor(c("cntrl","cntrl","treat","treat"))
 
 # create DGE list object
 list <- DGEList(counts=tribolium_counts,group=group)
@@ -190,7 +184,7 @@ So first, we will now plot the library sizes of our sequencing reads before norm
  
 ~~~
 # plot the library sizes before normalization
-barplot(list$samples$lib.size*1e-6, names=1:6, ylab="Library size (millions)")
+barplot(list$samples$lib.size*1e-6, names=1:4, ylab="Library size (millions)")
 ~~~
 {: .language-r}
 
@@ -204,7 +198,7 @@ Next, we will use the **plotMDS** function to display the relative similarities 
 ~~~
 # draw a MDS plot to show the relative similarities of the samples
 # and to view batch and treatment effects before normalization
-plotMDS(list, col=rep(1:6, each=3))
+plotMDS(list, col=rep(1:4, each=2))
 ~~~
 {: .language-r}
 
@@ -235,11 +229,11 @@ Now that we have normalized gene counts for our samples we should generate the s
 
 ~~~
 # plot the library sizes after normalization
-barplot(list$samples$lib.size*1e-6, names=1:6, ylab="Library size (millions)")
+barplot(list$samples$lib.size*1e-6, names=1:4, ylab="Library size (millions)")
  
 # draw a MDS plot to show the relative similarities of the samples
 # and to view batch and treatment effects after normalization
-plotMDS(list, col=rep(1:3, each=3))
+plotMDS(list, col=rep(1:2, each=2))
 ~~~
 {: .language-r}
 

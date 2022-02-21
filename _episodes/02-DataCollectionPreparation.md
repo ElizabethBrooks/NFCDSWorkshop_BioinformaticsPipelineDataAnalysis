@@ -160,7 +160,7 @@ In order to save time, we will retrieve a subset of the transcriptomic sequence 
 > - SRR8288562
 > - SRR8288564
 > - SRR8288557
-> Be aware that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, note that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
+> Note that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, be aware that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
 {: .solution}
 
 #### Step 5 - Basic Analysis

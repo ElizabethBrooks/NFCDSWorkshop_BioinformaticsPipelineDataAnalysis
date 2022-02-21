@@ -81,15 +81,15 @@ cntrl1_fc <- featureCounts(files="SRR8288561_accepted_hits.sam", annot.ext="Trib
 cntrl2_fc <- featureCounts(files="SRR8288562_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl3_fc <- featureCounts(files="SRR8288563_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 
-# treatment samples at 4h
-treat1_fc <- featureCounts(files="SRR8288564_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
-treat2_fc <- featureCounts(files="SRR8288557_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
-treat3_fc <- featureCounts(files="SRR8288560_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
-
 #cntrl samples 24h
 cntrl1_fc_24h <- featureCounts(files="SRR8288558_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl2_fc_24h <- featureCounts(files="SRR8288567_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl3_fc_24h <- featureCounts(files="SRR8288568_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
+
+# treatment samples at 4h
+treat1_fc <- featureCounts(files="SRR8288564_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
+treat2_fc <- featureCounts(files="SRR8288557_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
+treat3_fc <- featureCounts(files="SRR8288560_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 
 #treat samples 24h
 treat1_fc_24h <- featureCounts(files="SRR8288559_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
@@ -117,16 +117,16 @@ Before we can move on to any statistical analysis, we need to prepare the data b
 tribolium_counts <- data.frame(
   SRR8288561 = unname(cntrl1_fc_4h$counts),
   SRR8288562 = unname(cntrl2_fc_4h$counts),
-  SRR8288563 = unname(cntrl2_fc_4h$counts),
+  SRR8288563 = unname(cntrl3_fc_4h$counts),
   SRR8288558 = unname(cntrl1_fc_24h$counts),
   SRR8288567 = unname(cntrl2_fc_24h$counts),
-  SRR8288568 = unname(cntrl2_fc_24h$counts),
+  SRR8288568 = unname(cntrl3_fc_24h$counts),
   SRR8288564 = unname(treat1_fc_4h$counts),
   SRR8288557 = unname(treat2_fc_4h$counts),
-  SRR8288560 = unname(treat2_fc_4h$counts),
+  SRR8288560 = unname(treat3_fc_4h$counts),
   SRR8288559 = unname(treat1_fc_24h$counts),
   SRR8288565 = unname(treat2_fc_24h$counts),
-  SRR8288566 = unname(treat2_fc_24h$counts)
+  SRR8288566 = unname(treat3_fc_24h$counts)
 )
 
 # checkout what the resulting counts data frame looks like
