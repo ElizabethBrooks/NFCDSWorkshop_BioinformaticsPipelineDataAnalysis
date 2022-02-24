@@ -26,7 +26,7 @@ Biostatistics is the [application of statistical methods][biostats] to the desig
 ![What is Biostats?](../fig/bioStats.jpeg){: width="800" }
 *[Image source][bioinfoStats]*
 
-The goal of biostatistical analyses are to answer questions and solve problems in a variety of biological fields, ranging from medicine to agriculture. For example, biostaticians are able to use mathematics study the determining factors that impact the health of people in order to arrive at conclusions about disorders and diseases.
+The goal of biostatistical analyses are to answer questions and solve problems in a variety of biological fields, ranging from medicine to agriculture. For example, biostaticians are able to use mathematics to study the determining factors that impact the health of people in order to arrive at conclusions about disorders and diseases.
 
 > ## Checklist
 >
@@ -50,7 +50,7 @@ The goal of biostatistical analyses are to answer questions and solve problems i
 
 ## What is Bioinformatics?
 
-Bioinfotmatics is a interdisciplinary field that combines techniques and knowledge from both computer science and biology. It is a computational field that involves the analysis of complex genetic data. This commonly includes DNA, RNA, or protein sequence data. 
+Bioinfotmatics is an interdisciplinary field that combines techniques and knowledge from both computer science and biology. It is a computational field that involves the analysis of complex genetic data. This commonly includes DNA, RNA, or protein sequence data. 
 
 ![What is Bioinformatics?](../fig/bioInfo.jpeg){: width="800" }
 *[Image source][bioinfoStats]*
@@ -112,7 +112,7 @@ The following graphic depicts a general worklfow for preparing, analyzing, and v
 ![RNA Sequencing Data Analysis Pipeline](../fig/fbinf-01-693836-g001.jpeg){: width="800" }
 *[Image source][omicsWorkflow]*
 
-In this workshop you will gain experience in performing different aspects of bioinformatics and biostatistical data analysis by working through a workflow for analyzing gene expression data. The steps in the bioinformatics workflow for this workshop are:
+In this workshop you will gain experience in performing different aspects of bioinformatics and biostatistical data analysis by working through a scripting pipeline for analyzing gene expression data. The steps in the bioinformatics workflow for this workshop are:
 1. data collection - [SRA toolkit][toolkitSRA]
 2. quality control - [fastqc][fastqcCite]
 3. data preparation
@@ -125,7 +125,7 @@ In this workshop you will gain experience in performing different aspects of bio
 
 ## Pipelining & The Benefits of Scripting
 
-The primary goal of any bioinformatics analysis workflow is to give meaning to large and complex biological data sets. This often requires the development of code that is generalized and can be automated to run on multiple similar data sets, which may have small differences in their structure or content.
+The primary goal of any bioinformatics analysis workflow is to give meaning to complex biological data sets. This often requires the development of code that is generalized and can be automated to run on multiple similar data sets, which may have small differences in their structure or content.
 
 ![What is Shell Scripting?](../fig/what_is_shell_scripting.jpeg){: width="500" }
 *[Image source][scriptingBenefits]*
