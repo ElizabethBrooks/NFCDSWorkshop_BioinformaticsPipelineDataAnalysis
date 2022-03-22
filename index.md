@@ -40,7 +40,7 @@ This lesson is designed for anyone interested in learning how to combine R and B
 
 <!-- {% include syllabus.html %} -->
 
-[preSurvey]: https://forms.gle/1h6B5WZd4tY5eZSC9
-[postSurvey]: https://forms.gle/e8tnrEX8zT3HcL6S6
+[preSurvey]: https://
+[postSurvey]: https://
 
 {% include links.md %}

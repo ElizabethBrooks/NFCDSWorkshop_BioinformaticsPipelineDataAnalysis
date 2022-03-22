@@ -33,21 +33,17 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 > ~~~
 > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 > ~~~
-> {: .language-r}
 - For Windows 10 systems updated to the Windows 10 May 2020 update and newer run the following in PowerShell as Administrator: 
 > ~~~
 > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 > ~~~
-> {: .language-r}
 - Then restart your computer.
 - Now Ubuntu can be installed from the Microsoft Store:
   - Use the Start menu to launch the Microsoft Store application.
   - Search for Ubuntu and select the first result, "Ubuntu", published by Canonical Group Limited.
   - Click on the Install button. Ubuntu will be downloaded and installed automatically. Progress will be reported within the Microsoft Store application.
 - Ubuntu can now be launched in the same way as any other Windows 10 application, such as searching for and selecting Ubuntu in the Start menu.
-- When launched for the first time, Ubuntu will inform you that it’s "Installing" and you’ll need to wait a few moments. 
-- Then enter a username and password specific to your Ubuntu installation, which don’t need to be the same as your Windows 10 credentials. With this step complete, you’ll find yourself at the Ubuntu bash command line.
-
+**Note:** When launched for the first time, Ubuntu will inform you that it’s "Installing" and you’ll need to wait a few moments. Then enter a username and password specific to your Ubuntu installation, which don’t need to be the same as your Windows 10 credentials. With this step complete, you’ll find yourself at the Ubuntu bash command line.
 
 ### Mac OS Tips
 

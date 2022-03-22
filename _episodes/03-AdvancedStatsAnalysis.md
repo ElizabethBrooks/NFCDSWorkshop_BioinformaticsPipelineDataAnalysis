@@ -1,7 +1,7 @@
 ---
 title: "Advanced Statistical Analysis of Omics Data (Optional)"
-teaching: 0
-exercises: 0
+teaching: 30
+exercises: 60
 questions:
 - "How do I need to prepare my data for analysis in R?"
 - "What standard statistical methods do I need to analyze this data set?"

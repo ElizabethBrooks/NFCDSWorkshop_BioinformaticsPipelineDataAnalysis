@@ -1,7 +1,7 @@
 ---
 title: "Supplemental - Omics Data Collection & Preparation"
-teaching: 30
-exercises: 30
+teaching: 0
+exercises: 0
 questions:
 - "What is the experimental design for the data set we are using?"
 - "How do I naviagate the terminal?"
