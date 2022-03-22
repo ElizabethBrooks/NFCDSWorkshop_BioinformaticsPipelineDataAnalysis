@@ -1,5 +1,5 @@
 ---
-title: "Additional Lesson - Omics Data Collection & Preparation"
+title: "Supplemental - Omics Data Collection & Preparation"
 teaching: 30
 exercises: 30
 questions:

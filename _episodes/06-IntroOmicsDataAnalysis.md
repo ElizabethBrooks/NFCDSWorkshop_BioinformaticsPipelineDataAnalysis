@@ -1,5 +1,5 @@
 ---
-title: "Additional Lesson - Introduction to Omics Data Analysis"
+title: "Supplemental - Introduction to Omics Data Analysis"
 teaching: 20
 exercises: 5
 questions:
