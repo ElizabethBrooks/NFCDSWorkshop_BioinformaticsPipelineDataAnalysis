@@ -22,7 +22,6 @@ This lesson is designed for anyone interested in learning how to combine R and B
 > ## Prerequisites
 >
 > 1. Participants should be comfortable with using a computer and basic statistical methods. Furthermore, participants should have:
-> - used a computer before
 > - limited experience with BASH
 > - limited experience with R
 >
