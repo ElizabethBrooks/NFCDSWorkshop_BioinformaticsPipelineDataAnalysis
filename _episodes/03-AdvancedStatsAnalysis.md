@@ -172,8 +172,8 @@ Next, we will use **plotMDS** to display the relative similarities of the sample
 ~~~
 #Use a MDS plot to visualizes the differences
 # between the expression profiles of different samples
-points <- c(0,1,2,3)
-colors <- rep(c("blue", "darkgreen"), 2)
+points <- c(0,1,2,3,15,16,17,18)
+colors <- rep(c("blue", "darkgreen", "red", "black"), 2)
 
 #Create plot without legend
 plotMDS(list, col=colors[group], pch=points[group])
