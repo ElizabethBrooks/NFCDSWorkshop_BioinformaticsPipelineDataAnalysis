@@ -185,8 +185,8 @@ tested_cntrl <- exactTest(list, pair=c("treat_24h", "treat_4h"))
 resultsTbl_nctrl <- topTags(tested_cntrl, n=nrow(tested_cntrl$table))$table
 
 #Create filtered results table of DE genes
-resultsTbl_nctrl.keep <- resultsTbl_nctrl$FDR <= 0.05
-resultsTbl_treat_filtered <- resultsTbl_nctrl[resultsTbl_nctrl.keep,]
+resultsTbl_ctrl.keep <- resultsTbl_nctrl$FDR <= 0.05
+resultsTbl_cntrl_filtered <- resultsTbl_nctrl[resultsTbl_ctrl.keep,]
 
 #Write the results of the exact tests to a csv file
 write.table(resultsTbl_cntrl_filtered, file="exactTest_cntrl_filtered.csv", sep=",", row.names=TRUE)
