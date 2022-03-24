@@ -30,7 +30,7 @@ With our [transcript sequence data][countsCSV] now aligned and quantified, we ca
 > GLM's may be used for general experiments with multiple factors, and parallels the [ANOVA method][keyDifferences]. This is in contrast to the exact tests, which are only applicable to experiments with a single factor.
 {: .callout}
 
-As usual, the types of comparisons you can make will depend on the design of your study. In our case:
+As usual, the types of comparisons you can make will depend on the [design of your study][groupFactors]. In our case:
 
 | sample | treatment | hours |
 | ------- | ------- | ------- |
@@ -338,6 +338,7 @@ Here is the [R script][glmScript] with the code from this lesson. Also included 
 
 
 [countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
+[groupFactors]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/groupingFactors.csv
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html

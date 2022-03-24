@@ -8,7 +8,7 @@ tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")
 #tribolium_counts[ , 1:6]
 
 #Add grouping factor
-group <- factor(c(rep("cntrl_4h",3), rep("cntrl_24h",3), rep("treat_4h",3), rep("treat_24h",3)))
+group <- factor(c(rep("cntrl_4h",3), rep("treat_4h",3), rep("cntrl_24h",3), rep("treat_24h",3)))
 
 #BiocManager::install("edgeR")
 
@@ -142,8 +142,8 @@ abline(h=c(-1, 1), col="blue")
 plotSmear(tested_treat)
 
 ##############
-#Perform an exact test for cntrl_4h vs nctrl_24h
-tested_cntrl <- exactTest(list, pair=c("treat_24h", "treat_4h"))
+#Perform an exact test for cntrl_4h vs ctrl_24h
+tested_cntrl <- exactTest(list, pair=c("cntrl_24h", "cntrl_4h"))
 
 #Create a table of DE genes filtered by FDR
 resultsTbl_nctrl <- topTags(tested_cntrl, n=nrow(tested_cntrl$table))$table
