@@ -59,7 +59,7 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 
 **Note:** When launched for the first time, Ubuntu will inform you that it’s "Installing" and you’ll need to wait a few moments. Then enter a username and password specific to your Ubuntu installation, which don’t need to be the same as your Windows 10 credentials. With this step complete, you’ll find yourself at the Ubuntu bash command line.
 
-## **Necessary R Package - edgeR**
+## R Package - edgeR
 
 The edgeR R package allows you to perform differential expression biostatistical analysis using omics data.
 
