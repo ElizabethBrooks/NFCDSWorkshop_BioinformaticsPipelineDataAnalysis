@@ -346,7 +346,7 @@ abline(h=c(-1, 1), col="blue")
 
 > ## Plot
 >
-> ![MD Plot with AB Line](../fig/exactTest_plotMD_abline.png){: width="500" }
+> ![MD Plot with AB Line](../fig/){: width="500" }
 {: .solution}
 
 As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
@@ -359,7 +359,127 @@ plotSmear(tested_24h)
 
 > ## Plot
 >
-> ![Smear Plot](../fig/exactTest_plotSmear.png){: width="500" }
+> ![Smear Plot](../fig/){: width="500" }
+{: .solution}
+
+### Exact Tests - treat_4h vs treat_24h
+
+Next, we will perform exact tests on the treatment data with edgeR using the **exactTest** function.
+
+~~~
+#Perform an exact test for treat_4h vs treat_24h
+tested_treat <- exactTest(list, pair=c("treat_24h", "treat_4h"))
+
+#Create a table of DE genes filtered by FDR
+resultsTbl_treat <- topTags(tested_treat, n=nrow(tested_treat$table))$table
+
+#Create filtered results table of DE genes
+resultsTbl_treat.keep <- resultsTbl_treat$FDR <= 0.05
+resultsTbl_treat_filtered <- resultsTbl_treat[resultsTbl_treat.keep,]
+
+#Write the results of the exact tests to a csv file
+write.table(resultsTbl_treat_filtered, file="exactTest_treat_filtered.csv", sep=",", row.names=TRUE)
+~~~
+{: .language-r}
+
+Using the resulting differentially expressed (DE) genes from the exact test we can view the counts per million for the top genes of each sample.
+
+~~~
+#Look at the counts-per-million in individual samples for the top genes
+o <- order(tested_treat$table$PValue)
+cpm(list)[o[1:10],]
+
+# view the total number of differentially expressed genes at a p-value of 0.05
+summary(decideTests(tested_treat))
+~~~
+{: .language-r}
+
+We can also generate a mean difference (MD) plot of the log fold change (logFC) against the log counts per million (logcpm) using the **plotMD** function. DE genes are highlighted and the blue lines indicate 2-fold changes. 
+
+~~~
+# plot log-fold change against log-counts per million, with DE genes highlighted
+# the blue lines indicate 2-fold changes
+plotMD(tested_treat)
+abline(h=c(-1, 1), col="blue")
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![MD Plot with AB Line](../fig/){: width="500" }
+{: .solution}
+
+As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
+
+~~~
+# make a mean-difference plot of the libraries of count data
+plotSmear(tested_treat)
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![Smear Plot](../fig/){: width="500" }
+{: .solution}
+
+### Exact Tests - cntrl_4h vs cntrl_24h
+
+Next, we will perform exact tests on the control data with edgeR using the **exactTest** function.
+
+~~~
+#Perform an exact test for cntrl_4h vs nctrl_24h
+tested_cntrl <- exactTest(list, pair=c("treat_24h", "treat_4h"))
+
+#Create a table of DE genes filtered by FDR
+resultsTbl_nctrl <- topTags(tested_cntrl, n=nrow(tested_cntrl$table))$table
+
+#Create filtered results table of DE genes
+resultsTbl_nctrl.keep <- resultsTbl_nctrl$FDR <= 0.05
+resultsTbl_treat_filtered <- resultsTbl_nctrl[resultsTbl_nctrl.keep,]
+
+#Write the results of the exact tests to a csv file
+write.table(resultsTbl_cntrl_filtered, file="exactTest_cntrl_filtered.csv", sep=",", row.names=TRUE)
+~~~
+{: .language-r}
+
+Using the resulting differentially expressed (DE) genes from the exact test we can view the counts per million for the top genes of each sample.
+
+~~~
+#Look at the counts-per-million in individual samples for the top genes
+o <- order(tested_cntrl$table$PValue)
+cpm(list)[o[1:10],]
+
+# view the total number of differentially expressed genes at a p-value of 0.05
+summary(decideTests(tested_cntrl))
+~~~
+{: .language-r}
+
+We can also generate a mean difference (MD) plot of the log fold change (logFC) against the log counts per million (logcpm) using the **plotMD** function. DE genes are highlighted and the blue lines indicate 2-fold changes. 
+
+~~~
+# plot log-fold change against log-counts per million, with DE genes highlighted
+# the blue lines indicate 2-fold changes
+plotMD(tested_cntrl)
+abline(h=c(-1, 1), col="blue")
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![MD Plot with AB Line](../fig/){: width="500" }
+{: .solution}
+
+As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
+
+~~~
+# make a mean-difference plot of the libraries of count data
+plotSmear(tested_cntrl)
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![Smear Plot](../fig/){: width="500" }
 {: .solution}
 
 
