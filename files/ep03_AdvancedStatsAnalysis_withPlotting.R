@@ -114,7 +114,7 @@ dev.off()
 
 #Generate table of DE genes
 tagsTbl_treat_cntrl.filtered <- topTags(anov.treat_cntrl, n=nrow(anov.treat_cntrl$table), adjust.method="fdr")$table
-write.table(tagsTbl_treat_cntrl.filtered, file="glm_24h_4h.csv", sep=",", row.names=TRUE)
+write.table(tagsTbl_treat_cntrl.filtered, file="glm_treat_cntrl.csv", sep=",", row.names=TRUE)
 
 
 ########

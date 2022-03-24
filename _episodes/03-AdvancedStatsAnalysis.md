@@ -91,7 +91,6 @@ We will use the edgeR library in R with the data frame of transcript sequence re
 ~~~
 # setup a design matrix
 group <- factor(paste(targets$treatment,targets$hours,sep="."))
-#cbind(targets,Group=group)
 ~~~
 {: .language-r}
 
@@ -99,10 +98,8 @@ The grouping factors need to be added as a column to our experimental design bef
 
 ~~~
 # create DGE list object
-head(list)
 list <- DGEList(counts=tribolium_counts,group=group)
 colnames(list) <- rownames(targets)
-head(list)
 ~~~
 {: .language-r}
 
@@ -117,7 +114,7 @@ barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
 
 > ## Plot
 >
-> ![Barplot Before Normalization](../fig/glmQLF_barplotBefore.png){: width="500" }
+> ![Barplot Before Normalization](../fig/glm_librarySizes_beforeNorm.jpg){: width="500" }
 {: .solution}
 
 Next, we need to filter the raw gene counts by expression levels and remove counts of lowly expressed genes.
@@ -136,9 +133,16 @@ The filtered raw counts are then normalized with **calcNormFactors** according t
 #Use TMM normalization to eliminate composition biases
 # between libraries
 list <- calcNormFactors(list)
-#list$samples
-#Write normalized counts to file
+
+#Retrieve normalized counts
 normList <- cpm(list, normalized.lib.sizes=TRUE)
+
+#Write the normalized counts to a file
+write.table(normList, file="tribolium_normalizedCounts.csv", sep=",", row.names=TRUE)
+
+#View normalization factors
+list$samples
+dim(list)
 ~~~
 {: .language-r}
 
@@ -146,7 +150,6 @@ Now that we have normalized gene counts for our samples we should generate some 
 
 ~~~
 #Verify TMM normalization using a MD plot
-#Write plot to file
 plotMD(cpm(list, log=TRUE), column=1)
 abline(h=0, col="red", lty=2, lwd=2)
 ~~~
@@ -154,7 +157,7 @@ abline(h=0, col="red", lty=2, lwd=2)
 
 > ## Plot
 >
-> ![MD Plot After Normalization](../fig/glmQLF_plotMDAfter.png){: width="500" }
+> ![MD Plot After Normalization](../fig/glm_MD_afterNorm.jpg){: width="500" }
 {: .solution}
 
 Next, we will use **plotMDS** to display the relative similarities of the samples and view the differences between the expression profiles of different samples. 
@@ -171,9 +174,11 @@ Next, we will use **plotMDS** to display the relative similarities of the sample
 # between the expression profiles of different samples
 points <- c(0,1,2,3)
 colors <- rep(c("blue", "darkgreen"), 2)
-#Write plot without legend to file
+
+#Create plot without legend
 plotMDS(list, col=colors[group], pch=points[group])
-#Write plot with legend to file
+
+#Create plot with legend
 plotMDS(list, col=colors[group], pch=points[group])
 legend("topleft", legend=levels(group), pch=points, col=colors, ncol=2)
 ~~~
@@ -181,9 +186,9 @@ legend("topleft", legend=levels(group), pch=points, col=colors, ncol=2)
 
 > ## Plots
 >
-> ![MDS Plot After Normalization](../fig/glmQLF_plotMDS_noLegend.png){: width="500" }
+> ![MDS Plot After Normalization](../fig/glm_MDS_withoutLegend.jpg){: width="500" }
 >
-> ![MDS Plot After Normalization with Legend](../fig/glmQLF_plotMDS_legend.png){: width="500" }
+> ![MDS Plot After Normalization with Legend](../fig/glm_MDS_withLegend.jpg){: width="500" }
 {: .solution}
 
 The design matrix for our data also needs to be specified before we can perform the F-tests. The experimental design is parametrized with a one-way layout and one coefficient is assigned to each group.
@@ -193,7 +198,6 @@ The design matrix for our data also needs to be specified before we can perform 
 # where one coefficient is assigned to each group
 design <- model.matrix(~ 0 + group)
 colnames(design) <- levels(group)
-#design
 ~~~
 {: .language-r}
 
@@ -202,16 +206,15 @@ With the normalized gene counts and design matrix we can now generate the negati
 ~~~
 #Next, the NB dispersion is estimated
 list <- estimateDisp(list, design, robust=TRUE)
-#list$common.dispersion
+
 #Visualize the dispersion estimates with a BCV plot
-#Write plot to file
 plotBCV(list)
 ~~~
 {: .language-r}
 
 > ## Plot
 >
-> ![BCV Plot](../fig/glmQLF_plotBCVAfter.png){: width="500" }
+> ![BCV Plot](../fig/glm_BCV.jpg){: width="500" }
 {: .solution}
 
 Next, we estimate the QL dispersions for all genes using the **glmQLFit** function. This detects the gene-specific variability above and below the overall level. The dispersion are then plotted with the **plotQLDisp** function.
@@ -219,15 +222,15 @@ Next, we estimate the QL dispersions for all genes using the **glmQLFit** functi
 ~~~
 #Now, estimate and plot the QL dispersions
 fit <- glmQLFit(list, design, robust=TRUE)
-#head(fit$coefficients)
-#Write plot to file
+
+#Create plot
 plotQLDisp(fit)
 ~~~
 {: .language-r}
 
 > ## Plot
 >
-> ![QL Dispersion Plot](../fig/glmQLF_plotQLDisp.png){: width="500" }
+> ![QL Dispersion Plot](../fig/glm_QLDisp.jpg){: width="500" }
 {: .solution}
 
 Now we are ready to begin defining and testing contrasts of our experimental design. The first comparison we will make is used to test our hypothesis that the means of the *treatment* factor are equal.
@@ -244,15 +247,20 @@ con.treat_cntrl <- makeContrasts(set.treat_cntrl = (treat.4h + treat.24h)/2
 #Look at genes with significant expression across all UV groups
 anov.treat_cntrl <- glmTreat(fit, contrast=con.treat_cntrl, lfc=log2(1.2))
 summary(decideTests(anov.treat_cntrl))
-#Write plot to file
+
+#Create MD plot of DE genes
 plotMD(anov.treat_cntrl)
 abline(h=c(-1, 1), col="blue")
+
+#Generate table of DE genes
+tagsTbl_treat_cntrl.filtered <- topTags(anov.treat_cntrl, n=nrow(anov.treat_cntrl$table), adjust.method="fdr")$table
+write.table(tagsTbl_treat_cntrl.filtered, file="glm_treat_cntrl.csv", sep=",", row.names=TRUE)
 ~~~
 {: .language-r}
 
 > ## Plot
 >
-> ![Treatment vs Control Effect](../fig/glmQLF_treat_cntrl.png){: width="500" }
+> ![Treatment vs Control Effect](../fig/glm_treat_cntrl_MD.jpg){: width="500" }
 {: .solution}
 
 The second comparison we will make is used to test our hypothesis that the means of the *hours* factor are equal.
@@ -267,15 +275,20 @@ con.24h_4h <- makeContrasts(set.24h_4h = (cntrl.24h + treat.24h)/2
 #Look at genes with significant expression across all UV groups
 anov.24h_4h <- glmTreat(fit, contrast=con.24h_4h, lfc=log2(1.2))
 summary(decideTests(anov.24h_4h))
-#Write plot to file
+
+#Create MD plot of DE genes
 plotMD(anov.24h_4h)
 abline(h=c(-1, 1), col="blue")
+
+#Generate table of DE genes
+tagsTbl_24h_4h.filtered <- topTags(anov.24h_4h, n=nrow(anov.24h_4h$table), adjust.method="fdr")$table
+write.table(tagsTbl_24h_4h.filtered, file="glm_24h_4h.csv", sep=",", row.names=TRUE)
 ~~~
 {: .language-r}
 
 > ## Plot
 >
-> ![24h vs 4h Effect](../fig/glmQLF_24h_4h.png){: width="500" }
+> ![24h vs 4h Effect](../fig/glm_24h_4h_MD.jpg){: width="500" }
 {: .solution}
 
 The final comparison we will make is to test our hypothesis that there is no *interaction* between the two factors (treatment and tolerance).  To make our last contrast we will test whether the mean effects of the two factors are equal. 
@@ -291,15 +304,20 @@ con.interaction <- makeContrasts(set.interaction = ((treat.4h + treat.24h)/2
 #Look at genes with significant expression
 anov.interaction <- glmTreat(fit, contrast=con.interaction, lfc=log2(1.2))
 summary(decideTests(anov.interaction))
-#Write plot to file
+
+#Create MD plot of DE genes
 plotMD(anov.interaction)
 abline(h=c(-1, 1), col="blue")
+
+#Generate table of DE genes
+tagsTbl_inter.filtered <- topTags(anov.interaction, n=nrow(anov.interaction$table), adjust.method="fdr")$table
+write.table(tagsTbl_inter.filtered, file="glm_interaction.csv", sep=",", row.names=TRUE)
 ~~~
 {: .language-r}
 
 > ## Plot
 >
-> ![Interaction Effect](../fig/glmQLF_interaction.png){: width="500" }
+> ![Interaction Effect](../fig/glm_interaction_MD.jpg){: width="500" }
 {: .solution}
 
 
