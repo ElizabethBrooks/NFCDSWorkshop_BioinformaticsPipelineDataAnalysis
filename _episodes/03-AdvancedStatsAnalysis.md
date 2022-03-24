@@ -86,7 +86,18 @@ We will use the edgeR library in R with the data frame of transcript sequence re
 > {: .language-r}
  {: .callout}
 
- First, we need to setup the design matrix describing the experimental design layout of the study.
+Before we proceed with conducting any analysis in R, we should set our working directory to the location of our data. Then, we need to import our data using the read.csv function.
+
+~~~
+# set the working directory
+setwd("/YOUR/FILE/PATH/")
+
+# import gene count data
+tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")
+~~~
+{: .language-r}
+
+As a first step in the analysis, we need to setup the design matrix describing the experimental design layout of the study.
 
 ~~~
 # setup a design matrix

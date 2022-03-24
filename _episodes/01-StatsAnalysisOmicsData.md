@@ -75,7 +75,18 @@ We will use the edgeR library in R with the data frame of transcript sequence re
 > {: .language-r}
 {: .callout}
 
-First, we need to describe the layout of samples in our transcript sequence read count data frame using a list object.
+Before we proceed with conducting any analysis in R, we should set our working directory to the location of our data. Then, we need to import our data using the read.csv function.
+
+~~~
+# set the working directory
+setwd("/YOUR/FILE/PATH/")
+
+# import gene count data
+tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")
+~~~
+{: .language-r}
+
+As a first step in the analysis, we need to describe the layout of samples in our transcript sequence read count data frame using a list object.
 
 ~~~
 # add grouping factor to specify the layout of the count data frame
