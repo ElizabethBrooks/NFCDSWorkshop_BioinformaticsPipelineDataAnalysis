@@ -25,11 +25,11 @@ With our [transcript sequence data][countsCSV] now aligned and quantified, we ca
 
 Once negative binomial models are fitted and dispersion estimates are obtained, we can proceed with testing procedures for determining differential expression of the genes in our *Tribolium castaneum* reference genmoe using the **exactTest** function of edgeR. 
 
-**Note:** the exact test is based on the qCML methods. By knowing the conditional distribution for the sum of counts in a group, we can compute exact p-values by summing over all sums of counts that have a probability less than the probability under the null hypothesis of the observed sum of counts. 
+**Note:** the exact test in edgeR is based on the qCML methods. By knowing the conditional distribution for the sum of counts in a group, we can compute exact p-values by summing over all sums of counts that have a probability less than the probability under the null hypothesis of the observed sum of counts. 
 
 > ## Tip!
 >
-> The exact test for the negative binomial distribution has strong parallels with Fisher’s exact test, and is *only applicable to experiments with a single factor*.
+> The exact test for the negative binomial distribution has strong parallels with Fisher’s exact test, and is *only applicable to experiments with a single factor*. The [Fisher’s exact test][exactTest] is used to determine if there is a significant association between two categorical variables. And it is typically used as an alternative to the Chi-Square Test of Independence when the data is small.
 {: .callout}
 
 So, the types of contrasts you can make will depend on the design of your study and data set. The experimental design of the data we are using in this workshop is as follows:
@@ -483,11 +483,12 @@ plotSmear(tested_cntrl)
 {: .solution}
 
 
+[countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
 [deAnalysis]: https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 [edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
-[countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
+[exactTest]: https://www.statology.org/fishers-exact-test/
 
 {% include links.md %}

@@ -21,13 +21,13 @@ keypoints:
 
 ## Advanced Statistical Analysis in R - Generalized Linear Models
 
-Generalized linear models (GLM) are [another classic edgeR method][edgerMan] for analyzing RNA-seq expression data. In contrast to exact tests, GLMs allow for more general comparisons. 
+With our [transcript sequence data][countsCSV] now aligned and quantified, we can also use generalized linear models (GLM). These are [another classic edgeR method][edgerMan] for analyzing RNA-seq expression data. In contrast to exact tests, GLMs allow for more general comparisons. 
 
 **Note:** GLMs are an extension of classical linear models to nonnormally distributed response data. GLMs specify probability distributions according to their mean-variance relationship.
 
 > ## Tip!
 >
-> GLM's may be used for general experiments with multiple factors. This is in contrast to the exact tests, which are only applicable to experiments with a single factor.
+> GLM's may be used for general experiments with multiple factors, and parallels the [ANOVA method][keyDifferences]. This is in contrast to the exact tests, which are only applicable to experiments with a single factor.
 {: .callout}
 
 As usual, the types of comparisons you can make will depend on the design of your study. In our case:
@@ -303,9 +303,11 @@ abline(h=c(-1, 1), col="blue")
 {: .solution}
 
 
+[countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 [edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+[keyDifferences]: https://keydifferences.com/difference-between-t-test-and-anova.html
 
 {% include links.md %}
