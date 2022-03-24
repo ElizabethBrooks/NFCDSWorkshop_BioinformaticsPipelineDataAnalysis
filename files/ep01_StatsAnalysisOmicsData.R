@@ -1,0 +1,121 @@
+# set the working directory
+setwd("/Users/bamflappy/NFCDSWorkshop_Day2/script_data/")
+
+# import gene count data
+tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")
+
+# select a subset of the gene count data
+#tribolium_counts[ , 1:6]
+
+#Add grouping factor
+group <- factor(c(rep("cntrl_4h",3), rep("cntrl_24h",3), rep("treat_4h",3), rep("treat_24h",3)))
+
+#BiocManager::install("edgeR")
+
+library("edgeR")
+
+#Create DGE list object
+list <- DGEList(counts=tribolium_counts,group=group)
+
+#Plot the library sizes before normalization
+barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
+
+#Draw a MDS plot to show the relative similarities of the samples
+# and to view batch and treatment effects before normalization
+plotMDS(list, col=rep(1:12, each=3))
+
+#There is no purpose in analysing genes that are not expressed in either 
+# experimental condition, so genes are first filtered on expression levels
+keep <- filterByExpr(list)
+table(keep)
+list <- list[keep, , keep.lib.sizes=FALSE]
+
+#Calculate normalized factors
+list <- calcNormFactors(list)
+normList <- cpm(list, normalized.lib.sizes=TRUE)
+
+#View normalization factors
+list$samples
+dim(list)
+
+#Plot the library sizes after normalization
+barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
+
+#Draw a MDS plot to show the relative similarities of the samples
+# and to view batch and treatment effects after normalization
+plotMDS(list, col=rep(1:12, each=3))
+
+#Draw a heatmap of individual RNA-seq samples using moderated
+# log-counts-per-million after normalization
+logcpm <- cpm(list, log=TRUE)
+heatmap(logcpm)
+
+#Produce a matrix of pseudo-counts
+#Estimate common dispersion and tagwise dispersions
+list <- estimateDisp(list)
+list$common.dispersion
+
+#View dispersion estimates and biological coefficient of variation
+plotBCV(list)
+
+
+##############
+#Perform an exact test for treat_4h vs ctrl_4h
+tested_4h <- exactTest(list, pair=c("cntrl_4h", "treat_4h"))
+
+#Create results table of DE genes
+resultsTbl_4h <- topTags(tested_4h, n=nrow(tested_4h$table))$table
+
+#Create a table of DE genes filtered by FDR
+resultsTbl_4h.keep <- resultsTbl_4h$FDR <= 0.05
+resultsTbl_4h_filtered <- resultsTbl_4h[resultsTbl_4h.keep,]
+
+#Write the results of the exact tests to a csv file
+write.table(resultsTbl_4h_filtered, file="exactTest_4h_filtered.csv", sep=",", row.names=TRUE)
+
+#Look at the counts-per-million in individual samples for the top genes
+o <- order(tested_4h$table$PValue)
+cpm(list)[o[1:10],]
+
+#View the total number of differentially expressed genes at a p-value of 0.05
+summary(decideTests(tested_4h))
+
+#Plot log-fold change against log-counts per million, with DE genes highlighted
+#The blue lines indicate 2-fold changes
+plotMD(tested_4h)
+abline(h=c(-1, 1), col="blue")
+
+#Make a mean-difference plot of two libraries of count data with smearing of points
+#  with very low counts, especially those that are zero for one of the columns
+plotSmear(tested_4h)
+
+
+##############
+#Perform an exact test for treat_24h vs ctrl_24h
+tested_24h <- exactTest(list, pair=c("cntrl_24h", "treat_24h"))
+
+#Create a table of DE genes filtered by FDR
+resultsTbl_24h <- topTags(tested_24h, n=nrow(tested_24h$table))$table
+
+#Create filtered results table of DE genes
+resultsTbl_24h.keep <- resultsTbl_24h$FDR <= 0.05
+resultsTbl_24h_filtered <- resultsTbl_24h[resultsTbl_24h.keep,]
+
+#Write the results of the exact tests to a csv file
+write.table(resultsTbl_24h_filtered, file="exactTest_24h_filtered.csv", sep=",", row.names=TRUE)
+
+#Look at the counts-per-million in individual samples for the top genes
+o <- order(tested_24h$table$PValue)
+cpm(list)[o[1:10],]
+
+#View the total number of differentially expressed genes at a p-value of 0.05
+summary(decideTests(tested_24h))
+
+#Plot log-fold change against log-counts per million, with DE genes highlighted
+#The blue lines indicate 2-fold changes
+plotMD(tested_24h)
+abline(h=c(-1, 1), col="blue")
+
+#Make a mean-difference plot of two libraries of count data with smearing of points
+#  with very low counts, especially those that are zero for one of the columns
+plotSmear(tested_24h)

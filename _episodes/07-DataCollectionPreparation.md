@@ -96,7 +96,7 @@ The SRA Toolkit allows you to retrieve data from the SRA for a specific research
 With the SRA Toolkit installed, we can proceed with collecting the transcriptomic data we need for our bioinformatics analysis. Remeber that we are following the example of the study performed by the authors of "[Digital gene expression profiling in larvae of *Tribolium castaneum* at different periods post UV-B exposure][paperCite]".
 
 
-### Coding Challenge - Data Collection for Basic Statisticl Analysis
+### Coding Challenge - Transcriptomic Data Collection
 
 > ## Scripting & Pipelining Tip!
 >
@@ -143,72 +143,26 @@ Find the list of accession numbers for the set of transcriptomic data associated
 > ![Example SRA Accession Search](../fig/ScreenShotSRA.png){: width="500" }
 {: .solution}
 
-#### Step 4 - Basic Analysis
+#### Step 4
 
-In order to save time, we will retrieve a subset of the transcriptomic sequence data for the study. Determine the SRA accession numbers for the following samples on the results page:
-- Trc_1
-- Trc_2
-- Trc_4
-- Trc_5
-
-**Note:** you will need to download at least four of the sample sequence files to run the basic statistical analysis in this workshop.
+Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
 
 > ## Solution - Task 4
 >
-> The four SRA accession numbers are:
-> - SRR8288561
-> - SRR8288562
-> - SRR8288564
-> - SRR8288557
-> Note that the samples called SRR8288561 and SRR8288562 are control samples at 4 hours. Also, be aware that SRR8288564 and SRR8288557 are treated samples subjected to UV-B exposure at 4 hours.
+> It is possible to download the full list of SRA accession numbers for all the samples associated with the study by selecting to download the total accession list from the "Select" section of the page.
+> ![Example SRA Accession Search](../fig/ScreenShotResultsSRA.png){: width="500" }
 {: .solution}
 
-#### Step 5 - Basic Analysis
+#### Step 5
 
-Use the following *prefetch* and *fastq-dump* [command formats][samDump] from the SRA Toolkit in the terminal:
-~~~ 
-prefetch <accession number>
-fastq-dump <accession number> --output-file <accession number>.sam
-~~~
-{: .language-bash}
-
-> ## Solution - Task 5
->
-> Use the following *prefetch* and *fastq-dump* commands and accession numbers, which will take a few moments:
-> ~~~ 
-> prefetch SRR8288561 SRR8288562 SRR8288564 SRR8288557
-> fastq-dump --gzip SRR8288561 
-> fastq-dump --gzip SRR8288562 
-> fastq-dump --gzip SRR8288564
-> fastq-dump --gzip SRR8288557
-> ~~~
-{: .solution}
+Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
 
 > ## Scripting & Pipelining Tip!
 >
 > Remember to save these pieces of code in files with the **.sh** extension While you are working through these exercises!
 {: .callout}
 
-
-### Coding Challenge - Data Collection for Advanced Statisticl Analysis
-
-The following alternative steps 4 and 5 can be done to retrieve additional data to be able to complete more advanced statistical analyses later.
-
-#### Step 4 - Advanced Analysis
-
-Retrieve the total accession list for the study, which has the SRA accession numbers for all of the samples.
-
-> ## Solution - Advanced Task 4
->
-> It is possible to download the full list of SRA accession numbers for all the samples associated with the study by selecting to download the total accession list from the "Select" section of the page.
-> ![Example SRA Accession Search](../fig/ScreenShotResultsSRA.png){: width="500" }
-{: .solution}
-
-#### Step 5 - Advanced Analysis
-
-Retrieve the all of the transcriptomic sequence data for the study using the SRA accession numbers for all of the samples.
-
-> ## Solution - Advanced Task 5
+> ## Solution - Task 5
 >
 > To retrieve the full set of samples, use the following *prefetch* and *fastq-dump* commands and accession numbers. This will take several moments.
 > ~~~ 
@@ -378,6 +332,12 @@ Next, we need to prepare the transcriptomic sequence data files for statistical 
 > hisat2 -q -x TriboliumBuild -U SRR8288564.fastq.gz -S SRR8288564_accepted_hits.sam 
 > hisat2 -q -x TriboliumBuild -U SRR8288557.fastq.gz -S SRR8288557_accepted_hits.sam
 > hisat2 -q -x TriboliumBuild -U SRR8288560.fastq.gz -S SRR8288560_accepted_hits.sam
+> hisat2 -q -x TriboliumBuild -U SRR8288558.fastq.gz -S SRR8288560_accepted_hits.sam
+> hisat2 -q -x TriboliumBuild -U SRR8288567.fastq.gz -S SRR8288560_accepted_hits.sam
+> hisat2 -q -x TriboliumBuild -U SRR8288568.fastq.gz -S SRR8288560_accepted_hits.sam
+> hisat2 -q -x TriboliumBuild -U SRR8288559.fastq.gz -S SRR8288560_accepted_hits.sam
+> hisat2 -q -x TriboliumBuild -U SRR8288565.fastq.gz -S SRR8288560_accepted_hits.sam
+> hisat2 -q -x TriboliumBuild -U SRR8288566.fastq.gz -S SRR8288560_accepted_hits.sam
 > ~~~
 > {: .language-bash}
 {: .challenge}
@@ -443,7 +403,7 @@ cntrl1_fc <- featureCounts(files="SRR8288561_accepted_hits.sam", annot.ext="Trib
 cntrl2_fc <- featureCounts(files="SRR8288562_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl3_fc <- featureCounts(files="SRR8288563_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 
-#cntrl samples 24h
+# control samples 24h
 cntrl1_fc_24h <- featureCounts(files="SRR8288558_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl2_fc_24h <- featureCounts(files="SRR8288567_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 cntrl3_fc_24h <- featureCounts(files="SRR8288568_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
@@ -453,7 +413,7 @@ treat1_fc <- featureCounts(files="SRR8288564_accepted_hits.sam", annot.ext="Trib
 treat2_fc <- featureCounts(files="SRR8288557_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 treat3_fc <- featureCounts(files="SRR8288560_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 
-#treat samples 24h
+# treatment samples 24h
 treat1_fc_24h <- featureCounts(files="SRR8288559_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 treat2_fc_24h <- featureCounts(files="SRR8288565_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)
 treat3_fc_24h <- featureCounts(files="SRR8288566_accepted_hits.sam", annot.ext="Tribolium.gtf", isGTFAnnotationFile=TRUE)

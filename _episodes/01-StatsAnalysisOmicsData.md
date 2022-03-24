@@ -32,14 +32,22 @@ Once negative binomial models are fitted and dispersion estimates are obtained, 
 > The exact test for the negative binomial distribution has strong parallels with Fisher’s exact test, and is *only applicable to experiments with a single factor*.
 {: .callout}
 
-So, the types of contrasts you can make will depend on the design of your study and data set. The experimental design of the data we are using in this workshopis as follows:
+So, the types of contrasts you can make will depend on the design of your study and data set. The experimental design of the data we are using in this workshop is as follows:
 
-| sample | treatment |
-| ------- | ------- |
-| SRR8288561 | cntrl |
-| SRR8288562 | cntrl |
-| SRR8288564 | treat |
-| SRR8288557 | treat |
+| sample | treatment | hours |
+| ------- | ------- | ------- |
+| SRR8288561 | cntrl | 4h |
+| SRR8288562 | cntrl | 4h |
+| SRR8288563 | cntrl | 4h |
+| SRR8288564 | treat | 4h |
+| SRR8288557 | treat | 4h |
+| SRR8288560 | treat | 4h |
+| SRR8288558 | cntrl | 24h |
+| SRR8288567 | cntrl | 24h |
+| SRR8288568 | cntrl | 24h |
+| SRR8288559 | treat | 24h |
+| SRR8288565 | treat | 24h |
+| SRR8288566 | treat | 24h |
 
 **Note** in the treatment column:
 - cntrl - control treatment
@@ -71,7 +79,7 @@ First, we need to describe the layout of samples in our transcript sequence read
 
 ~~~
 # add grouping factor to specify the layout of the count data frame
-group <- factor(c("cntrl","cntrl","treat","treat"))
+group <- factor(c(rep("cntrl_4h",3), rep("cntrl_24h",3), rep("treat_4h",3), rep("treat_24h",3)))
 
 # create DGE list object
 list <- DGEList(counts=tribolium_counts,group=group)
@@ -84,7 +92,7 @@ So first, we will now plot the library sizes of our sequencing reads before norm
  
 ~~~
 # plot the library sizes before normalization
-barplot(list$samples$lib.size*1e-6, names=1:4, ylab="Library size (millions)")
+barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
 ~~~
 {: .language-r}
 
@@ -98,7 +106,7 @@ Next, we will use the **plotMDS** function to display the relative similarities 
 ~~~
 # draw a MDS plot to show the relative similarities of the samples
 # and to view batch and treatment effects before normalization
-plotMDS(list, col=rep(1:4, each=2))
+plotMDS(list, col=rep(1:12, each=3))
 ~~~
 {: .language-r}
 
@@ -129,11 +137,11 @@ Now that we have normalized gene counts for our samples we should generate the s
 
 ~~~
 # plot the library sizes after normalization
-barplot(list$samples$lib.size*1e-6, names=1:4, ylab="Library size (millions)")
+barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
  
 # draw a MDS plot to show the relative similarities of the samples
 # and to view batch and treatment effects after normalization
-plotMDS(list, col=rep(1:2, each=2))
+plotMDS(list, col=rep(1:12, each=3))
 ~~~
 {: .language-r}
 
@@ -177,16 +185,18 @@ plotBCV(list)
 > ![BCV Plot](../fig/exactTest_plotBCVAfter.png){: width="500" }
 {: .solution}
 
+### Exact Tests - treat_4h vs ctrl_4h
+
 Now, we are ready to perform exact tests with edgeR using the **exactTest** function.
 
 ~~~
-# perform an exact test for treat vs ctrl
-tested <- exactTest(list, pair=c("cntrl", "treat"))
+#Perform an exact test for treat_4h vs ctrl_4h
+tested <- exactTest(list, pair=c("cntrl_4h", "treat_4h"))
 
-# create results table of differentially expressed (DE) genes
+#Create results table of DE genes
 resultsTbl <- topTags(tested, n=nrow(tested$table))$table
 
-# create filtered results table of DE genes
+#Create filtered results table of DE genes
 resultsTbl.keep <- resultsTbl$FDR <= 0.05
 resultsTblFiltered <- resultsTbl[resultsTbl.keep,]
 ~~~
@@ -224,6 +234,126 @@ As a final step, we will produce a MA plot of the libraries of count data using 
 ~~~
 # make a mean-difference plot of the libraries of count data
 plotSmear(tested)
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![Smear Plot](../fig/exactTest_plotSmear.png){: width="500" }
+{: .solution}
+
+### Exact Tests - treat_4h vs ctrl_4h
+
+Now, we are ready to perform exact tests on the 4h data with edgeR using the **exactTest** function.
+
+~~~
+#Perform an exact test for treat_4h vs ctrl_4h
+tested_4h <- exactTest(list, pair=c("cntrl_4h", "treat_4h"))
+
+#Create results table of DE genes
+resultsTbl_4h <- topTags(tested_4h, n=nrow(tested_4h$table))$table
+
+#Create a table of DE genes filtered by FDR
+resultsTbl_4h.keep <- resultsTbl_4h$FDR <= 0.05
+resultsTbl_4h_filtered <- resultsTbl_4h[resultsTbl_4h.keep,]
+
+#Write the results of the exact tests to a csv file
+write.table(resultsTbl_4h_filtered, file="exactTest_4h_filtered.csv", sep=",", row.names=TRUE)
+~~~
+{: .language-r}
+
+Using the resulting differentially expressed (DE) genes from the exact test we can view the counts per million for the top genes of each sample.
+
+~~~
+#Look at the counts-per-million in individual samples for the top genes
+o <- order(tested_4h$table$PValue)
+cpm(list)[o[1:10],]
+
+# view the total number of differentially expressed genes at a p-value of 0.05
+summary(decideTests(tested_4h))
+~~~
+{: .language-r}
+
+We can also generate a mean difference (MD) plot of the log fold change (logFC) against the log counts per million (logcpm) using the **plotMD** function. DE genes are highlighted and the blue lines indicate 2-fold changes. 
+
+~~~
+# plot log-fold change against log-counts per million, with DE genes highlighted
+# the blue lines indicate 2-fold changes
+plotMD(tested_4h)
+abline(h=c(-1, 1), col="blue")
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![MD Plot with AB Line](../fig/exactTest_plotMD_abline.png){: width="500" }
+{: .solution}
+
+As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
+
+~~~
+# make a mean-difference plot of the libraries of count data
+plotSmear(tested_4h)
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![Smear Plot](../fig/exactTest_plotSmear.png){: width="500" }
+{: .solution}
+
+### Exact Tests - treat_24h vs ctrl_24h
+
+Next, we will perform exact tests on the 24h data with edgeR using the **exactTest** function.
+
+~~~
+#Perform an exact test for treat_24h vs ctrl_24h
+tested_24h <- exactTest(list, pair=c("cntrl_24h", "treat_24h"))
+
+#Create a table of DE genes filtered by FDR
+resultsTbl_24h <- topTags(tested_24h, n=nrow(tested_24h$table))$table
+
+#Create filtered results table of DE genes
+resultsTbl_24h.keep <- resultsTbl_24h$FDR <= 0.05
+resultsTbl_24h_filtered <- resultsTbl_24h[resultsTbl_24h.keep,]
+
+#Write the results of the exact tests to a csv file
+write.table(resultsTbl_24h_filtered, file="exactTest_24h_filtered.csv", sep=",", row.names=TRUE)
+~~~
+{: .language-r}
+
+Using the resulting differentially expressed (DE) genes from the exact test we can view the counts per million for the top genes of each sample.
+
+~~~
+#Look at the counts-per-million in individual samples for the top genes
+o <- order(tested_24h$table$PValue)
+cpm(list)[o[1:10],]
+
+# view the total number of differentially expressed genes at a p-value of 0.05
+summary(decideTests(tested_24h))
+~~~
+{: .language-r}
+
+We can also generate a mean difference (MD) plot of the log fold change (logFC) against the log counts per million (logcpm) using the **plotMD** function. DE genes are highlighted and the blue lines indicate 2-fold changes. 
+
+~~~
+# plot log-fold change against log-counts per million, with DE genes highlighted
+# the blue lines indicate 2-fold changes
+plotMD(tested_24h)
+abline(h=c(-1, 1), col="blue")
+~~~
+{: .language-r}
+
+> ## Plot
+>
+> ![MD Plot with AB Line](../fig/exactTest_plotMD_abline.png){: width="500" }
+{: .solution}
+
+As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
+
+~~~
+# make a mean-difference plot of the libraries of count data
+plotSmear(tested_24h)
 ~~~
 {: .language-r}
 

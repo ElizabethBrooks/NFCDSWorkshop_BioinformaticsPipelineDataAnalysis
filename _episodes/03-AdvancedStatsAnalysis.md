@@ -1,7 +1,7 @@
 ---
 title: "DE Analysis with Generalized Linear Models"
 teaching: 30
-exercises: 60
+exercises: 50
 questions:
 - "How do I need to prepare my data for analysis in R?"
 - "What standard statistical methods do I need to analyze this data set?"

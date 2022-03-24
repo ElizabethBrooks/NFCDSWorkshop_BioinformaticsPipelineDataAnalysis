@@ -1,7 +1,7 @@
 ---
 title: "Break"
 teaching: 0
-exercises: 5
+exercises: 10
 questions:
 - "Take a break!"
 objectives:
