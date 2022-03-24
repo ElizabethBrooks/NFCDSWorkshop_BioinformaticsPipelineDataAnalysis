@@ -29,7 +29,7 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 
 3. The Ubuntu terminal for Windows has many of the same features you’ll find using the terminal on Ubuntu for Linux, visit [https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview](https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview). Note that you will need a x86 PC running Windows 10.
 - As a first step the Windows Subsystem for Linux needs to be installed for your version of Windows 10.
-- For Windows 10 systems updated to the Windows 10 Fall Creators update released October 2017, run the following in PowerShell as Administrator: 
+- For Windows 10 systems updated to the Windows 10 Fall Creators update released October 2017, *run the following in PowerShell as Administrator*: 
 > ~~~
 > dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 > ~~~
@@ -60,8 +60,23 @@ The command line terminal available to Mac OS and Linux is a powerful tool and w
 - Select the "Download RStudio for Mac" button and the R Studio installer will begin to download.
 - Open the installer and follow the installation instructions.
 
+## **Necessary R Package - edgeR**
 
-## **Required Bioinformatics Software**
+The edgeR R package allows you to perform differential expression biostatistical analysis using omics data.
+
+The [BiocManager][biocCite] makes it easy to install Bioconductor packages, including the Rsubread and edgeR packages in R. The following R code can be used to install these packages, for example.
+
+Note that the first step in installing any Bioconductor package is to make sure that you have the BiocManager installed *using the R programming language*.
+
+~~~
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("edgeR")
+~~~
+{: .language-r}
+
+## ***Optional* Bioinformatics Software**
 
 ### SRA Toolkit
 
@@ -277,10 +292,9 @@ First, download the [source package from the Download section on the right side]
 > {: .language-bash}
 {: .callout}
 
+### R Package - Rsubread
 
-### R Packages - Rsubread & edgeR
-
-The final pieces of software you will need to complete the analysis in this workshop are the Rsubread and edgeR R packages. These packages allow you to perform different biostatistical analysis on omics data.
+The Rsubread package allows you to generate metrics on transcriptomic data for downstream analysis. The **featureCounts** function of the Rsubread library allows us to count the number of transcripts that map to each genomic feature in the *Tribolum castaneum* reference genome.
 
 The [BiocManager][biocCite] makes it easy to install Bioconductor packages, including the Rsubread and edgeR packages in R. The following R code can be used to install these packages, for example.
 
@@ -291,11 +305,8 @@ if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
 BiocManager::install("Rsubread")
-
-BiocManager::install("edgeR")
 ~~~
 {: .language-r}
-
 
 [toolkitSRA]: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc
 [installSRA]: https://github.com/ncbi/sra-tools/wiki/02.-Installing-SRA-Toolkit

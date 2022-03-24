@@ -1,5 +1,5 @@
 ---
-title: "Advanced Statistical Analysis of Omics Data (Optional)"
+title: "DE Analysis with Generalized Linear Models"
 teaching: 30
 exercises: 60
 questions:

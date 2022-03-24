@@ -1,5 +1,5 @@
 ---
-title: "Statistical Analysis of Omics Data"
+title: "DE Analysis with Exact Tests"
 teaching: 30
 exercises: 30
 questions:
