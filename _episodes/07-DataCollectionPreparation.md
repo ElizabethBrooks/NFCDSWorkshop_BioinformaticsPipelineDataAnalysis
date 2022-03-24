@@ -463,6 +463,11 @@ head(tribolium_counts)
 {: .language-r}
 
 
+## Scripts for this Lesson
+
+Here is the [BASH script][exactTestScript] with the code from this lesson. 
+
+
 [beetleInfo]: https://entnemdept.ufl.edu/creatures/urban/beetles/red_flour_beetle.htm
 [paperCite]: https://www.sciencedirect.com/science/article/pii/S0147651319302684
 [radiationEffects]: https://www.mdpi.com/1420-3049/19/5/6202/htm 
@@ -495,5 +500,6 @@ head(tribolium_counts)
 [goodEx]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html
 [badEx]: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/bad_sequence_fastqc.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
+[bashScript]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/ep07_DataCollectionPreparation_BASH.sh
 
 {% include links.md %}

@@ -321,11 +321,18 @@ write.table(tagsTbl_inter.filtered, file="glm_interaction.csv", sep=",", row.nam
 {: .solution}
 
 
+## Scripts for this Lesson
+
+Here is the [R script][glmScript] with the code from this lesson. Also included is a [R script][glmScriptPlotting] with the plots being written to jpg files, rather than output to the screen.
+
+
 [countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 [edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [keyDifferences]: https://keydifferences.com/difference-between-t-test-and-anova.html
+[glmScript]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/ep03_AdvancedStatsAnalysis.R
+[glmScriptPlotting]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/ep03_AdvancedStatsAnalysis_withPlotting.R
 
 {% include links.md %}

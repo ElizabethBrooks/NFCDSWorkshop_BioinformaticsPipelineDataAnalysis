@@ -429,6 +429,11 @@ plotSmear(tested_cntrl)
 {: .solution}
 
 
+## Scripts for this Lesson
+
+Here is the [R script][exactTestScript] with the code from this lesson. Also included is a [R script][exactTestScriptPlotting] with the plots being written to jpg files, rather than output to the screen.
+
+
 [countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
 [deAnalysis]: https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/performing-a-rna-seq-experiment/data-analysis/differential-gene-expression-analysis/
 [rsubreadCite]: https://bioconductor.org/packages/release/bioc/html/Rsubread.html
@@ -436,5 +441,7 @@ plotSmear(tested_cntrl)
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 [edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [exactTest]: https://www.statology.org/fishers-exact-test/
+[exactTestScript]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/ep01_StatsAnalysisOmicsData.R
+[exactTestScriptPlotting]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/ep01_StatsAnalysisOmicsData_withPlotting.R
 
 {% include links.md %}
