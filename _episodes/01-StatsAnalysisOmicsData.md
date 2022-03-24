@@ -488,6 +488,6 @@ plotSmear(tested_cntrl)
 [edgeRCite]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
 [countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 [edgerMan]: https://www.bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf
-[countsCSV]: https://github.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/blob/gh-pages/files/TriboliumCounts.csv
+[countsCSV]: https://raw.githubusercontent.com/ElizabethBrooks/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/gh-pages/files/TriboliumCounts.csv
 
 {% include links.md %}
