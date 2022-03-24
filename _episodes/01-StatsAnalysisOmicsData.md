@@ -98,7 +98,7 @@ barplot(list$samples$lib.size*1e-6, names=1:12, ylab="Library size (millions)")
 
 > ## Plot
 >
-> ![Barplot Before Normalization](../fig/exactTest_barplotBefore.png){: width="500" }
+> ![Barplot Before Normalization](../fig/exactTest_librarySizes_beforeNorm.jpg){: width="500" }
 {: .solution}
 
 Next, we will use the **plotMDS** function to display the relative similarities of the samples and view batch and treatment effects before normalization. 
@@ -112,7 +112,7 @@ plotMDS(list, col=rep(1:12, each=3))
 
 > ## Plot
 >
-> ![MDS Plot Before Normalization](../fig/exactTest_plotMDSBefore.png){: width="500" }
+> ![MDS Plot Before Normalization](../fig/exactTest_MDS_beforeNorm.jpg){: width="500" }
 {: .solution}
 
 There is no purpose in analyzing genes that are not expressed in either experimental condition (treatment or control), so raw gene counts are first filtered by expression levels.
@@ -126,6 +126,9 @@ list <- list[keep, , keep.lib.sizes=FALSE]
 # calculate normalized factors
 list <- calcNormFactors(list)
 normList <- cpm(list, normalized.lib.sizes=TRUE)
+
+#Write the normalized counts to a file
+write.table(normList, file="tribolium_normalizedCounts.csv", sep=",", row.names=TRUE)
 
 # view normalization factors
 list$samples
@@ -147,9 +150,9 @@ plotMDS(list, col=rep(1:12, each=3))
 
 > ## Plots
 >
-> ![Barplot After Normalization](../fig/exactTest_barplotAfter.png){: width="500" }
+> ![Barplot After Normalization](../fig/exactTest_librarySizes_afterNorm.jpg){: width="500" }
 >
-> ![MDS Plot After Normalization](../fig/exactTest_plotMDSAfter.png){: width="500" }
+> ![MDS Plot After Normalization](../fig/exactTest_MDS_afterNorm.jpg){: width="500" }
 {: .solution}
 
 It can also be useful to view the moderated log-counts-per-million after normalization using the **cpm** function results with **heatmap**.
@@ -164,7 +167,7 @@ heatmap(logcpm)
 
 > ## Plot
 >
-> ![Heatmap After Normalization](../fig/exactTest_heatmapAfter.png){: width="500" }
+> ![Heatmap After Normalization](../fig/exactTest_logCPM.jpg){: width="500" }
 {: .solution}
 
 With the normalized gene counts we can also produce a matrix of pseudo-counts to estimate the common and tagwise dispersions. This allows us to use the **plotBCV** function to generate a genewise biological coefficient of variation (BCV) plot of dispersion estimates.
@@ -182,7 +185,7 @@ plotBCV(list)
 
 > ## Plot
 >
-> ![BCV Plot](../fig/exactTest_plotBCVAfter.png){: width="500" }
+> ![BCV Plot](../fig/exactTest_BCV.jpg){: width="500" }
 {: .solution}
 
 ### Exact Tests - treat_4h vs ctrl_4h
@@ -226,7 +229,7 @@ abline(h=c(-1, 1), col="blue")
 
 > ## Plot
 >
-> ![MD Plot with AB Line](../fig/exactTest_plotMD_abline.png){: width="500" }
+> ![MD Plot with AB Line](../fig/exactTest_4h_DE.jpg){: width="500" }
 {: .solution}
 
 As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
@@ -239,68 +242,9 @@ plotSmear(tested)
 
 > ## Plot
 >
-> ![Smear Plot](../fig/exactTest_plotSmear.png){: width="500" }
+> ![Smear Plot](../fig/exactTest_4h_smear.jpg){: width="500" }
 {: .solution}
 
-### Exact Tests - treat_4h vs ctrl_4h
-
-Now, we are ready to perform exact tests on the 4h data with edgeR using the **exactTest** function.
-
-~~~
-#Perform an exact test for treat_4h vs ctrl_4h
-tested_4h <- exactTest(list, pair=c("cntrl_4h", "treat_4h"))
-
-#Create results table of DE genes
-resultsTbl_4h <- topTags(tested_4h, n=nrow(tested_4h$table))$table
-
-#Create a table of DE genes filtered by FDR
-resultsTbl_4h.keep <- resultsTbl_4h$FDR <= 0.05
-resultsTbl_4h_filtered <- resultsTbl_4h[resultsTbl_4h.keep,]
-
-#Write the results of the exact tests to a csv file
-write.table(resultsTbl_4h_filtered, file="exactTest_4h_filtered.csv", sep=",", row.names=TRUE)
-~~~
-{: .language-r}
-
-Using the resulting differentially expressed (DE) genes from the exact test we can view the counts per million for the top genes of each sample.
-
-~~~
-#Look at the counts-per-million in individual samples for the top genes
-o <- order(tested_4h$table$PValue)
-cpm(list)[o[1:10],]
-
-# view the total number of differentially expressed genes at a p-value of 0.05
-summary(decideTests(tested_4h))
-~~~
-{: .language-r}
-
-We can also generate a mean difference (MD) plot of the log fold change (logFC) against the log counts per million (logcpm) using the **plotMD** function. DE genes are highlighted and the blue lines indicate 2-fold changes. 
-
-~~~
-# plot log-fold change against log-counts per million, with DE genes highlighted
-# the blue lines indicate 2-fold changes
-plotMD(tested_4h)
-abline(h=c(-1, 1), col="blue")
-~~~
-{: .language-r}
-
-> ## Plot
->
-> ![MD Plot with AB Line](../fig/exactTest_plotMD_abline.png){: width="500" }
-{: .solution}
-
-As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
-
-~~~
-# make a mean-difference plot of the libraries of count data
-plotSmear(tested_4h)
-~~~
-{: .language-r}
-
-> ## Plot
->
-> ![Smear Plot](../fig/exactTest_plotSmear.png){: width="500" }
-{: .solution}
 
 ### Exact Tests - treat_24h vs ctrl_24h
 
@@ -346,7 +290,7 @@ abline(h=c(-1, 1), col="blue")
 
 > ## Plot
 >
-> ![MD Plot with AB Line](../fig/){: width="500" }
+> ![MD Plot with AB Line](../fig/exactTest_24h_DE.jpg){: width="500" }
 {: .solution}
 
 As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
@@ -359,8 +303,9 @@ plotSmear(tested_24h)
 
 > ## Plot
 >
-> ![Smear Plot](../fig/){: width="500" }
+> ![Smear Plot](../fig/exactTest_24h_smear.jpg){: width="500" }
 {: .solution}
+
 
 ### Exact Tests - treat_4h vs treat_24h
 
@@ -406,7 +351,7 @@ abline(h=c(-1, 1), col="blue")
 
 > ## Plot
 >
-> ![MD Plot with AB Line](../fig/){: width="500" }
+> ![MD Plot with AB Line](../fig/exactTest_treat_DE.jpg){: width="500" }
 {: .solution}
 
 As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
@@ -419,8 +364,9 @@ plotSmear(tested_treat)
 
 > ## Plot
 >
-> ![Smear Plot](../fig/){: width="500" }
+> ![Smear Plot](../fig/exactTest_treat_smear.jpg){: width="500" }
 {: .solution}
+
 
 ### Exact Tests - cntrl_4h vs cntrl_24h
 
@@ -466,7 +412,7 @@ abline(h=c(-1, 1), col="blue")
 
 > ## Plot
 >
-> ![MD Plot with AB Line](../fig/){: width="500" }
+> ![MD Plot with AB Line](../fig/exactTest_cntrl_DE.jpg){: width="500" }
 {: .solution}
 
 As a final step, we will produce a MA plot of the libraries of count data using the **plotSmear** function. There are smearing points with very low counts, particularly those counts that are zero for one of the columns.
@@ -479,7 +425,7 @@ plotSmear(tested_cntrl)
 
 > ## Plot
 >
-> ![Smear Plot](../fig/){: width="500" }
+> ![Smear Plot](../fig/exactTest_cntrl_smear.jpg){: width="500" }
 {: .solution}
 
 
