@@ -75,11 +75,11 @@ BiocManager::install("edgeR")
 ~~~
 {: .language-r}
 
-## ***Optional* Bioinformatics Software**
+## ***Optional* Bioinformatics Software for Supplemental Lessons**
 
 ### SRA Toolkit
 
-In this workshop we will collect the transcriptomic data we need from the sequence read archive (SRA). Specifically, the transcript sequence data for the paper investigating the effects of UV-B exposure on the larvae of the red flour beetle.
+In the supplemental lessons of this workshop we will collect the transcriptomic data we need from the sequence read archive (SRA). Specifically, the transcript sequence data for the paper investigating the effects of UV-B exposure on the larvae of the red flour beetle.
 
 To download the SRA toolkit:
 1. navigate to the [installation instructions][installSRA]
