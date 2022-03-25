@@ -1,5 +1,5 @@
 # set the working directory
-setwd("/Users/bamflappy/NFCDSWorkshop_Day2/script_data/")
+setwd("/YOUR/FILE/PATH/")
 
 # import gene count data
 tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")

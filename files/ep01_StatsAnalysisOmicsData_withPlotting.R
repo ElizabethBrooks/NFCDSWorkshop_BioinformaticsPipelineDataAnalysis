@@ -1,5 +1,5 @@
 # set the working directory
-setwd("/Users/bamflappy/NFCDSWorkshop_Day2/script_data/")
+setwd("/YOUR/FILE/PATH/")
 
 # import gene count data
 tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")
@@ -8,7 +8,7 @@ tribolium_counts <- read.csv("TriboliumCounts.csv", row.names="X")
 #tribolium_counts[ , 1:6]
 
 #Add grouping factor
-group <- factor(c(rep("cntrl_4h",3), rep("cntrl_24h",3), rep("treat_4h",3), rep("treat_24h",3)))
+group <- factor(c(rep("cntrl_4h",3), rep("treat_4h",3), rep("cntrl_24h",3), rep("treat_24h",3)))
 
 #BiocManager::install("edgeR")
 
