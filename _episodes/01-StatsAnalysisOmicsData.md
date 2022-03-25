@@ -90,7 +90,7 @@ As a first step in the analysis, we need to describe the layout of samples in ou
 
 ~~~
 # add grouping factor to specify the layout of the count data frame
-group <- factor(c(rep("cntrl_4h",3), rep("cntrl_24h",3), rep("treat_4h",3), rep("treat_24h",3)))
+group <- factor(c(rep("cntrl_4h",3), rep("treat_4h",3), rep("cntrl_24h",3), rep("treat_24h",3)))
 
 # create DGE list object
 list <- DGEList(counts=tribolium_counts,group=group)
