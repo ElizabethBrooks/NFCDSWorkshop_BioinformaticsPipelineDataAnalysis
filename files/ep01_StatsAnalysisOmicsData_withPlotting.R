@@ -178,8 +178,8 @@ plotSmear(tested_treat)
 dev.off()
 
 ##############
-#Perform an exact test for cntrl_4h vs nctrl_24h
-tested_cntrl <- exactTest(list, pair=c("treat_24h", "treat_4h"))
+#Perform an exact test for cntrl_4h vs ctrl_24h
+tested_cntrl <- exactTest(list, pair=c("cntrl_24h", "cntrl_4h"))
 
 #Create a table of DE genes filtered by FDR
 resultsTbl_nctrl <- topTags(tested_cntrl, n=nrow(tested_cntrl$table))$table
