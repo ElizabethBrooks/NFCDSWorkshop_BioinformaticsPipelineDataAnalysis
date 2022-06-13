@@ -1,24 +1,22 @@
-# Introduction to R and BASH Scripting with Application in Bioinformatics
+# NFCDS Workshop - Bioinformatics Data Analysis
 
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
+## Website
+https://elizabethbrooks.github.io/NFCDSWorkshop_BioinformaticsPipelineDataAnalysis/index.html
 
-This repository generates the corresponding lesson website from [The Carpentries](https://carpentries.org/) repertoire of lessons. 
+## Description
+This is the second lesson in a two-part workshop series Programming and Data Analysis with R and BASH, which is delivered as part of the NFCDS pedagogdy fellowship program.
 
-## Contributing
+Given the increasing amount of data being generated today, programmatic data analysis is an important skill for a wide range of fields. The R programming language and Unix/Linux command line can be powerful tools for analyzing data. Even more powerfully, the huge variety of R and command line tools can be used together with scripting to create custom pipelines to analyze large or complex data sets.
 
-We welcome all contributions to improve the lesson! Maintainers will do their best to help you if you have any
-questions, concerns, or experience any difficulties along the way.
+## Outcomes
+In this hands-on workshop, participants will learn about biological data analysis with R and Unix/Linux tools, with a focus on techniques for creating modular R and BASH scripts. Additionally, participants will explore how to create custom scripts to automate the analysis of large data sets. This workshop includes an introduction to scripting and biological data analysis, with a focus on comparative techniques for creating modular R and BASH scripts.
 
-We'd like to ask you to familiarize yourself with our [Contribution Guide](CONTRIBUTING.md) and have a look at
-the [more detailed guidelines][lesson-example] on proper formatting, ways to render the lesson locally, and even
-how to write new episodes.
+## Audience
+This lesson is designed for anyone interested in learning how to combine R and BASH scripting to automate the analysis of biological data sets. For example, biologists interested in learning how to create pipelines that use a combination of R scripts to analyze and visualize data. Another potential application of the skills learned from this workshop is the ability to create a set of scripts that work together to integrate specific omics tools in a data analysis workflow.
 
-Please see the current list of [issues][FIXME] for ideas for contributing to this
-repository. For making your contribution, we use the GitHub flow, which is
-nicely explained in the chapter [Contributing to a Project](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in Pro Git
-by Scott Chacon.
-Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.  
+## Code of Conduct
 
+All participants should agree to abide by [The Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/index_coc.html).
 
 ## Maintainer(s)
 
@@ -36,3 +34,4 @@ A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
 To cite this lesson, please consult with [CITATION](CITATION)
 
 [lesson-example]: https://carpentries.github.io/lesson-example
+
