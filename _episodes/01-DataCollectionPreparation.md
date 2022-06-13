@@ -1,5 +1,5 @@
 ---
-title: "Supplemental - Omics Data Collection & Preparation"
+title: "Omics Data Collection & Preparation"
 teaching: 0
 exercises: 0
 questions:

@@ -3,7 +3,7 @@ layout: page
 title: Setup
 ---
 
-## **Required Programming Language Software**
+## **Required Software**
 
 These lessons require the installation of **R** and **RStudio** (optionally **BASH**). The R open-source software is an object-oriented programming language for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows, and MacOS. 
 
@@ -75,7 +75,7 @@ BiocManager::install("edgeR")
 ~~~
 {: .language-r}
 
-## ***Optional* Bioinformatics Software for Supplemental Lessons**
+## **Software for Bioinformatics Lessons**
 
 ### SRA Toolkit
 
