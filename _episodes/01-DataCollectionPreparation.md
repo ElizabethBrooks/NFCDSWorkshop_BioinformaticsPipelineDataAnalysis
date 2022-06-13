@@ -1,7 +1,7 @@
 ---
 title: "Omics Data Collection & Preparation"
-teaching: 0
-exercises: 0
+teaching: 30
+exercises: 30
 questions:
 - "What is the experimental design for the data set we are using?"
 - "How do I naviagate the terminal?"
@@ -392,7 +392,7 @@ The **featureCounts** function of the Rsubread library allows us to count the nu
 
 As a first step, we need to quantify (count) the number of transcript sequence reads that have mapped (aligned) to the features of the *Tribolium castaneum* genome.
 
-![Example FASTQ File Formatting](../fig/count-fig2.png){: width="800" }
+![Example Transcript Quantification](../fig/count-fig2.png){: width="800" }
 *[Image source][countFig]*
 
 So to quantify the read fragments that map to the genomic features of the red flour beetle genome, we will use the **fetureCounts** function with the output Hisat2 sam files from the previous step of the bioinformatics workflow.
@@ -465,9 +465,10 @@ head(tribolium_counts)
 
 ## Scripts for this Lesson
 
-Here is the [BASH script][exactTestScript] with the code from this lesson. 
+Here is the [BASH script][bashScript] with the code from this lesson. 
 
 
+[countFig]: https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/05_counting_reads.html
 [beetleInfo]: https://entnemdept.ufl.edu/creatures/urban/beetles/red_flour_beetle.htm
 [paperCite]: https://www.sciencedirect.com/science/article/pii/S0147651319302684
 [radiationEffects]: https://www.mdpi.com/1420-3049/19/5/6202/htm 
